@@ -1,0 +1,3995 @@
+<head>
+                <meta http-equiv="Content-type" content="text/html;charset=utf-8" />
+                <style>
+                    .bold {
+                        font-weight:bold;
+                    }
+                    .italic {
+                        font-weight:italic;
+                    }
+                    .normal {
+                        font-weight:normal;
+                    }
+                </style></head><style>col {mso-width-source:auto;} table {font-family:Arial;font-size:11px}</style><table id='tb_main_title' style='border-collapse: collapse;' name='tb_main_title' width='700' class="table-print-title" >
+<thead>
+<tr><th colspan='3'  align='center' nowrap='1' ><span class="logo_left" nowrap="true"><font style="font-weight:normal;">BỘ GIÁO DỤC VÀ ĐÀO TẠO</font><br/>TRƯỜNG CAO ĐẲNG KỸ THUẬT - CÔNG NGHỆ BÁCH KHOA</span><br/></th><th colspan='10'  align='center' nowrap='1' ><span class="logo_right" style=" " nowrap="true">CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM<br/>Độc lập - Tự do - Hạnh phúc</span><br/></th></tr>
+<tr><th colspan='13'  align='center' valign='bottom'  class='bold main_title' style='height:35px'>Danh Sách Môn Học</th></tr>
+</thead></table><table id='tb_main_body' style='border-collapse: collapse;' name='tb_main_body' width='700' class="table-print" border="1" >
+<thead>
+<tr><th align="center" >Stt</th><th align="center" >Mã môn học</th><th align="center" >Mã môn học hiển thị</th><th align="center" >Tên môn học</th><th align="center" >Tên rút gọn</th><th align="center" >Đơn vị học trình/Tín chỉ</th><th align="center" >Mã bộ môn</th><th align="center" >Tên bộ môn</th><th align="center" >Mã đơn vị</th><th align="center" >Tên đơn vị</th><th align="center" >Mô hình đào tạo</th><th align="center" >Tổng số giờ</th><th align="center" >Mã tính chất phòng</th></tr>
+</thead><tr class="body">
+<td  align='center' width='5%' class = 'bold' >1</td>
+<td  align='left' >K16MH210</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ16</td>
+<td  align='left' >Cơ sở tạo hình</td>
+<td  align='left' >Cơ sở tạo hình</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >75</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >2</td>
+<td  align='left' >K14MH09</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ18</td>
+<td  align='left' >Thiết kế các mẫu quảng cáo</td>
+<td  align='left' >Thiết kế các mẫu quảng cáo</td>
+<td  align='right' >4</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >90</td>
+<td  align='left' >TH-Thực hành tin học</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >3</td>
+<td  align='left' >K16MH218</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ24</td>
+<td  align='left' >Thiết kế bao bì và in ấn chế bản</td>
+<td  align='left' >Thiết kế bao bì và in ấn chế bản</td>
+<td  align='right' >4</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >90</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >4</td>
+<td  align='left' >K15MH524</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ13</td>
+<td  align='left' >Đồ hoạ căn bản</td>
+<td  align='left' >Đồ hoạ căn bản</td>
+<td  align='right' >4</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >90</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >5</td>
+<td  align='left' >K16MH179</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ14</td>
+<td  align='left' >Ứng dụng CNTT trực tuyến</td>
+<td  align='left' >Ứng dụng CNTT trực tuyến</td>
+<td  align='right' >2</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >62</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >6</td>
+<td  align='left' >K16MH187</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ22</td>
+<td  align='left' style='mso-number-format:\@;' >Lập trình C# và windows 1</td>
+<td  align='left' style='mso-number-format:\@;' >Lập trình C# và windows 1</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >80</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >7</td>
+<td  align='left' >K15MH214</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ10</td>
+<td  align='left' >Mạng máy tính</td>
+<td  align='left' >Mạng máy tính</td>
+<td  align='right' >2</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >45</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >8</td>
+<td  align='left' >K14_MH41</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ11</td>
+<td  align='left' >Lập trình hướng đối tượng C++</td>
+<td  align='left' >Lập trình hướng đối tượng C++</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >75</td>
+<td  align='left' >TH-Thực hành tin học</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >9</td>
+<td  align='left' >K15MH239</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ29</td>
+<td  align='left' >Project Xây dựng phần mềm quản lý</td>
+<td  align='left' >Project Xây dựng phần mềm quản lý</td>
+<td  align='right' >5</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >155</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >10</td>
+<td  align='left' >K14_MH49</td>
+<td  align='left' >MH19</td>
+<td  align='left' >Cơ sở dữ liệu</td>
+<td  align='left' >Cơ sở dữ liệu</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >60</td>
+<td  align='left' >TH-Thực hành tin học</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >11</td>
+<td  align='left' >K15MH538</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ27</td>
+<td  align='left' >Thiết kế sự kiện</td>
+<td  align='left' >Thiết kế sự kiện</td>
+<td  align='right' >4</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >90</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >12</td>
+<td  align='left' >K15MH154</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ17</td>
+<td  align='left' >Lập trình java</td>
+<td  align='left' >Lập trình java</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >80</td>
+<td  align='left' >TH-Thực hành tin học</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >13</td>
+<td  align='left' >K15MH546</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ35</td>
+<td  align='left' >Đồ án tốt nghiệp</td>
+<td  align='left' >Đồ án tốt nghiệp</td>
+<td  align='right' >5</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >150</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >14</td>
+<td  align='left' >K15MH162</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ25</td>
+<td  align='left' >Thực tập tốt nghiệp</td>
+<td  align='left' >Thực tập tốt nghiệp</td>
+<td  align='right' >5</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >225</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >15</td>
+<td  align='left' >K14_MH123</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ18</td>
+<td  align='left' >Thiết kế dàn trang</td>
+<td  align='left' >Thiết kế dàn trang</td>
+<td  align='right' >5</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >120</td>
+<td  align='left' >TH-Thực hành tin học</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >16</td>
+<td  align='left' >K14_MH211</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ31</td>
+<td  align='left' >Hệ điều hành mã nguồn mở</td>
+<td  align='left' >Hệ điều hành mã nguồn mở</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >60</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >17</td>
+<td  align='left' >K16MH220</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ26</td>
+<td  align='left' >Thiết kế Lịch</td>
+<td  align='left' >Thiết kế Lịch</td>
+<td  align='right' >4</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >90</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >18</td>
+<td  align='left' >K16MH228</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ34</td>
+<td  align='left' >Thực tập tốt nghiệp</td>
+<td  align='left' >Thực tập tốt nghiệp</td>
+<td  align='right' >8</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >400</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >19</td>
+<td  align='left' >K15MH198</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ23</td>
+<td  align='left' >Quản lý dự án CNTT</td>
+<td  align='left' >Quản lý dự án CNTT</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >80</td>
+<td  align='left' >TH-Thực hành tin học</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >20</td>
+<td  align='left' >K15MH207</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ32</td>
+<td  align='left' >Phát triển Web bằng phần mềm mã nguồn mở</td>
+<td  align='left' >Phát triển Web bằng phần mềm mã nguồn mở</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >80</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >21</td>
+<td  align='left' >K16MH383</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ11</td>
+<td  align='left' >Lập trình web</td>
+<td  align='left' >Lập trình web</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >80</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >22</td>
+<td  align='left' >K16MH400</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ22</td>
+<td  align='left' >Biên tập và tạo kỹ xảo Video</td>
+<td  align='left' >Biên tập và tạo kỹ xảo Video</td>
+<td  align='right' >1</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >20</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >23</td>
+<td  align='left' >K16MH435</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ20</td>
+<td  align='left' style='mso-number-format:\@;' >Thực tập 1: Trải nghiệp doanh nghiệp</td>
+<td  align='left' style='mso-number-format:\@;' >Thực tập 1: Trải nghiệp doanh nghiệp</td>
+<td  align='right' >2</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >100</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >24</td>
+<td  align='left' >K14_MH54</td>
+<td  align='left' >MH24</td>
+<td  align='left' >Đồ họa ứng dụng</td>
+<td  align='left' >Đồ họa ứng dụng</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >75</td>
+<td  align='left' >TH-Thực hành tin học</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >25</td>
+<td  align='left' >K14_MH116</td>
+<td  align='left' >MH11</td>
+<td  align='left' >Đồ họa căn bản</td>
+<td  align='left' >Đồ họa căn bản</td>
+<td  align='right' >4</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >90</td>
+<td  align='left' >&nbsp;</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >26</td>
+<td  align='left' >K14_MH214_TH</td>
+<td  align='left' >&nbsp;</td>
+<td  align='left' >Lập trình Java  thực hành</td>
+<td  align='left' >Lập trình Java</td>
+<td  align='right' >0</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >60</td>
+<td  align='left' >K-Khác</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >27</td>
+<td  align='left' >K16MH428</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ15</td>
+<td  align='left' >Thiết kế bao bì và in ấn chế bản</td>
+<td  align='left' >Thiết kế bao bì và in ấn chế bản</td>
+<td  align='right' >4</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >90</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >28</td>
+<td  align='left' >K15MH187</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ12</td>
+<td  align='left' >Cơ sở dữ liệu</td>
+<td  align='left' >Cơ sở dữ liệu</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >75</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >29</td>
+<td  align='left' >K15MH195</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ20</td>
+<td  align='left' >Hệ quản trị Cơ sở dữ liệu</td>
+<td  align='left' >Hệ quản trị Cơ sở dữ liệu</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >80</td>
+<td  align='left' >TH-Thực hành tin học</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >30</td>
+<td  align='left' >K16MH192</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ27</td>
+<td  align='left' >Phát triển ứng dụng trên thiết bị di động</td>
+<td  align='left' >Phát triển ứng dụng trên thiết bị di động</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >80</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >31</td>
+<td  align='left' >K16MH200</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ35</td>
+<td  align='left' >Thực tập tốt nghiệp</td>
+<td  align='left' >Thực tập tốt nghiệp</td>
+<td  align='right' >8</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >380</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >32</td>
+<td  align='left' >K14_MH222</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ20</td>
+<td  align='left' >Tiếng Anh chuyên ngành</td>
+<td  align='left' >Tiếng Anh chuyên ngành</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >60</td>
+<td  align='left' >TH-Thực hành tin học</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >33</td>
+<td  align='left' >K14_MH230</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ28</td>
+<td  align='left' >Đồ họa 3D nâng cao</td>
+<td  align='left' >Đồ họa 3D nâng cao</td>
+<td  align='right' >5</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >120</td>
+<td  align='left' >TH-Thực hành tin học</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >34</td>
+<td  align='left' >K14_MH208</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ28</td>
+<td  align='left' >Công nghệ đa phương tiện</td>
+<td  align='left' >Công nghệ đa phương tiện</td>
+<td  align='right' >2</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >45</td>
+<td  align='left' >TH-Thực hành tin học</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >35</td>
+<td  align='left' >K14_MH216</td>
+<td  align='left' >MH36</td>
+<td  align='left' >Thực tập chuyên ngành</td>
+<td  align='left' >Thực tập chuyên ngành</td>
+<td  align='right' >11</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >300</td>
+<td  align='left' >PTH-Phòng thực hành</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >36</td>
+<td  align='left' >K16MH225</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ31</td>
+<td  align='left' >Biên tập và tạo kỹ xảo Video</td>
+<td  align='left' >Biên tập và tạo kỹ xảo Video</td>
+<td  align='right' >5</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >120</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >37</td>
+<td  align='left' >K16MH373</td>
+<td  align='left' >MD32</td>
+<td  align='left' >Lập trình web</td>
+<td  align='left' >Lập trình web</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >80</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >38</td>
+<td  align='left' >K15MH203</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ28</td>
+<td  align='left' >Lập trình Game Mobile</td>
+<td  align='left' >Lập trình Game Mobile</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >80</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >39</td>
+<td  align='left' >K15MH211</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ07</td>
+<td  align='left' >Kiến trúc máy tính</td>
+<td  align='left' >Kiến trúc máy tính</td>
+<td  align='right' >2</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >45</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >40</td>
+<td  align='left' >K16MH207</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ13</td>
+<td  align='left' >Đồ hoạ căn bản</td>
+<td  align='left' >Đồ hoạ căn bản</td>
+<td  align='right' >4</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >90</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >41</td>
+<td  align='left' >K16MH215</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ21</td>
+<td  align='left' >Thiết kế dàn trang</td>
+<td  align='left' >Thiết kế dàn trang</td>
+<td  align='right' >4</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >90</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >42</td>
+<td  align='left' >K14MH16</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ29</td>
+<td  align='left' >Thực tập tốt nghiệp</td>
+<td  align='left' >Thực tập tốt nghiệp</td>
+<td  align='right' >15</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >400</td>
+<td  align='left' >PTH-Phòng thực hành</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >43</td>
+<td  align='left' >K15MH529</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ19</td>
+<td  align='left' >Thiết kế minh họa với Adobe Illustrator</td>
+<td  align='left' >Thiết kế minh họa với Adobe Illustrator</td>
+<td  align='right' >4</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >90</td>
+<td  align='left' >TH-Thực hành tin học</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >44</td>
+<td  align='left' >K16MH176</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ11</td>
+<td  align='left' >Lắp ráp và cài đặt máy tính</td>
+<td  align='left' >Lắp ráp và cài đặt máy tính</td>
+<td  align='right' >2</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >45</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >45</td>
+<td  align='left' >K16MH184</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ19</td>
+<td  align='left' >Lập trình web</td>
+<td  align='left' >Lập trình web</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >80</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >46</td>
+<td  align='left' >K14_MH38</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ08</td>
+<td  align='left' >Lắp ráp và cài đặt máy tính</td>
+<td  align='left' >Lắp ráp và cài đặt máy tính</td>
+<td  align='right' >2</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >45</td>
+<td  align='left' >TH-Thực hành tin học</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >47</td>
+<td  align='left' >K15MH236</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ26</td>
+<td  align='left' >Lập trình quản lý</td>
+<td  align='left' >Lập trình quản lý</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >80</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >48</td>
+<td  align='left' >K14_MH46</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ16</td>
+<td  align='left' >Quản trị mạng</td>
+<td  align='left' >Quản trị mạng</td>
+<td  align='right' >2</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >45</td>
+<td  align='left' >TH-Thực hành tin học</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >49</td>
+<td  align='left' >K15MH518</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ11</td>
+<td  align='left' >Lắp ráp và cài đặt máy tính</td>
+<td  align='left' >Lắp ráp và cài đặt máy tính</td>
+<td  align='right' >2</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >45</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >50</td>
+<td  align='left' >K15MH535</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ24</td>
+<td  align='left' >Thiết kế bao bì và in ấn chế bản</td>
+<td  align='left' >Thiết kế bao bì và in ấn chế bản</td>
+<td  align='right' >4</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >90</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >51</td>
+<td  align='left' >K15MH151</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ14</td>
+<td  align='left' >Cấu trúc dữ liệu và Giải thuật</td>
+<td  align='left' >Cấu trúc dữ liệu và Giải thuật</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >80</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >52</td>
+<td  align='left' >K15MH543</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ32</td>
+<td  align='left' >Nhập môn Đồ hoạ 3D</td>
+<td  align='left' >Nhập môn Đồ hoạ 3D</td>
+<td  align='right' >4</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >90</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >53</td>
+<td  align='left' >K15MH159</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ22</td>
+<td  align='left' >Phát triển ứng dụng trên thiết bị di động</td>
+<td  align='left' >Phát triển ứng dụng trên thiết bị di động</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >80</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >54</td>
+<td  align='left' >K14_MH113</td>
+<td  align='left' >MH08</td>
+<td  align='left' >Lắp ráp và cài đặt máy tính</td>
+<td  align='left' >Lắp ráp và cài đặt máy tính</td>
+<td  align='right' >2</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >45</td>
+<td  align='left' >&nbsp;</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >55</td>
+<td  align='left' >K14_MH121</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ16</td>
+<td  align='left' style='mso-number-format:\@;' >Mỹ thuật căn bản 2</td>
+<td  align='left' style='mso-number-format:\@;' >Mỹ thuật căn bản 2</td>
+<td  align='right' >4</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >90</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >56</td>
+<td  align='left' >K16MH425</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ10</td>
+<td  align='left' >Cơ sở tạo hình</td>
+<td  align='left' >Cơ sở tạo hình</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >75</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >57</td>
+<td  align='left' >K16MH433</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ18</td>
+<td  align='left' >Thiết kế sự kiện</td>
+<td  align='left' >Thiết kế sự kiện</td>
+<td  align='right' >4</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >90</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >58</td>
+<td  align='left' >K15MH184</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ09</td>
+<td  align='left' >Lập trình căn bản</td>
+<td  align='left' >Lập trình căn bản</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >80</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >59</td>
+<td  align='left' >K15MH192</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ17</td>
+<td  align='left' >Lập trình hướng đối tượng</td>
+<td  align='left' >Lập trình hướng đối tượng</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >80</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >60</td>
+<td  align='left' >K16MH189</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ24</td>
+<td  align='left' >An toàn và Bảo mật thông tin</td>
+<td  align='left' >An toàn và Bảo mật thông tin</td>
+<td  align='right' >2</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >50</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >61</td>
+<td  align='left' >K16MH197</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ32</td>
+<td  align='left' >Phát triển Web bằng phần mềm mã nguồn mở</td>
+<td  align='left' >Phát triển Web bằng phần mềm mã nguồn mở</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >80</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >62</td>
+<td  align='left' >K14_MH219</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ17</td>
+<td  align='left' style='mso-number-format:\@;' >Mỹ thuật căn bản 2</td>
+<td  align='left' style='mso-number-format:\@;' >Mỹ thuật căn bản 2</td>
+<td  align='right' >4</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >90</td>
+<td  align='left' >TH-Thực hành tin học</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >63</td>
+<td  align='left' >K14_MH227</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ25</td>
+<td  align='left' >Biên tập video</td>
+<td  align='left' >Biên tập video</td>
+<td  align='right' >4</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >90</td>
+<td  align='left' >TH-Thực hành tin học</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >64</td>
+<td  align='left' >K16MH380</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ14</td>
+<td  align='left' >Phát triển Web bằng phần mềm mã nguồn mở</td>
+<td  align='left' >Phát triển Web bằng phần mềm mã nguồn mở</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >80</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >65</td>
+<td  align='left' >K15MH622</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ31</td>
+<td  align='left' >Quản trị Web Server và Mail Server</td>
+<td  align='left' >Quản trị Web Server và Mail Server</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >80</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >66</td>
+<td  align='left' >K16MH440</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ22</td>
+<td  align='left' style='mso-number-format:\@;' >Project 1: Thiết kế Poster, Banner, Standee</td>
+<td  align='left' style='mso-number-format:\@;' >Project 1: Thiết kế Poster, Banner, Standee</td>
+<td  align='right' >2</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >60</td>
+<td  align='left' >PTH-Phòng thực hành</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >67</td>
+<td  align='left' >K15MH200</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ25</td>
+<td  align='left' >Phân tích thiết kế hệ thống</td>
+<td  align='left' >Phân tích thiết kế hệ thống</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >80</td>
+<td  align='left' >TH-Thực hành tin học</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >68</td>
+<td  align='left' >K15MH208</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ33</td>
+<td  align='left' >Project Xây dựng website bán hàng</td>
+<td  align='left' >Project Xây dựng website bán hàng</td>
+<td  align='right' >5</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >155</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >69</td>
+<td  align='left' >K16MH204</td>
+<td  align='left' >MH10</td>
+<td  align='left' style='mso-number-format:\@;' >Mỹ thuật căn bản 1</td>
+<td  align='left' style='mso-number-format:\@;' >Mỹ thuật căn bản 1</td>
+<td  align='right' >4</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >90</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >70</td>
+<td  align='left' >K16MH212</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ18</td>
+<td  align='left' >Đồ hoạ ứng dụng với Photoshop</td>
+<td  align='left' >Đồ hoạ ứng dụng với Photoshop</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >75</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >71</td>
+<td  align='left' >K14MH13</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ26</td>
+<td  align='left' >Tạo kỹ xảo video</td>
+<td  align='left' >Tạo kỹ xảo video</td>
+<td  align='right' >6</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >150</td>
+<td  align='left' >TH-Thực hành tin học</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >72</td>
+<td  align='left' >K15MH526</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ16</td>
+<td  align='left' >Cơ sở tạo hình</td>
+<td  align='left' >Cơ sở tạo hình</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >75</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >73</td>
+<td  align='left' >K16MH173</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ08</td>
+<td  align='left' >Lập trình trực quan với Scratch</td>
+<td  align='left' >Lập trình trực quan với Scratch</td>
+<td  align='right' >2</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >62</td>
+<td  align='left' >PTH-Phòng thực hành</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >74</td>
+<td  align='left' >K16MH181</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ16</td>
+<td  align='left' >Cấu trúc dữ liệu và Giải thuật</td>
+<td  align='left' >Cấu trúc dữ liệu và Giải thuật</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >80</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >75</td>
+<td  align='left' >K15MH217</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ13</td>
+<td  align='left' >Đồ họa ứng dụng</td>
+<td  align='left' >Đồ họa ứng dụng</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >75</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >76</td>
+<td  align='left' >K14_MH43</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ13</td>
+<td  align='left' style='mso-number-format:\@;' >Tin học 3</td>
+<td  align='left' style='mso-number-format:\@;' >Tin học 3</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >60</td>
+<td  align='left' >TH-Thực hành tin học</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >77</td>
+<td  align='left' >K15MH241</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ31</td>
+<td  align='left' >Phát triển ứng dụng trên thiết bị di động</td>
+<td  align='left' >Phát triển ứng dụng trên thiết bị di động</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >80</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >78</td>
+<td  align='left' >K14_MH51</td>
+<td  align='left' >MH21</td>
+<td  align='left' >Phân tích và thiết kế hướng đối tượng</td>
+<td  align='left' >Phân tích và thiết kế hướng đối tượng</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >75</td>
+<td  align='left' >TH-Thực hành tin học</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >79</td>
+<td  align='left' >K15MH532</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ22</td>
+<td  align='left' style='mso-number-format:\@;' >Project 1: Thiết kế Poster, Banner, Standee</td>
+<td  align='left' style='mso-number-format:\@;' >Project 1: Thiết kế Poster, Banner, Standee</td>
+<td  align='right' >2</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >60</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >80</td>
+<td  align='left' >K15MH148</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ11</td>
+<td  align='left' >Lắp ráp và bảo trì máy tính</td>
+<td  align='left' >Lắp ráp và bảo trì máy tính</td>
+<td  align='right' >2</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >45</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >81</td>
+<td  align='left' >K15MH540</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ29</td>
+<td  align='left' style='mso-number-format:\@;' >Thực tập 1: Trải nghiệp doanh nghiệp</td>
+<td  align='left' style='mso-number-format:\@;' >Thực tập 1: Trải nghiệp doanh nghiệp</td>
+<td  align='right' >2</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >100</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >82</td>
+<td  align='left' >K15MH156</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ19</td>
+<td  align='left' >Phân tích thiết kế hệ thống</td>
+<td  align='left' >Phân tích thiết kế hệ thống</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >80</td>
+<td  align='left' >TH-Thực hành tin học</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >83</td>
+<td  align='left' >K14_MH205</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ25</td>
+<td  align='left' >Project  (Xây dựng phần mềm quản lý dữ liệu)</td>
+<td  align='left' >Project  (Xây dựng phần mềm quản lý dữ liệu)</td>
+<td  align='right' >4</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >90</td>
+<td  align='left' >TH-Thực hành tin học</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >84</td>
+<td  align='left' >K14_MH213</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ33</td>
+<td  align='left' >Project (Thiết kế website thương mại điện tử)</td>
+<td  align='left' >Project (Thiết kế website thương mại điện tử)</td>
+<td  align='right' >4</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >90</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >85</td>
+<td  align='left' >K16MH222</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ28</td>
+<td  align='left' style='mso-number-format:\@;' >Project 2: Thiết kế Bộ nhận diện thương hiệu và Thiết kế in ấn</td>
+<td  align='left' style='mso-number-format:\@;' >Project 2: Thiết kế Bộ nhận diện thương hiệu và Thiết kế in ấn</td>
+<td  align='right' >2</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >60</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >86</td>
+<td  align='left' >K16MH370</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ08</td>
+<td  align='left' >Ứng dụng CNTT trực tuyến</td>
+<td  align='left' >Ứng dụng CNTT trực tuyến</td>
+<td  align='right' >2</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >62</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >87</td>
+<td  align='left' >K14_MH224</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ22</td>
+<td  align='left' >Thiết kế Website</td>
+<td  align='left' >Thiết kế Website</td>
+<td  align='right' >4</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >90</td>
+<td  align='left' >TH-Thực hành tin học</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >88</td>
+<td  align='left' >K15MH144</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ07</td>
+<td  align='left' >Kiến trúc máy tính</td>
+<td  align='left' >Kiến trúc máy tính</td>
+<td  align='right' >2</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >45</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >89</td>
+<td  align='left' >K16MH377</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ36</td>
+<td  align='left' >Project Xây dựng website bán hàng</td>
+<td  align='left' >Project Xây dựng website bán hàng</td>
+<td  align='right' >5</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >155</td>
+<td  align='left' >TH-Thực hành tin học</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >90</td>
+<td  align='left' >K16MH385</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ16</td>
+<td  align='left' style='mso-number-format:\@;' >Thực tập trải nghiệm 1</td>
+<td  align='left' style='mso-number-format:\@;' >Thực tập trải nghiệm 1</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >95</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >91</td>
+<td  align='left' >K16MH437</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ23</td>
+<td  align='left' style='mso-number-format:\@;' >Project 3: Thiết kế đồ hoạ chuyển động</td>
+<td  align='left' style='mso-number-format:\@;' >Project 3: Thiết kế đồ hoạ chuyển động</td>
+<td  align='right' >2</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >60</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >92</td>
+<td  align='left' >K14_MH56</td>
+<td  align='left' >MH26</td>
+<td  align='left' >Lập trình Java</td>
+<td  align='left' >Lập trình Java</td>
+<td  align='right' >4</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >90</td>
+<td  align='left' >TH-Thực hành tin học</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >93</td>
+<td  align='left' >K14_MH118</td>
+<td  align='left' >MH13</td>
+<td  align='left' style='mso-number-format:\@;' >Vẽ bằng máy tính 2</td>
+<td  align='left' style='mso-number-format:\@;' >Vẽ bằng máy tính 2</td>
+<td  align='right' >4</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >90</td>
+<td  align='left' >&nbsp;</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >94</td>
+<td  align='left' >K16MH422_TH</td>
+<td  align='left' >&nbsp;</td>
+<td  align='left' >Lập trình web nâng cao  thực hành</td>
+<td  align='left' >Lập trình web nâng cao</td>
+<td  align='right' >0</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >48</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >95</td>
+<td  align='left' >K16MH430</td>
+<td  align='left' >MH07</td>
+<td  align='left' >Tiếng Anh chuyên ngành</td>
+<td  align='left' >Tiếng Anh chuyên ngành</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >60</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >96</td>
+<td  align='left' >K15MH168</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ12</td>
+<td  align='left' >Cơ sở dữ liệu</td>
+<td  align='left' >Cơ sở dữ liệu</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >82</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >97</td>
+<td  align='left' >K15MH189</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ14</td>
+<td  align='left' >Ứng dụng CNTT trực tuyến</td>
+<td  align='left' >Ứng dụng CNTT trực tuyến</td>
+<td  align='right' >2</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >62</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >98</td>
+<td  align='left' >K16MH194</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ29</td>
+<td  align='left' >Project Phát triển ứng dụng Game trên nền tảng di động</td>
+<td  align='left' >Project Phát triển ứng dụng Game trên nền tảng di động</td>
+<td  align='right' >5</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >155</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >99</td>
+<td  align='left' >K16MH202</td>
+<td  align='left' >MH08</td>
+<td  align='left' >Lắp ráp và cài đặt máy tính</td>
+<td  align='left' >Lắp ráp và cài đặt máy tính</td>
+<td  align='right' >2</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >45</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >100</td>
+<td  align='left' >K16MH209</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ15</td>
+<td  align='left' >Kỹ thuật nhiếp ảnh</td>
+<td  align='left' >Kỹ thuật nhiếp ảnh</td>
+<td  align='right' >2</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >45</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >101</td>
+<td  align='left' >K14MH08</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ14</td>
+<td  align='left' >Chỉnh sửa ảnh</td>
+<td  align='left' >Chỉnh sửa ảnh</td>
+<td  align='right' >4</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >90</td>
+<td  align='left' >TH-Thực hành tin học</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >102</td>
+<td  align='left' >K16MH217</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ23</td>
+<td  align='left' >Tâm lý khách hàng và tư duy thương hiệu</td>
+<td  align='left' >Tâm lý khách hàng và tư duy thương hiệu</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >75</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >103</td>
+<td  align='left' >K15MH523</td>
+<td  align='left' >MH12</td>
+<td  align='left' >Lập trình căn bản</td>
+<td  align='left' >Lập trình căn bản</td>
+<td  align='right' >4</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >90</td>
+<td  align='left' >TH-Thực hành tin học</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >104</td>
+<td  align='left' >K16MH178</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ13</td>
+<td  align='left' >Đồ họa ứng dụng</td>
+<td  align='left' >Đồ họa ứng dụng</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >75</td>
+<td  align='left' >PTH-Phòng thực hành</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >105</td>
+<td  align='left' >K16MH186</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ21</td>
+<td  align='left' >Tiếng Anh chuyên ngành</td>
+<td  align='left' >Tiếng Anh chuyên ngành</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >60</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >106</td>
+<td  align='left' >K15MH213</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ09</td>
+<td  align='left' >Lập trình căn bản</td>
+<td  align='left' >Lập trình căn bản</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >80</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >107</td>
+<td  align='left' >K14_MH40</td>
+<td  align='left' >MH10</td>
+<td  align='left' >Cấu trúc dữ liệu và giải thuật</td>
+<td  align='left' >Cấu trúc dữ liệu và giải thuật</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >60</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >108</td>
+<td  align='left' >K15MH238</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ28</td>
+<td  align='left' >Lập trình .NET nâng cao</td>
+<td  align='left' >Lập trình .NET nâng cao</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >80</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >109</td>
+<td  align='left' >K14_MH48</td>
+<td  align='left' >MH18</td>
+<td  align='left' >Tiếng Anh chuyên ngành</td>
+<td  align='left' >Tiếng Anh chuyên ngành</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >60</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >110</td>
+<td  align='left' >K15MH537</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ26</td>
+<td  align='left' >Thiết kế Lịch</td>
+<td  align='left' >Thiết kế Lịch</td>
+<td  align='right' >4</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >90</td>
+<td  align='left' >TH-Thực hành tin học</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >111</td>
+<td  align='left' >K15MH153</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ16</td>
+<td  align='left' >Lập trình hướng đối tượng</td>
+<td  align='left' >Lập trình hướng đối tượng</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >80</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >112</td>
+<td  align='left' >K15MH545</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ34</td>
+<td  align='left' >Thực tập tốt nghiệp</td>
+<td  align='left' >Thực tập tốt nghiệp</td>
+<td  align='right' >8</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >380</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >113</td>
+<td  align='left' >K15MH161</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ24</td>
+<td  align='left' >Project Phát triển ứng dụng Game trên nền tảng di động</td>
+<td  align='left' >Project Phát triển ứng dụng Game trên nền tảng di động</td>
+<td  align='right' >5</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >155</td>
+<td  align='left' >TH-Thực hành tin học</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >114</td>
+<td  align='left' >K14_MH210</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ30</td>
+<td  align='left' >Thiết kế ứng dụng với ASP.Net</td>
+<td  align='left' >Thiết kế ứng dụng với ASP.Net</td>
+<td  align='right' >4</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >90</td>
+<td  align='left' >TH-Thực hành tin học</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >115</td>
+<td  align='left' >K14_MH218</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ16</td>
+<td  align='left' >Thực tập chuyên ngành</td>
+<td  align='left' >Thực tập chuyên ngành</td>
+<td  align='right' >11</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >300</td>
+<td  align='left' >TH-Thực hành tin học</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >116</td>
+<td  align='left' >K16MH227</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ33</td>
+<td  align='left' style='mso-number-format:\@;' >Project 3: Thiết kế đồ hoạ chuyển động</td>
+<td  align='left' style='mso-number-format:\@;' >Project 3: Thiết kế đồ hoạ chuyển động</td>
+<td  align='right' >2</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >60</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >117</td>
+<td  align='left' >K16MH375</td>
+<td  align='left' >MD34</td>
+<td  align='left' >Quản trị Web Server và Mail Server</td>
+<td  align='left' >Quản trị Web Server và Mail Server</td>
+<td  align='right' >2</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >80</td>
+<td  align='left' >TH-Thực hành tin học</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >118</td>
+<td  align='left' >K15MH197</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ22</td>
+<td  align='left' style='mso-number-format:\@;' >Lập trình C# và windows 1</td>
+<td  align='left' style='mso-number-format:\@;' >Lập trình C# và windows 1</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >80</td>
+<td  align='left' >TH-Thực hành tin học</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >119</td>
+<td  align='left' >K15MH206</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ31</td>
+<td  align='left' >Quản trị Web Server và Mail Server</td>
+<td  align='left' >Quản trị Web Server và Mail Server</td>
+<td  align='right' >2</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >80</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >120</td>
+<td  align='left' >K16MH382</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ34</td>
+<td  align='left' >Quản trị Web Server và Mail Server</td>
+<td  align='left' >Quản trị Web Server và Mail Server</td>
+<td  align='right' >2</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >80</td>
+<td  align='left' >TH-Thực hành tin học</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >121</td>
+<td  align='left' >K16MH398</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ31</td>
+<td  align='left' >Biên tập và tạo kỹ xảo Video</td>
+<td  align='left' >Biên tập và tạo kỹ xảo Video</td>
+<td  align='right' >1</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >20</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >122</td>
+<td  align='left' >K16MH434</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ19</td>
+<td  align='left' style='mso-number-format:\@;' >Project 2: Thiết kế Bộ nhận diện thương hiệu và Thiết kế in ấn</td>
+<td  align='left' style='mso-number-format:\@;' >Project 2: Thiết kế Bộ nhận diện thương hiệu và Thiết kế in ấn</td>
+<td  align='right' >2</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >60</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >123</td>
+<td  align='left' >K14_MH215_TH</td>
+<td  align='left' >&nbsp;</td>
+<td  align='left' >Phát triển ứng dụng di động  thực hành</td>
+<td  align='left' >Phát triển ứng dụng di động</td>
+<td  align='right' >0</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >85</td>
+<td  align='left' >TH-Thực hành tin học</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >124</td>
+<td  align='left' >K14_MH53</td>
+<td  align='left' >MH23</td>
+<td  align='left' >Hệ quản trị cơ sở dữ liệu SQL Server</td>
+<td  align='left' >Hệ quản trị cơ sở dữ liệu SQL Server</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >75</td>
+<td  align='left' >TH-Thực hành tin học</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >125</td>
+<td  align='left' >K14_MH115</td>
+<td  align='left' >MH10</td>
+<td  align='left' style='mso-number-format:\@;' >Mỹ thuật căn bản 1</td>
+<td  align='left' style='mso-number-format:\@;' >Mỹ thuật căn bản 1</td>
+<td  align='right' >4</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >90</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >126</td>
+<td  align='left' >K16MH420</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ31</td>
+<td  align='left' >Quản trị Web Server và Mail Server</td>
+<td  align='left' >Quản trị Web Server và Mail Server</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >80</td>
+<td  align='left' >TH-Thực hành tin học</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >127</td>
+<td  align='left' >K16MH427</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ14</td>
+<td  align='left' >Tâm lý khách hàng và tư duy thương hiệu</td>
+<td  align='left' >Tâm lý khách hàng và tư duy thương hiệu</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >75</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >128</td>
+<td  align='left' >K15MH186</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ11</td>
+<td  align='left' >Lắp ráp và cài đặt máy tính</td>
+<td  align='left' >Lắp ráp và cài đặt máy tính</td>
+<td  align='right' >2</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >45</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >129</td>
+<td  align='left' >K15MH194</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ19</td>
+<td  align='left' >Lập trình web</td>
+<td  align='left' >Lập trình web</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >80</td>
+<td  align='left' >TH-Thực hành tin học</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >130</td>
+<td  align='left' >K16MH191</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ26</td>
+<td  align='left' >Lập trình java nâng cao</td>
+<td  align='left' >Lập trình java nâng cao</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >80</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >131</td>
+<td  align='left' >K16MH199</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ34</td>
+<td  align='left' style='mso-number-format:\@;' >Thực tập trải nghiệm 1</td>
+<td  align='left' style='mso-number-format:\@;' >Thực tập trải nghiệm 1</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >95</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >132</td>
+<td  align='left' >K14_MH221</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ19</td>
+<td  align='left' >Thiết kế dàn trang</td>
+<td  align='left' >Thiết kế dàn trang</td>
+<td  align='right' >5</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >120</td>
+<td  align='left' >TH-Thực hành tin học</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >133</td>
+<td  align='left' >K14_MH229</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ27</td>
+<td  align='left' >Nhập môn đồ họa 3D</td>
+<td  align='left' >Nhập môn đồ họa 3D</td>
+<td  align='right' >4</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >90</td>
+<td  align='left' >TH-Thực hành tin học</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >134</td>
+<td  align='left' >K16MH224</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ30</td>
+<td  align='left' >Đồ hoạ tương tác với Flash</td>
+<td  align='left' >Đồ hoạ tương tác với Flash</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >75</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >135</td>
+<td  align='left' >K16MH372</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ10</td>
+<td  align='left' >Quản lý dự án CNTT</td>
+<td  align='left' >Quản lý dự án CNTT</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >80</td>
+<td  align='left' >TH-Thực hành tin học</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >136</td>
+<td  align='left' >K15MH202</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ27</td>
+<td  align='left' >Phát triển ứng dụng trên thiết bị di động</td>
+<td  align='left' >Phát triển ứng dụng trên thiết bị di động</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >80</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >137</td>
+<td  align='left' >K15MH210</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ35</td>
+<td  align='left' >Thực tập tốt nghiệp</td>
+<td  align='left' >Thực tập tốt nghiệp</td>
+<td  align='right' >8</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >380</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >138</td>
+<td  align='left' >K16MH206</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ11</td>
+<td  align='left' >Cơ sở văn hoá Việt Nam</td>
+<td  align='left' >Cơ sở văn hoá Việt Nam</td>
+<td  align='right' >2</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >54</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >139</td>
+<td  align='left' >K16MH214</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ12</td>
+<td  align='left' >Thiết kế Logo</td>
+<td  align='left' >Thiết kế Logo</td>
+<td  align='right' >2</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >45</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >140</td>
+<td  align='left' >K14MH15</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ28</td>
+<td  align='left' >Đồ họa 3D nâng cao</td>
+<td  align='left' >Đồ họa 3D nâng cao</td>
+<td  align='right' >5</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >120</td>
+<td  align='left' >TH-Thực hành tin học</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >141</td>
+<td  align='left' >K15MH528</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ18</td>
+<td  align='left' >Đồ hoạ ứng dụng với Photoshop</td>
+<td  align='left' >Đồ hoạ ứng dụng với Photoshop</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >75</td>
+<td  align='left' >TH-Thực hành tin học</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >142</td>
+<td  align='left' >K16MH175</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ10</td>
+<td  align='left' >Mạng máy tính</td>
+<td  align='left' >Mạng máy tính</td>
+<td  align='right' >2</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >45</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >143</td>
+<td  align='left' >K16MH183</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ18</td>
+<td  align='left' >Lập trình java</td>
+<td  align='left' >Lập trình java</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >80</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >144</td>
+<td  align='left' >K14_MH37</td>
+<td  align='left' >MH07</td>
+<td  align='left' >Mạng máy tính</td>
+<td  align='left' >Mạng máy tính</td>
+<td  align='right' >2</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >45</td>
+<td  align='left' >&nbsp;</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >145</td>
+<td  align='left' >K15MH235</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ12</td>
+<td  align='left' >Cơ sở dữ liệu</td>
+<td  align='left' >Cơ sở dữ liệu</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >80</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >146</td>
+<td  align='left' >K14_MH45</td>
+<td  align='left' >MH15</td>
+<td  align='left' >An toàn và bảo mật thông tin</td>
+<td  align='left' >An toàn và bảo mật thông tin</td>
+<td  align='right' >2</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >30</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >147</td>
+<td  align='left' >K15MH243</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ33</td>
+<td  align='left' >Project Phát triển ứng dụng Game trên nền tảng di động</td>
+<td  align='left' >Project Phát triển ứng dụng Game trên nền tảng di động</td>
+<td  align='right' >5</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >155</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >148</td>
+<td  align='left' >K15MH534</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ23</td>
+<td  align='left' >Tâm lý khách hàng và tư duy thương hiệu</td>
+<td  align='left' >Tâm lý khách hàng và tư duy thương hiệu</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >75</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >149</td>
+<td  align='left' >K15MH150</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ13</td>
+<td  align='left' >Đồ họa ứng dụng</td>
+<td  align='left' >Đồ họa ứng dụng</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >75</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >150</td>
+<td  align='left' >K15MH542</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ31</td>
+<td  align='left' >Biên tập và tạo kỹ xảo Video</td>
+<td  align='left' >Biên tập và tạo kỹ xảo Video</td>
+<td  align='right' >5</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >120</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >151</td>
+<td  align='left' >K15MH158</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ21</td>
+<td  align='left' >Ứng dụng CNTT trực tuyến</td>
+<td  align='left' >Ứng dụng CNTT trực tuyến</td>
+<td  align='right' >2</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >62</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >152</td>
+<td  align='left' >K14_MH207</td>
+<td  align='left' >MH27</td>
+<td  align='left' >Thiết kế Website với HTML&CSS</td>
+<td  align='left' >Thiết kế Website với HTML&CSS</td>
+<td  align='right' >4</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >90</td>
+<td  align='left' >TH-Thực hành tin học</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >153</td>
+<td  align='left' >K14_MH215</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ35</td>
+<td  align='left' >Phát triển ứng dụng di động</td>
+<td  align='left' >Phát triển ứng dụng di động</td>
+<td  align='right' >5</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >120</td>
+<td  align='left' >TH-Thực hành tin học</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >154</td>
+<td  align='left' >K16MH424</td>
+<td  align='left' >MH08</td>
+<td  align='left' >Cơ sở văn hoá Việt Nam</td>
+<td  align='left' >Cơ sở văn hoá Việt Nam</td>
+<td  align='right' >2</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >54</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >155</td>
+<td  align='left' >K16MH432</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ17</td>
+<td  align='left' >Thiết kế Lịch</td>
+<td  align='left' >Thiết kế Lịch</td>
+<td  align='right' >4</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >90</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >156</td>
+<td  align='left' >K15MH183</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ08</td>
+<td  align='left' >Lập trình trực quan với Scratch</td>
+<td  align='left' >Lập trình trực quan với Scratch</td>
+<td  align='right' >2</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >62</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >157</td>
+<td  align='left' >K15MH191</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ16</td>
+<td  align='left' >Cấu trúc dữ liệu và Giải thuật</td>
+<td  align='left' >Cấu trúc dữ liệu và Giải thuật</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >80</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >158</td>
+<td  align='left' >K16MH188</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ23</td>
+<td  align='left' >Quản lý dự án CNTT</td>
+<td  align='left' >Quản lý dự án CNTT</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >80</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >159</td>
+<td  align='left' >K16MH196</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ31</td>
+<td  align='left' >Quản trị Web Server và Mail Server</td>
+<td  align='left' >Quản trị Web Server và Mail Server</td>
+<td  align='right' >2</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >70</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >160</td>
+<td  align='left' >K14_MH226</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ24</td>
+<td  align='left' >Đồ họa tương tác với Flash</td>
+<td  align='left' >Đồ họa tương tác với Flash</td>
+<td  align='right' >5</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >120</td>
+<td  align='left' >TH-Thực hành tin học</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >161</td>
+<td  align='left' >K15MH146</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ09</td>
+<td  align='left' >Lập trình căn bản</td>
+<td  align='left' >Lập trình căn bản</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >80</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >162</td>
+<td  align='left' >K16MH379</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ34</td>
+<td  align='left' >Quản trị Web Server và Mail Server</td>
+<td  align='left' >Quản trị Web Server và Mail Server</td>
+<td  align='right' >2</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >80</td>
+<td  align='left' >TH-Thực hành tin học</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >163</td>
+<td  align='left' >K15MH621</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ30</td>
+<td  align='left' >Lập trình web nâng cao</td>
+<td  align='left' >Lập trình web nâng cao</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >80</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >164</td>
+<td  align='left' >K16MH439</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ20</td>
+<td  align='left' >Thiết kế Logo</td>
+<td  align='left' >Thiết kế Logo</td>
+<td  align='right' >2</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >45</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >165</td>
+<td  align='left' >K14_MH112</td>
+<td  align='left' >MH07</td>
+<td  align='left' >Mạng căn bản</td>
+<td  align='left' >Mạng căn bản</td>
+<td  align='right' >2</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >45</td>
+<td  align='left' >&nbsp;</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >166</td>
+<td  align='left' >K14_MH120</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ15</td>
+<td  align='left' >Kỹ thuật nhiếp ảnh</td>
+<td  align='left' >Kỹ thuật nhiếp ảnh</td>
+<td  align='right' >2</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >45</td>
+<td  align='left' >TH-Thực hành tin học</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >167</td>
+<td  align='left' >K15MH199</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ24</td>
+<td  align='left' >An toàn và Bảo mật thông tin</td>
+<td  align='left' >An toàn và Bảo mật thông tin</td>
+<td  align='right' >2</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >50</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >168</td>
+<td  align='left' >K15MH204</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ29</td>
+<td  align='left' >Project Phát triển ứng dụng Game trên nền tảng di động</td>
+<td  align='left' >Project Phát triển ứng dụng Game trên nền tảng di động</td>
+<td  align='right' >5</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >155</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >169</td>
+<td  align='left' >K16MH211</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ17</td>
+<td  align='left' >Nghệ thuật chữ</td>
+<td  align='left' >Nghệ thuật chữ</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >75</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >170</td>
+<td  align='left' >K14MH12</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ25</td>
+<td  align='left' >Biên tập video</td>
+<td  align='left' >Biên tập video</td>
+<td  align='right' >4</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >90</td>
+<td  align='left' >TH-Thực hành tin học</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >171</td>
+<td  align='left' >K16MH219</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ25</td>
+<td  align='left' >Minh hoạ và Thiết kế sách</td>
+<td  align='left' >Minh hoạ và Thiết kế sách</td>
+<td  align='right' >4</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >90</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >172</td>
+<td  align='left' >K15MH525</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ14</td>
+<td  align='left' >Hình hoạ</td>
+<td  align='left' >Hình hoạ</td>
+<td  align='right' >4</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >90</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >173</td>
+<td  align='left' >K16MH172</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ07</td>
+<td  align='left' >Kiến trúc máy tính</td>
+<td  align='left' >Kiến trúc máy tính</td>
+<td  align='right' >2</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >45</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >174</td>
+<td  align='left' >K16MH180</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ15</td>
+<td  align='left' >Thiết kế WEB</td>
+<td  align='left' >Thiết kế WEB</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >80</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >175</td>
+<td  align='left' >K15MH215</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ11</td>
+<td  align='left' >Lắp ráp và cài đặt máy tính</td>
+<td  align='left' >Lắp ráp và cài đặt máy tính</td>
+<td  align='right' >2</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >45</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >176</td>
+<td  align='left' >K14_MH42</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ12</td>
+<td  align='left' >Lập trình cơ bản với C#.NET</td>
+<td  align='left' >Lập trình cơ bản với C#.NET</td>
+<td  align='right' >4</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >90</td>
+<td  align='left' >TH-Thực hành tin học</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >177</td>
+<td  align='left' >K15MH240</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ30</td>
+<td  align='left' >Lập trình java nâng cao</td>
+<td  align='left' >Lập trình java nâng cao</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >80</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >178</td>
+<td  align='left' >K14_MH50</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ20</td>
+<td  align='left' >Hệ quản trị cơ sở dữ liệu Access</td>
+<td  align='left' >Hệ quản trị cơ sở dữ liệu Access</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >60</td>
+<td  align='left' >TH-Thực hành tin học</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >179</td>
+<td  align='left' >K15MH531</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ21</td>
+<td  align='left' >Thiết kế dàn trang</td>
+<td  align='left' >Thiết kế dàn trang</td>
+<td  align='right' >4</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >90</td>
+<td  align='left' >TH-Thực hành tin học</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >180</td>
+<td  align='left' >K15MH147</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ10</td>
+<td  align='left' >Mạng máy tính</td>
+<td  align='left' >Mạng máy tính</td>
+<td  align='right' >2</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >45</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >181</td>
+<td  align='left' >K15MH539</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ28</td>
+<td  align='left' style='mso-number-format:\@;' >Project 2: Thiết kế Bộ nhận diện thương hiệu và Thiết kế in ấn</td>
+<td  align='left' style='mso-number-format:\@;' >Project 2: Thiết kế Bộ nhận diện thương hiệu và Thiết kế in ấn</td>
+<td  align='right' >2</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >60</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >182</td>
+<td  align='left' >K15MH155</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ18</td>
+<td  align='left' >Hệ quản trị Cơ sở dữ liệu</td>
+<td  align='left' >Hệ quản trị Cơ sở dữ liệu</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >80</td>
+<td  align='left' >PTH-Phòng thực hành</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >183</td>
+<td  align='left' >K14_MH204</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ24</td>
+<td  align='left' >Lập trình ADO.Net</td>
+<td  align='left' >Lập trình ADO.Net</td>
+<td  align='right' >4</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >90</td>
+<td  align='left' >TH-Thực hành tin học</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >184</td>
+<td  align='left' >K14_MH212</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ32</td>
+<td  align='left' >Lập trình Web với PHP và MySQL</td>
+<td  align='left' >Lập trình Web với PHP và MySQL</td>
+<td  align='right' >4</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >90</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >185</td>
+<td  align='left' >K16MH221</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ27</td>
+<td  align='left' >Thiết kế sự kiện</td>
+<td  align='left' >Thiết kế sự kiện</td>
+<td  align='right' >4</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >90</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >186</td>
+<td  align='left' >K16MH369</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ07</td>
+<td  align='left' >Lập trình trực quan với Scratch</td>
+<td  align='left' >Lập trình trực quan với Scratch</td>
+<td  align='right' >2</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >62</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >187</td>
+<td  align='left' >K14_MH223</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ21</td>
+<td  align='left' style='mso-number-format:\@;' >Mỹ thuật căn bản 3</td>
+<td  align='left' style='mso-number-format:\@;' >Mỹ thuật căn bản 3</td>
+<td  align='right' >4</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >90</td>
+<td  align='left' >PTH-Phòng thực hành</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >188</td>
+<td  align='left' >K14_MH231</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ29</td>
+<td  align='left' >Thực tập tốt nghiệp</td>
+<td  align='left' >Thực tập tốt nghiệp</td>
+<td  align='right' >15</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >400</td>
+<td  align='left' >TH-Thực hành tin học</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >189</td>
+<td  align='left' >K16MH376</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ35</td>
+<td  align='left' >Phát triển Web bằng phần mềm mã nguồn mở</td>
+<td  align='left' >Phát triển Web bằng phần mềm mã nguồn mở</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >80</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >190</td>
+<td  align='left' >K16MH384</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ33</td>
+<td  align='left' >Lập trình web nâng cao</td>
+<td  align='left' >Lập trình web nâng cao</td>
+<td  align='right' >4</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >90</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >191</td>
+<td  align='left' >K16MH436</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ21</td>
+<td  align='left' >Đồ hoạ tương tác với Flash</td>
+<td  align='left' >Đồ hoạ tương tác với Flash</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >75</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >192</td>
+<td  align='left' >K14_MH55</td>
+<td  align='left' >MH25</td>
+<td  align='left' >Thiết kế Website với HTML&CSS</td>
+<td  align='left' >Thiết kế Website với HTML&CSS</td>
+<td  align='right' >4</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >90</td>
+<td  align='left' >TH-Thực hành tin học</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >193</td>
+<td  align='left' >K14_MH117</td>
+<td  align='left' >MH12</td>
+<td  align='left' style='mso-number-format:\@;' >Vẽ bằng máy tính 1</td>
+<td  align='left' style='mso-number-format:\@;' >Vẽ bằng máy tính 1</td>
+<td  align='right' >4</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >90</td>
+<td  align='left' >&nbsp;</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >194</td>
+<td  align='left' >K16MH422</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ12</td>
+<td  align='left' >Lập trình web nâng cao</td>
+<td  align='left' >Lập trình web nâng cao</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >80</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >195</td>
+<td  align='left' >K16MH429</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ16</td>
+<td  align='left' >Minh hoạ và Thiết kế sách</td>
+<td  align='left' >Minh hoạ và Thiết kế sách</td>
+<td  align='right' >4</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >90</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >196</td>
+<td  align='left' >K15MH188</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ13</td>
+<td  align='left' >Đồ họa ứng dụng</td>
+<td  align='left' >Đồ họa ứng dụng</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >75</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >197</td>
+<td  align='left' >K15MH196</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ21</td>
+<td  align='left' >Tiếng Anh chuyên ngành</td>
+<td  align='left' >Tiếng Anh chuyên ngành</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >60</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >198</td>
+<td  align='left' >K16MH193</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ28</td>
+<td  align='left' >Lập trình Game Mobile</td>
+<td  align='left' >Lập trình Game Mobile</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >80</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >199</td>
+<td  align='left' >K16MH201</td>
+<td  align='left' >MH07</td>
+<td  align='left' >Mạng căn bản</td>
+<td  align='left' >Mạng căn bản</td>
+<td  align='right' >2</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >45</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >200</td>
+<td  align='left' >K16MH185</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ20</td>
+<td  align='left' >Hệ quản trị Cơ sở dữ liệu</td>
+<td  align='left' >Hệ quản trị Cơ sở dữ liệu</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >80</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >201</td>
+<td  align='left' >K14_MH39</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ09</td>
+<td  align='left' >Lập trình căn bản</td>
+<td  align='left' >Lập trình căn bản</td>
+<td  align='right' >4</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >90</td>
+<td  align='left' >TH-Thực hành tin học</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >202</td>
+<td  align='left' >K15MH237</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ27</td>
+<td  align='left' >Lập trình với cơ sở dữ liệu</td>
+<td  align='left' >Lập trình với cơ sở dữ liệu</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >80</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >203</td>
+<td  align='left' >K14_MH47</td>
+<td  align='left' >MH17</td>
+<td  align='left' >Khai thác phần mềm quản lý dự án</td>
+<td  align='left' >Khai thác phần mềm quản lý dự án</td>
+<td  align='right' >1</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >30</td>
+<td  align='left' >TH-Thực hành tin học</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >204</td>
+<td  align='left' >K14MH07</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ17</td>
+<td  align='left' style='mso-number-format:\@;' >Mỹ thuật căn bản 2</td>
+<td  align='left' style='mso-number-format:\@;' >Mỹ thuật căn bản 2</td>
+<td  align='right' >4</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >90</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >205</td>
+<td  align='left' >K15MH536</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ25</td>
+<td  align='left' >Minh hoạ và Thiết kế sách</td>
+<td  align='left' >Minh hoạ và Thiết kế sách</td>
+<td  align='right' >4</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >90</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >206</td>
+<td  align='left' >K15MH152</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ15</td>
+<td  align='left' >Thiết kế WEB</td>
+<td  align='left' >Thiết kế WEB</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >80</td>
+<td  align='left' >TH-Thực hành tin học</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >207</td>
+<td  align='left' >K15MH544</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ33</td>
+<td  align='left' style='mso-number-format:\@;' >Project 3: Thiết kế đồ hoạ chuyển động</td>
+<td  align='left' style='mso-number-format:\@;' >Project 3: Thiết kế đồ hoạ chuyển động</td>
+<td  align='right' >2</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >60</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >208</td>
+<td  align='left' >K15MH160</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ23</td>
+<td  align='left' >Lập trình Game Mobile</td>
+<td  align='left' >Lập trình Game Mobile</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >80</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >209</td>
+<td  align='left' >K14_MH209</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ29</td>
+<td  align='left' >Project (Thiết kế website tin tức)</td>
+<td  align='left' >Project (Thiết kế website tin tức)</td>
+<td  align='right' >4</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >90</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >210</td>
+<td  align='left' >K14_MH217</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ37</td>
+<td  align='left' >Thực tập tốt nghiệp</td>
+<td  align='left' >Thực tập tốt nghiệp</td>
+<td  align='right' >14</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >380</td>
+<td  align='left' >&nbsp;</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >211</td>
+<td  align='left' >K16MH226</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ32</td>
+<td  align='left' >Nhập môn Đồ hoạ 3D</td>
+<td  align='left' >Nhập môn Đồ hoạ 3D</td>
+<td  align='right' >4</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >90</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >212</td>
+<td  align='left' >K16MH374</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ33</td>
+<td  align='left' >Lập trình web nâng cao</td>
+<td  align='left' >Lập trình web nâng cao</td>
+<td  align='right' >4</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >80</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >213</td>
+<td  align='left' >K15MH205</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ30</td>
+<td  align='left' >Lập trình web nâng cao</td>
+<td  align='left' >Lập trình web nâng cao</td>
+<td  align='right' >4</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >80</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >214</td>
+<td  align='left' >K15MH212</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ08</td>
+<td  align='left' >Lập trình trực quan với Scratch</td>
+<td  align='left' >Lập trình trực quan với Scratch</td>
+<td  align='right' >2</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >62</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >215</td>
+<td  align='left' >K16MH208</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ14</td>
+<td  align='left' >Hình hoạ</td>
+<td  align='left' >Hình hoạ</td>
+<td  align='right' >4</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >90</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >216</td>
+<td  align='left' >K16MH216</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ13</td>
+<td  align='left' style='mso-number-format:\@;' >Project 1: Thiết kế Poster, Banner, Standee</td>
+<td  align='left' style='mso-number-format:\@;' >Project 1: Thiết kế Poster, Banner, Standee</td>
+<td  align='right' >2</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >60</td>
+<td  align='left' >PTH-Phòng thực hành</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >217</td>
+<td  align='left' >K15MH522</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ11</td>
+<td  align='left' >Cơ sở văn hoá Việt Nam</td>
+<td  align='left' >Cơ sở văn hoá Việt Nam</td>
+<td  align='right' >2</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >54</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >218</td>
+<td  align='left' >K15MH530</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ20</td>
+<td  align='left' >Thiết kế Logo</td>
+<td  align='left' >Thiết kế Logo</td>
+<td  align='right' >2</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >45</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >219</td>
+<td  align='left' >K16MH177</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ12</td>
+<td  align='left' >Cơ sở dữ liệu</td>
+<td  align='left' >Cơ sở dữ liệu</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >80</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >220</td>
+<td  align='left' >K14_MH114</td>
+<td  align='left' >MH09</td>
+<td  align='left' >Lập trình căn bản</td>
+<td  align='left' >Lập trình căn bản</td>
+<td  align='right' >4</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >90</td>
+<td  align='left' >K-Khác</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >221</td>
+<td  align='left' >K14_MH122</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ17</td>
+<td  align='left' >Thiết kế các mẫu quảng cáo</td>
+<td  align='left' >Thiết kế các mẫu quảng cáo</td>
+<td  align='right' >4</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >90</td>
+<td  align='left' >TH-Thực hành tin học</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >222</td>
+<td  align='left' >K16MH419</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ30</td>
+<td  align='left' >Lập trình web nâng cao</td>
+<td  align='left' >Lập trình web nâng cao</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >80</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >223</td>
+<td  align='left' >K16MH426</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ11</td>
+<td  align='left' >Nghệ thuật chữ</td>
+<td  align='left' >Nghệ thuật chữ</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >75</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >224</td>
+<td  align='left' >K15MH185</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ10</td>
+<td  align='left' >Mạng máy tính</td>
+<td  align='left' >Mạng máy tính</td>
+<td  align='right' >2</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >45</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >225</td>
+<td  align='left' >K15MH193</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ18</td>
+<td  align='left' >Lập trình java</td>
+<td  align='left' >Lập trình java</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >80</td>
+<td  align='left' >TH-Thực hành tin học</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >226</td>
+<td  align='left' >K16MH190</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ25</td>
+<td  align='left' >Phân tích thiết kế hệ thống</td>
+<td  align='left' >Phân tích thiết kế hệ thống</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >80</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >227</td>
+<td  align='left' >K16MH198</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ33</td>
+<td  align='left' >Project Xây dựng website bán hàng</td>
+<td  align='left' >Project Xây dựng website bán hàng</td>
+<td  align='right' >5</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >155</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >228</td>
+<td  align='left' >K14_MH220</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ18</td>
+<td  align='left' >Thiết kế các mẫu quảng cáo</td>
+<td  align='left' >Thiết kế các mẫu quảng cáo</td>
+<td  align='right' >4</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >90</td>
+<td  align='left' >TH-Thực hành tin học</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >229</td>
+<td  align='left' >K14_MH228</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ26</td>
+<td  align='left' >Tạo kỹ xảo video</td>
+<td  align='left' >Tạo kỹ xảo video</td>
+<td  align='right' >6</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >150</td>
+<td  align='left' >TH-Thực hành tin học</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >230</td>
+<td  align='left' >K16MH381</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ15</td>
+<td  align='left' >Project Xây dựng website bán hàng</td>
+<td  align='left' >Project Xây dựng website bán hàng</td>
+<td  align='right' >5</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >155</td>
+<td  align='left' >TH-Thực hành tin học</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >231</td>
+<td  align='left' >K15MH623</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ25</td>
+<td  align='left' >Thực tập tốt nghiệp</td>
+<td  align='left' >Thực tập tốt nghiệp</td>
+<td  align='right' >5</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >225</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >232</td>
+<td  align='left' >K14_MH115_TH</td>
+<td  align='left' >&nbsp;</td>
+<td  align='left' style='mso-number-format:\@;' >Mỹ thuật căn bản 1  thực hành</td>
+<td  align='left' style='mso-number-format:\@;' >Mỹ thuật căn bản 1</td>
+<td  align='right' >0</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >48</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >233</td>
+<td  align='left' >K15MH201</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ26</td>
+<td  align='left' >Lập trình java nâng cao</td>
+<td  align='left' >Lập trình java nâng cao</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >80</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >234</td>
+<td  align='left' >K15MH209</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ34</td>
+<td  align='left' style='mso-number-format:\@;' >Thực tập trải nghiệm 1</td>
+<td  align='left' style='mso-number-format:\@;' >Thực tập trải nghiệm 1</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >95</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >235</td>
+<td  align='left' >K16MH205</td>
+<td  align='left' >MH12</td>
+<td  align='left' >Lập trình căn bản</td>
+<td  align='left' >Lập trình căn bản</td>
+<td  align='right' >4</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >90</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >236</td>
+<td  align='left' >K16MH213</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ19</td>
+<td  align='left' >Thiết kế minh họa với Adobe Illustrator</td>
+<td  align='left' >Thiết kế minh họa với Adobe Illustrator</td>
+<td  align='right' >4</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >90</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >237</td>
+<td  align='left' >K14MH14</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ27</td>
+<td  align='left' >Nhập môn đồ họa 3D</td>
+<td  align='left' >Nhập môn đồ họa 3D</td>
+<td  align='right' >4</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >90</td>
+<td  align='left' >TH-Thực hành tin học</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >238</td>
+<td  align='left' >K15MH527</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ17</td>
+<td  align='left' >Nghệ thuật chữ</td>
+<td  align='left' >Nghệ thuật chữ</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >75</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >239</td>
+<td  align='left' >K16MH174</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ09</td>
+<td  align='left' >Lập trình căn bản</td>
+<td  align='left' >Lập trình căn bản</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >80</td>
+<td  align='left' >PTH-Phòng thực hành</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >240</td>
+<td  align='left' >K16MH182</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ17</td>
+<td  align='left' >Lập trình hướng đối tượng</td>
+<td  align='left' >Lập trình hướng đối tượng</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >80</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >241</td>
+<td  align='left' >K15MH230</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ21</td>
+<td  align='left' >Lập trình Java nâng cao</td>
+<td  align='left' >Lập trình Java nâng cao</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >80</td>
+<td  align='left' >TH-Thực hành tin học</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >242</td>
+<td  align='left' >K14_MH44</td>
+<td  align='left' >MH14</td>
+<td  align='left' >Kiến trúc máy tính</td>
+<td  align='left' >Kiến trúc máy tính</td>
+<td  align='right' >2</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >45</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >243</td>
+<td  align='left' >K15MH242</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ32</td>
+<td  align='left' >Lập trình Game Mobile</td>
+<td  align='left' >Lập trình Game Mobile</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >80</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >244</td>
+<td  align='left' >K14_MH52</td>
+<td  align='left' >MH22</td>
+<td  align='left' >Lập trình với VB.NET</td>
+<td  align='left' >Lập trình với VB.NET</td>
+<td  align='right' >4</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >90</td>
+<td  align='left' >TH-Thực hành tin học</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >245</td>
+<td  align='left' >K15MH533</td>
+<td  align='left' >MH09</td>
+<td  align='left' >Tiếng Anh chuyên ngành</td>
+<td  align='left' >Tiếng Anh chuyên ngành</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >60</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >246</td>
+<td  align='left' >K15MH149</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ12</td>
+<td  align='left' >Cơ sở dữ liệu</td>
+<td  align='left' >Cơ sở dữ liệu</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >82</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >247</td>
+<td  align='left' >K15MH541</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ30</td>
+<td  align='left' >Đồ hoạ tương tác với Flash</td>
+<td  align='left' >Đồ hoạ tương tác với Flash</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >75</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >248</td>
+<td  align='left' >K15MH157</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ20</td>
+<td  align='left' >Tiếng Anh chuyên ngành</td>
+<td  align='left' >Tiếng Anh chuyên ngành</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >60</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >249</td>
+<td  align='left' >K14_MH206</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ26</td>
+<td  align='left' >Đồ họa ứng dụng</td>
+<td  align='left' >Đồ họa ứng dụng</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >75</td>
+<td  align='left' >TH-Thực hành tin học</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >250</td>
+<td  align='left' >K14_MH214</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ34</td>
+<td  align='left' >Lập trình Java</td>
+<td  align='left' >Lập trình Java</td>
+<td  align='right' >4</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >90</td>
+<td  align='left' >TH-Thực hành tin học</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >251</td>
+<td  align='left' >K16MH223</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ29</td>
+<td  align='left' style='mso-number-format:\@;' >Thực tập 1: Trải nghiệp doanh nghiệp</td>
+<td  align='left' style='mso-number-format:\@;' >Thực tập 1: Trải nghiệp doanh nghiệp</td>
+<td  align='right' >2</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >100</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >252</td>
+<td  align='left' >K16MH371</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ09</td>
+<td  align='left' style='mso-number-format:\@;' >Lập trình C# và windows 1</td>
+<td  align='left' style='mso-number-format:\@;' >Lập trình C# và windows 1</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >80</td>
+<td  align='left' >TH-Thực hành tin học</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >253</td>
+<td  align='left' >K16MH195</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ30</td>
+<td  align='left' >Lập trình web nâng cao</td>
+<td  align='left' >Lập trình web nâng cao</td>
+<td  align='right' >4</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >90</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >254</td>
+<td  align='left' >K16MH203</td>
+<td  align='left' >MH09</td>
+<td  align='left' >Tiếng Anh chuyên ngành</td>
+<td  align='left' >Tiếng Anh chuyên ngành</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >60</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >255</td>
+<td  align='left' >K14_MH225</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ23</td>
+<td  align='left' >Tâm lý khách hàng & tư duy thương hiệu</td>
+<td  align='left' >Tâm lý khách hàng & tư duy thương hiệu</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >60</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >256</td>
+<td  align='left' >K15MH145</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ08</td>
+<td  align='left' >Lập trình trực quan với Scratch</td>
+<td  align='left' >Lập trình trực quan với Scratch</td>
+<td  align='right' >2</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >62</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >257</td>
+<td  align='left' >K16MH378</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ34</td>
+<td  align='left' >Quản trị Web Server và Mail Server</td>
+<td  align='left' >Quản trị Web Server và Mail Server</td>
+<td  align='right' >2</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >80</td>
+<td  align='left' >TH-Thực hành tin học</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >258</td>
+<td  align='left' >K16MH386</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ17</td>
+<td  align='left' >Thực tập tốt nghiệp</td>
+<td  align='left' >Thực tập tốt nghiệp</td>
+<td  align='right' >8</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >380</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >259</td>
+<td  align='left' >K16MH438</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ24</td>
+<td  align='left' >Thực tập tốt nghiệp</td>
+<td  align='left' >Thực tập tốt nghiệp</td>
+<td  align='right' >8</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >400</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >260</td>
+<td  align='left' >K14_MH57</td>
+<td  align='left' >MH27</td>
+<td  align='left' >Thực tập tốt nghiệp</td>
+<td  align='left' >Thực tập tốt nghiệp</td>
+<td  align='right' >14</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >380</td>
+<td  align='left' >TH-Thực hành tin học</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >261</td>
+<td  align='left' >K14_MH119</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ14</td>
+<td  align='left' >Chỉnh sửa ảnh</td>
+<td  align='left' >Chỉnh sửa ảnh</td>
+<td  align='right' >4</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >90</td>
+<td  align='left' >TH-Thực hành tin học</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >262</td>
+<td  align='left' >K16MH423</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ13</td>
+<td  align='left' >Quản trị Web Server và Mail Server</td>
+<td  align='left' >Quản trị Web Server và Mail Server</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >80</td>
+<td  align='left' >PTH-Phòng thực hành</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >263</td>
+<td  align='left' >K16MH431</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ09</td>
+<td  align='left' >Kỹ thuật nhiếp ảnh</td>
+<td  align='left' >Kỹ thuật nhiếp ảnh</td>
+<td  align='right' >2</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Tín chỉ</td>
+<td  align='right' >45</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >264</td>
+<td  align='left' >K15MH182</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ07</td>
+<td  align='left' >Kiến trúc máy tính</td>
+<td  align='left' >Kiến trúc máy tính</td>
+<td  align='right' >2</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >45</td>
+<td  align='left' >LT-Lý thuyết</td>
+</tr>
+<tr class="body">
+<td  align='center' width='5%' class = 'bold' >265</td>
+<td  align='left' >K15MH190</td>
+<td  align='left' style='mso-number-format:\@;' >MĐ15</td>
+<td  align='left' >Thiết kế WEB</td>
+<td  align='left' >Thiết kế WEB</td>
+<td  align='right' >3</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Khoa Công nghệ thông tin</td>
+<td  align='left' >CNTT</td>
+<td  align='left' >Công nghệ thông tin</td>
+<td  align='left' >Niên chế</td>
+<td  align='right' >80</td>
+<td  align='left' >TH-Thực hành tin học</td>
+</tr>
+</table>

@@ -1,0 +1,48 @@
+﻿Thứ,Buổi,Tiết,Lớp,Mã môn,Tên môn,Giảng viên,Mã GV,Yêu cầu phòng (projects/rooms),Phòng,Mã tính chất phòng (rooms.csv),Tuần từ,Tuần đến
+Thứ 2,Sáng,1–5,LT601-K15,K15MH242,Lập trình Game Mobile,Lê Văn Hội,CT176,LT,107-N4,LT,24,52
+Thứ 2,Sáng,1–5,TK601-K15,K15MH538,Thiết kế sự kiện,Nguyễn Thị Thanh Thủy,GV140,LT,106-N4,LT,24,52
+Thứ 2,Sáng,1–5,TK601-K16,K16MH211,Nghệ thuật chữ,Nguyễn Thị Diệu Mỹ,CT204,LT,102-N4,LT,24,52
+Thứ 2,Sáng,1–5,TK602-K15,K15MH539,Project 2: Thiết kế Bộ nhận diện thương hiệu và Thiết kế in ấn,Đặng Văn Nam,GV251,LT,105-N4,LT,24,52
+Thứ 2,Sáng,1–5,TK602-K16LT,K16MH429,Minh hoạ và Thiết kế sách,Phạm Thị Thúy An,CT161,LT,101-N4,LT,24,52
+Thứ 2,Sáng,1–5,TT601-K15,K15MH621,Lập trình web nâng cao,Nguyễn Thị Luyện,GV164,LT,104-N4,LT,24,52
+Thứ 2,Sáng,1–5,TT601-K16,K16MH185,Hệ quản trị Cơ sở dữ liệu,Vũ Quốc Cường,CT192,LT,103-N4,LT,24,52
+Thứ 2,Sáng,1–5,TT602-K14,K14_MH214,Lập trình Java,Lê Văn Quân,CT212,TH,203-N1 (PHONG MAY),TH,24,52
+Thứ 2,Sáng,1–5,TT602-K16LT,K16MH423,Quản trị Web Server và Mail Server,Lê Thị Mai,GV093,TH,202 (PHONG MAY),TH,24,52
+Thứ 3,Sáng,1–5,LT601-K15,K15MH241,Phát triển ứng dụng trên thiết bị di động,Lê Văn Quân,CT212,LT,107-N4,LT,24,52
+Thứ 3,Sáng,1–5,TK601-K15,K15MH539,Project 2: Thiết kế Bộ nhận diện thương hiệu và Thiết kế in ấn,Phạm Thị Thúy An,CT161,LT,106-N4,LT,24,52
+Thứ 3,Sáng,1–5,TK601-K16,K16MH210,Cơ sở tạo hình,Lê Thị Minh Loan,GV169,LT,102-N4,LT,24,52
+Thứ 3,Sáng,1–5,TK602-K15,K15MH538,Thiết kế sự kiện,Nguyễn Thị Thanh Thủy,GV140,LT,105-N4,LT,24,52
+Thứ 3,Sáng,1–5,TK602-K16LT,K16MH428,Thiết kế bao bì và in ấn chế bản,Nguyễn Thị Diệu Mỹ,CT204,LT,101-N4,LT,24,52
+Thứ 3,Sáng,1–5,TT601-K15,K15MH622,Quản trị Web Server và Mail Server,Lê Thị Mai,GV093,LT,104-N4,LT,24,52
+Thứ 3,Sáng,1–5,TT601-K16,K16MH184,Lập trình web,Nguyễn Thị Liên,CT112,LT,103-N4,LT,24,52
+Thứ 3,Sáng,1–5,TT602-K14,K14_MH215,Phát triển ứng dụng di động,Lê Văn Hội,CT176,TH,202 (PHONG MAY),TH,24,52
+Thứ 3,Sáng,1–5,TT602-K16LT,K16MH381,Project Xây dựng website bán hàng,Vũ Quốc Cường,CT192,TH,203-N1 (PHONG MAY),TH,24,52
+Thứ 4,Sáng,1–5,LT601-K15,K15MH240,Lập trình java nâng cao,Lê Huy Hoàng,GV266,LT,107-N4,LT,24,52
+Thứ 4,Sáng,1–5,TK601-K15,K15MH537,Thiết kế Lịch,Lê Diễm Quỳnh,CT224,TH,203-N1 (PHONG MAY),TH,24,52
+Thứ 4,Sáng,1–5,TK601-K16,K16MH208,Hình hoạ,Nguyễn Văn Thạch,GV146,LT,102-N4,LT,24,52
+Thứ 4,Sáng,1–5,TK602-K15,K15MH537,Thiết kế Lịch,Lê Thị Minh Loan,GV169,TH,202 (PHONG MAY),TH,24,52
+Thứ 4,Sáng,1–5,TK602-K16LT,K16MH427,Tâm lý khách hàng và tư duy thương hiệu,Lê Ngọc Hà,GV145,LT,101-N4,LT,24,52
+Thứ 4,Sáng,1–5,TT601-K15,K15MH207,Phát triển Web bằng phần mềm mã nguồn mở,Nguyễn Thị Luyện,GV164,LT,104-N4,LT,24,52
+Thứ 4,Sáng,1–5,TT601-K16,K16MH182,Lập trình hướng đối tượng,Lê Văn Quân,CT212,LT,103-N4,LT,24,52
+Thứ 4,Sáng,1–5,TT602-K16LT,K16MH381,Project Xây dựng website bán hàng,Vũ Quốc Cường,CT192,TH,305 (PHONG MAY),TH,24,52
+Thứ 5,Sáng,1–5,TK601-K15,K15MH534,Tâm lý khách hàng và tư duy thương hiệu,Lê Ngọc Hà,GV145,LT,106-N4,LT,24,52
+Thứ 5,Sáng,1–5,TK601-K16,K16MH207,Đồ hoạ căn bản,Phạm Thị Thúy An,CT161,LT,103-N4,LT,24,52
+Thứ 5,Sáng,1–5,TK602-K15,K15MH536,Minh hoạ và Thiết kế sách,Lê Diễm Quỳnh,CT224,LT,105-N4,LT,24,52
+Thứ 5,Sáng,1–5,TK602-K16LT,K16MH426,Nghệ thuật chữ,Nguyễn Thị Diệu Mỹ,CT204,LT,101-N4,LT,24,52
+Thứ 5,Sáng,1–5,TT601-K14,K14_MH215,Phát triển ứng dụng di động,Lê Văn Quân,CT212,TH,204-N1 (PHONG MAY),TH,24,52
+Thứ 5,Sáng,1–5,TT601-K16,K16MH181,Cấu trúc dữ liệu và Giải thuật,Vũ Mạnh Hùng(1),CT216,LT,104-N4,LT,24,52
+Thứ 5,Sáng,1–5,TT602-K16LT,K16MH380,Phát triển Web bằng phần mềm mã nguồn mở,Nguyễn Thị Luyện,GV164,LT,102-N4,LT,24,52
+Thứ 6,Sáng,1–5,TK601-K15,K15MH536,Minh hoạ và Thiết kế sách,Phạm Thị Thúy An,CT161,LT,106-N4,LT,24,52
+Thứ 6,Sáng,1–5,TK601-K16,K16MH205,Lập trình căn bản,Nguyễn Thị Liên,CT112,LT,103-N4,LT,24,52
+Thứ 6,Sáng,1–5,TK602-K15,K15MH535,Thiết kế bao bì và in ấn chế bản,Nguyễn Thị Diệu Mỹ,CT204,LT,105-N4,LT,24,52
+Thứ 6,Sáng,1–5,TK602-K16LT,K16MH425,Cơ sở tạo hình,Lê Thị Minh Loan,GV169,LT,101-N4,LT,24,52
+Thứ 6,Sáng,1–5,TT601-K14,K14_MH214,Lập trình Java,Lê Văn Quân,CT212,TH,202 (PHONG MAY),TH,24,52
+Thứ 6,Sáng,1–5,TT601-K16,K16MH180,Thiết kế WEB,Vũ Quốc Cường,CT192,LT,104-N4,LT,24,52
+Thứ 6,Sáng,1–5,TT602-K16LT,K16MH370,Ứng dụng CNTT trực tuyến,Lê Văn Tâm,GV091,LT,102-N4,LT,24,52
+Thứ 7,Sáng,1–5,LT601-K15,K15MH243,Project Phát triển ứng dụng Game trên nền tảng di động,Lê Văn Hội,CT176,LT,KHU 9-NHA N2,LT,24,52
+Thứ 7,Sáng,1–5,TK601-K15,K15MH535,Thiết kế bao bì và in ấn chế bản,Nguyễn Thị Diệu Mỹ,CT204,LT,103-N4,LT,24,52
+Thứ 7,Sáng,1–5,TK602-K15,K15MH534,Tâm lý khách hàng và tư duy thương hiệu,Lê Ngọc Hà,GV145,LT,102-N4,LT,24,52
+Thứ 7,Sáng,1–5,TT601-K15,K15MH208,Project Xây dựng website bán hàng,Vũ Quốc Cường,CT192,LT,XUONG NAU AN,LT,24,52
+Thứ 7,Sáng,1–5,TT601-K16,K16MH179,Ứng dụng CNTT trực tuyến,Lê Văn Tâm,GV091,LT,101-N4,LT,24,52
+Chủ nhật,Sáng,1–5,LT601-K15,K15MH243,Project Phát triển ứng dụng Game trên nền tảng di động,Lê Văn Hội,CT176,LT,103-N4,LT,24,52
+Chủ nhật,Sáng,1–5,TT601-K15,K15MH208,Project Xây dựng website bán hàng,Vũ Quốc Cường,CT192,LT,411-N1,LT,24,52

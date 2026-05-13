@@ -1,0 +1,57 @@
+﻿teacher_id,username,teacher_name,gender,status,department_name,unit_name,phone,campus_name,teacher_type,is_active
+CT112,CT112,Nguyễn Thị Liên,Nữ,Đang công tác,Khoa Công nghệ thông tin,Công nghệ thông tin,,Cơ sở Hà Nội,Giảng viên cơ hữu,1
+CT128,CT128,Trần Bá Phan,Nam,Đang công tác,Khoa Công nghệ thông tin,Công nghệ thông tin,,Cơ sở Hà Nội,Giảng viên thỉnh giảng,1
+CT147,CT147,Nguyễn Trí Sang,Nam,Đã nghỉ,Khoa Công nghệ thông tin,Công nghệ thông tin,,Cơ sở Hà Nội,Giảng viên cơ hữu,0
+CT159,ct159,Nguyễn Thị Minh Thu,Nữ,Đang công tác,Khoa Công nghệ thông tin,Công nghệ thông tin,,Cơ sở Hà Nội,Giảng viên cơ hữu,1
+CT161,ct161,Phạm Thị Thúy An,Nữ,Đang công tác,Khoa Công nghệ thông tin,Công nghệ thông tin,,Cơ sở Hà Nội,Giảng viên thỉnh giảng,1
+CT172,ct172,Đỗ Tiến Thịnh,Nam,Đang công tác,Khoa Công nghệ thông tin,Công nghệ thông tin,,Cơ sở Hà Nội,Giảng viên thỉnh giảng,1
+CT176,ct176,Lê Văn Hội,Nam,Đang công tác,Khoa Công nghệ thông tin,Công nghệ thông tin,936114790,Cơ sở Hà Nội,Giảng viên cơ hữu,1
+CT188,ct188,Lâm Anh Quân,Nam,Đã nghỉ,Khoa Công nghệ thông tin,Công nghệ thông tin,,Cơ sở Hà Nội,Giảng viên cơ hữu,0
+CT192,ct192,Vũ Quốc Cường,Nam,Đang công tác,Khoa Công nghệ thông tin,Công nghệ thông tin,,Cơ sở Hà Nội,Giảng viên cơ hữu,1
+CT204,ct204,Nguyễn Thị Diệu Mỹ,Nữ,Đang công tác,Khoa Công nghệ thông tin,Công nghệ thông tin,,Cơ sở Hà Nội,Giảng viên cơ hữu,1
+CT212,ct212,Lê Văn Quân,Nam,Đang công tác,Khoa Công nghệ thông tin,Công nghệ thông tin,,Cơ sở Hà Nội,Giảng viên cơ hữu,1
+CT216,ct216,Vũ Mạnh Hùng(1),Nam,Đang công tác,Khoa Công nghệ thông tin,Công nghệ thông tin,,Cơ sở Hà Nội,Giảng viên cơ hữu,1
+CT217,ct217,Vũ Quốc Cường(1),Nam,Đang công tác,Khoa Công nghệ thông tin,Công nghệ thông tin,,Cơ sở Hà Nội,Giảng viên cơ hữu,1
+CT218,ct218,Phạm Thị Thúy An(1),Nữ,Đang công tác,Khoa Công nghệ thông tin,Công nghệ thông tin,,Cơ sở Hà Nội,Giảng viên thỉnh giảng,1
+CT220,ct220,Nguyễn Thị Minh Thu(1),Nữ,Đang công tác,Khoa Công nghệ thông tin,Công nghệ thông tin,,Cơ sở Hà Nội,Giảng viên cơ hữu,1
+CT224,ct224,Lê Diễm Quỳnh,Nữ,Đang công tác,Khoa Công nghệ thông tin,Công nghệ thông tin,,Cơ sở Hà Nội,Giảng viên cơ hữu,1
+CT225,ct225,Nguyễn Thị Diệu Mỹ (1),Nữ,Đang công tác,Khoa Công nghệ thông tin,Công nghệ thông tin,,Cơ sở Hà Nội,Giảng viên cơ hữu,1
+CT229,ct229,Nguyễn Thị Liên (1),Nữ,Đang công tác,Khoa Công nghệ thông tin,Công nghệ thông tin,,Cơ sở Hà Nội,Giảng viên cơ hữu,1
+GV067,GV067,Vũ Mạnh Hùng,Nam,Đang công tác,Khoa Công nghệ thông tin,Công nghệ thông tin,,Cơ sở Hà Nội,Giảng viên cơ hữu,1
+GV071,GV071,Nguyễn Thị Bích Nga,Nữ,Đang công tác,Khoa Công nghệ thông tin,Công nghệ thông tin,769168696,Cơ sở Hà Nội,Giảng viên thỉnh giảng,1
+GV091,GV091,Lê Văn Tâm,Nam,Đang công tác,Khoa Công nghệ thông tin,Công nghệ thông tin,988297802,Cơ sở Hà Nội,Giảng viên thỉnh giảng,1
+GV092,GV092,Nguyễn Văn Lâm,Nam,Đang công tác,Khoa Công nghệ thông tin,Công nghệ thông tin,,Cơ sở Hà Nội,Giảng viên thỉnh giảng,1
+GV093,GV093,Lê Thị Mai,Nữ,Đang công tác,Khoa Công nghệ thông tin,Công nghệ thông tin,,Cơ sở Hà Nội,Giảng viên thỉnh giảng,1
+GV094,GV094,Nguyễn Văn Huân,Nam,Đang công tác,Khoa Công nghệ thông tin,Công nghệ thông tin,,Cơ sở Hà Nội,Giảng viên thỉnh giảng,1
+GV095,GV095,Vương Thanh Hải,Nam,Đang công tác,Khoa Công nghệ thông tin,Công nghệ thông tin,,Cơ sở Hà Nội,Giảng viên thỉnh giảng,1
+GV099,GV099,Nguyễn Tuấn Khanh,Nam,Đang công tác,Khoa Công nghệ thông tin,Công nghệ thông tin,,Cơ sở Hà Nội,Giảng viên thỉnh giảng,1
+GV119,GV119,Dương Quốc Công,Nam,Đang công tác,Khoa Công nghệ thông tin,Công nghệ thông tin,,Cơ sở Hà Nội,Giảng viên thỉnh giảng,1
+GV120,GV120,Hoàng Cẩm An,Nam,Đang công tác,Khoa Công nghệ thông tin,Công nghệ thông tin,,Cơ sở Hà Nội,Giảng viên thỉnh giảng,1
+GV122,GV122,Lê Thanh Tấn,Nam,Đang công tác,Khoa Công nghệ thông tin,Công nghệ thông tin,,Cơ sở Hà Nội,Giảng viên thỉnh giảng,1
+GV124,GV124,Nguyễn Hải Đăng,Nam,Đang công tác,Khoa Công nghệ thông tin,Công nghệ thông tin,,Cơ sở Hà Nội,Giảng viên thỉnh giảng,1
+GV133,GV133,Hoàng Thu Hằng,Nữ,Đang công tác,Khoa Công nghệ thông tin,Công nghệ thông tin,,Cơ sở Hà Nội,Giảng viên thỉnh giảng,1
+GV136,GV136,Lê Văn Tài,Nam,Đang công tác,Khoa Công nghệ thông tin,Công nghệ thông tin,,Cơ sở Hà Nội,Giảng viên thỉnh giảng,1
+GV140,gv140,Nguyễn Thị Thanh Thủy,Nữ,Đang công tác,Khoa Công nghệ thông tin,Công nghệ thông tin,,Cơ sở Hà Nội,Giảng viên thỉnh giảng,1
+GV143,gv143,Đào Thị Bích Loan,Nữ,Đang công tác,Khoa Công nghệ thông tin,Công nghệ thông tin,,Cơ sở Hà Nội,Giảng viên thỉnh giảng,1
+GV145,gv145,Lê Ngọc Hà,Nữ,Đang công tác,Khoa Công nghệ thông tin,Công nghệ thông tin,,Cơ sở Hà Nội,Giảng viên thỉnh giảng,1
+GV146,gv146,Nguyễn Văn Thạch,Nam,Đang công tác,Khoa Công nghệ thông tin,Công nghệ thông tin,,Cơ sở Hà Nội,Giảng viên thỉnh giảng,1
+GV159,gv159,Phạm Huy Hiển,Nam,Đang công tác,Khoa Công nghệ thông tin,Công nghệ thông tin,,Cơ sở Hà Nội,Giảng viên thỉnh giảng,1
+GV160,gv160,Ngô Thị Bích Ngọc,Nữ,Đang công tác,Khoa Công nghệ thông tin,Công nghệ thông tin,,Cơ sở Hà Nội,Giảng viên thỉnh giảng,1
+GV162,gv162,Vũ Minh Cường,Nam,Đang công tác,Khoa Công nghệ thông tin,Công nghệ thông tin,,Cơ sở Hà Nội,Giảng viên thỉnh giảng,1
+GV164,gv164,Nguyễn Thị Luyện,Nữ,Đang công tác,Khoa Công nghệ thông tin,Công nghệ thông tin,,Cơ sở Hà Nội,Giảng viên thỉnh giảng,1
+GV169,gv169,Lê Thị Minh Loan,Nữ,Đang công tác,Khoa Công nghệ thông tin,Công nghệ thông tin,0961413166/096302272,Cơ sở Hà Nội,Giảng viên thỉnh giảng,1
+GV175,gv175,Nguyễn Trọng Tùng,Nam,Đang công tác,Khoa Công nghệ thông tin,Công nghệ thông tin,,Cơ sở Hà Nội,Giảng viên thỉnh giảng,1
+GV178,gv178,Chu Thị Minh Thương,Nữ,Đang công tác,Khoa Công nghệ thông tin,Công nghệ thông tin,,Cơ sở Hà Nội,Giảng viên thỉnh giảng,1
+GV179,gv179,Nguyễn Thị Minh Thư,Nữ,Đang công tác,Khoa Công nghệ thông tin,Công nghệ thông tin,,Cơ sở Hà Nội,Giảng viên thỉnh giảng,1
+GV214,gv214,Vũ Thị Nguyệt,Nữ,Đang công tác,Khoa Công nghệ thông tin,Công nghệ thông tin,,Cơ sở Hà Nội,Giảng viên thỉnh giảng,1
+GV251,gv251,Đặng Văn Nam,Nam,Đang công tác,Khoa Công nghệ thông tin,Công nghệ thông tin,,Cơ sở Hà Nội,Giảng viên thỉnh giảng,1
+GV266,gv266,Lê Huy Hoàng,Nam,Đang công tác,Khoa Công nghệ thông tin,Công nghệ thông tin,904233501,Cơ sở Hà Nội,Giảng viên thỉnh giảng,1
+GV287,gv287,Nguyễn Thị Lương,Nữ,Đang công tác,Khoa Công nghệ thông tin,Công nghệ thông tin,,Cơ sở Hà Nội,Giảng viên thỉnh giảng,1
+GV291,gv291,Lê Văn Tâm(1),Nam,Đang công tác,Khoa Công nghệ thông tin,Công nghệ thông tin,,Cơ sở Hà Nội,Giảng viên cơ hữu,1
+GV292,gv292,Đặng Văn Nam(1),Nam,Đang công tác,Khoa Công nghệ thông tin,Công nghệ thông tin,,Cơ sở Hà Nội,Giảng viên thỉnh giảng,1
+GV300,gv300,Lê Ngọc Hà (1),Nữ,Đang công tác,Khoa Công nghệ thông tin,Công nghệ thông tin,,Cơ sở Hà Nội,Giảng viên thỉnh giảng,1
+GV301,gv301,Lê Thị Mai (1),Nữ,Đang công tác,Khoa Công nghệ thông tin,Công nghệ thông tin,,Cơ sở Hà Nội,Giảng viên thỉnh giảng,1
+GV302,gv302,Nguyễn Thị Luyện (1),Nữ,Đang công tác,Khoa Công nghệ thông tin,Công nghệ thông tin,,Cơ sở Hà Nội,Giảng viên thỉnh giảng,1
+GV303,gv303,Lê Thị Minh Loan (1),Nữ,Đang công tác,Khoa Công nghệ thông tin,Công nghệ thông tin,,Cơ sở Hà Nội,Giảng viên thỉnh giảng,1
+GV304,gv304,Vương Thanh Hải (1),Nam,Đang công tác,Khoa Công nghệ thông tin,Công nghệ thông tin,,Cơ sở Hà Nội,Giảng viên thỉnh giảng,1
+NV139,nv139,Test Phần mềm,Nữ,Đang công tác,Khoa Công nghệ thông tin,Công nghệ thông tin,,Cơ sở Hà Nội,Giảng viên cơ hữu,1
