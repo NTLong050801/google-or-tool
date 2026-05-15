@@ -30,7 +30,7 @@ class Classroom(BaseModel):
 class Assignment(BaseModel):
     id: int
     teacher_id: str = Field(..., description="Mã cán bộ / định danh GV (vd CT112)")
-    course_id: int = Field(..., description="Id offering (hiển thị / truy vết)")
+    course_id: str = Field(..., description="Mã môn học gốc (từ Excel, dùng truy vết)")
     class_group_id: int = Field(
         ...,
         description="Cùng một lớp SV: không được học 2 môn trùng tiết (thường = edu_course_id)",
@@ -46,6 +46,9 @@ class Assignment(BaseModel):
     week_start: int = Field(..., ge=1, description="Tuần bắt đầu (order_id)")
     week_end: int = Field(..., ge=1, description="Tuần kết thúc (order_id)")
 
+    department_code: str = Field("", description="Mã khoa (vd cntt, kt)")
+    term_code: str = Field("", description="Mã học kỳ (vd 2025_2026_HK2)")
+
 
 class GenerateRequest(BaseModel):
     or_tools: ORToolsConfig
@@ -56,13 +59,14 @@ class GenerateRequest(BaseModel):
 class ScheduledSession(BaseModel):
     assignment_id: int
     teacher_id: str
-    course_id: int
+    course_id: str
     classroom_id: int
     day: DayOfWeek
     period_start: int
     period_end: int
     week_start: int
     week_end: int
+    department_code: str = ""
 
 
 class GenerateResponse(BaseModel):

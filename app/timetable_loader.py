@@ -4,6 +4,7 @@ import csv
 import html
 import re
 import unicodedata
+from dataclasses import dataclass
 from pathlib import Path
 from typing import Dict, List, Tuple
 
@@ -175,3 +176,65 @@ def week_bounds_from_csv(path: Path) -> Tuple[int, int]:
 
 def load_classes_project(path: Path) -> pd.DataFrame:
     return pd.read_excel(path, engine="openpyxl")
+
+
+@dataclass(frozen=True)
+class TeacherBusyEntry:
+    teacher_id: str
+    week_start: int
+    week_end: int
+    day_of_week: int  # 2..8
+    period_start: int  # 1-based
+    period_end: int
+    reason: str = ""
+
+
+def _parse_range(value: str, lo: int, hi: int) -> List[Tuple[int, int]]:
+    """Parse '3', '1-7', '*' thành list of (start, end) ranges."""
+    v = value.strip()
+    if v == "*":
+        return [(lo, hi)]
+    if "-" in v:
+        parts = v.split("-", 1)
+        return [(int(parts[0]), int(parts[1]))]
+    val = int(v)
+    return [(val, val)]
+
+
+def load_teacher_busy(path: Path, week_lo: int, week_hi: int, periods_per_day: int = 10) -> List[TeacherBusyEntry]:
+    """Đọc teacher_busy.csv, expand day wildcard thành entries (giữ week range nguyên)."""
+    if not path.is_file():
+        return []
+    entries: List[TeacherBusyEntry] = []
+    with path.open(encoding="utf-8-sig", newline="") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            tid = (row.get("teacher_id") or "").strip()
+            if not tid:
+                continue
+            week_raw = (row.get("week_order") or "*").strip()
+            day_raw = (row.get("day_of_week") or "*").strip()
+            ps_raw = (row.get("period_start") or "*").strip()
+            pe_raw = (row.get("period_end") or "*").strip()
+            reason = (row.get("reason") or "").strip()
+
+            week_ranges = _parse_range(week_raw, week_lo, week_hi)
+            day_ranges = _parse_range(day_raw, 2, 8)
+            if ps_raw == "*" or pe_raw == "*":
+                p_start, p_end = 1, periods_per_day
+            else:
+                p_start, p_end = int(ps_raw), int(pe_raw)
+
+            for w_start, w_end in week_ranges:
+                for d_start, d_end in day_ranges:
+                    for d in range(d_start, d_end + 1):
+                        entries.append(TeacherBusyEntry(
+                            teacher_id=tid,
+                            week_start=max(w_start, week_lo),
+                            week_end=min(w_end, week_hi),
+                            day_of_week=d,
+                            period_start=p_start,
+                            period_end=p_end,
+                            reason=reason,
+                        ))
+    return entries

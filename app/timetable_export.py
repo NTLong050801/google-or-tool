@@ -49,6 +49,7 @@ def export_timetable_csv(
         sub_code = str(lab.get("subject_code", ""))
         sub_name = str(lab.get("subject_name", ""))
         gv_name = str(lab.get("teacher_name", s.teacher_id))
+        dept = str(lab.get("department_code", s.department_code))
         cluster = cluster_by_aid.get(int(s.assignment_id), int(s.period_end) - int(s.period_start) + 1)
         p_end = int(s.period_start) + cluster - 1
         period_txt = f"{int(s.period_start)}–{p_end}"
@@ -60,6 +61,7 @@ def export_timetable_csv(
                 "_sort_day": int(s.day),
                 "_sort_p": int(s.period_start),
                 "_sort_cls": cls_name,
+                "Khoa": dept,
                 "Thứ": _DAY_VI.get(int(s.day), str(s.day)),
                 "Buổi": _slot_label(int(s.period_start), morning_periods),
                 "Tiết": period_txt,

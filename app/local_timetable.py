@@ -6,6 +6,7 @@ import argparse
 import sys
 from pathlib import Path
 
+from .paths import TermPaths, _default_data_root
 from .solver import solve_weekly_timetable
 from .timetable_builder import build_generate_request
 from .timetable_export import export_timetable_csv
@@ -22,26 +23,36 @@ def main() -> None:
         "--data-root",
         type=Path,
         default=None,
-        help="Thư mục chứa classes_project.xls, projects.xls, cleans/… (mặc định app/data)",
+        help="Thư mục gốc chứa shared/, terms/… (mặc định app/data)",
+    )
+    parser.add_argument(
+        "--term",
+        type=str,
+        default="2025_2026_HK2",
+        help="Mã học kỳ (tên thư mục trong terms/)",
+    )
+    parser.add_argument(
+        "--departments",
+        type=str,
+        default=None,
+        help="Danh sách khoa cách nhau bởi dấu phẩy (mặc định: tất cả khoa trong term)",
     )
     parser.add_argument("--seconds", type=float, default=120.0, help="Giới hạn thời gian solver")
-    parser.add_argument(
-        "--minutes-per-lesson",
-        type=int,
-        default=50,
-        help="Quy đổi 'giờ' trong Excel sang tiết (phút/tiết)",
-    )
     parser.add_argument(
         "--lessons-cluster",
         type=int,
         default=5,
-        help="Số tiết/buổi (phải khớp khối sáng-chiều; mặc định 5 tiết/buổi)",
+        help="Số tiết/buổi (mặc định 5 tiết/buổi)",
     )
     args = parser.parse_args()
 
+    data_root = args.data_root or _default_data_root()
+    depts = [d.strip() for d in args.departments.split(",")] if args.departments else None
+
     br = build_generate_request(
-        args.data_root,
-        minutes_per_lesson=args.minutes_per_lesson,
+        data_root,
+        term_code=args.term,
+        departments=depts,
         lessons_cluster=args.lessons_cluster,
     )
 
@@ -53,7 +64,8 @@ def main() -> None:
     print(
         f"assignments={len(br.request.assignments)} "
         f"skipped_rows={br.skipped_rows} "
-        f"classrooms={len(br.request.classrooms)}"
+        f"classrooms={len(br.request.classrooms)} "
+        f"teacher_busy_entries={len(br.teacher_busy)}"
     )
 
     req = br.request
@@ -64,12 +76,14 @@ def main() -> None:
         afternoon_periods=req.or_tools.afternoon_periods,
         assignments=req.assignments,
         classrooms=req.classrooms,
+        teacher_busy=br.teacher_busy,
         max_time_seconds=float(args.seconds),
     )
 
-    root = args.data_root or (Path(__file__).resolve().parent / "data")
-    out_dir = root / "output"
+    tp = TermPaths(data_root=data_root, term_code=args.term)
+    out_dir = tp.output_dir
     out_dir.mkdir(parents=True, exist_ok=True)
+
     out_json = out_dir / "timetable_result.json"
     out_json.write_text(res.model_dump_json(indent=2), encoding="utf-8")
 
