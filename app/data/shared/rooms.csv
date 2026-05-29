@@ -1,132 +1,123 @@
-﻿room_name,building_floor,room_label,campus_code,capacity,min_capacity,room_property_code,room_property_name,home_department,using_department,note,in_use
-424,1,101-N4,CS1,80,4,LT,Lý thuyết,Cơ khí và Công nghệ,,,1
-413,1,102-N4,CS1,70,4,LT,Lý thuyết,"Khoa Kinh tế, Du lịch và Truyền thông",,,1
-437,1,103-N4,CS1,50,3,LT,Lý thuyết,Cơ khí và Công nghệ,,,1
-438,1,104-N4,CS1,50,3,LT,Lý thuyết,Phòng Đào Tạo,,,1
-439,1,105-N4,CS1,50,3,LT,Lý thuyết,Phòng Đào Tạo,,,1
-415,1,106-N4,CS1,100,5,LT,Lý thuyết,Cơ khí và Công nghệ,,,1
-420,1,107-N4,CS1,50,3,LT,Lý thuyết,Cơ khí và Công nghệ,,,1
-423,2,201-N4,CS1,50,3,LT,Lý thuyết,"Khoa Kinh tế, Du lịch và Truyền thông",,,1
-135,2,202 (PHONG MAY),CS1,65,3,TH,Thực hành tin học,Công nghệ thông tin,Công nghệ thông tin,,1
-422,2,202-N4,CS1,50,3,LT,Lý thuyết,"Khoa Kinh tế, Du lịch và Truyền thông",,,1
-251,2,203-N1 (PHONG MAY),CS1,65,3,TH,Thực hành tin học,Cơ khí và Công nghệ,,,1
-435,2,203-N1(PHONG MAY AO),CS1,65,3,TH,Thực hành tin học,Hội đồng quản trị,,Phòng ảo xếp TKB,1
-433,2,203-N4,CS1,40,2,LT,Lý thuyết,Cơ khí và Công nghệ,,,1
-252,2,204-N1 (PHONG MAY),CS1,70,4,TH,Thực hành tin học,Cơ khí và Công nghệ,,,1
-440,2,204-N4,CS1,40,2,LT,Lý thuyết,"Khoa Kinh tế, Du lịch và Truyền thông","Khoa Kinh tế, Du lịch và Truyền thông",,1
-253,2,205-N1,CS1,60,3,LT,Lý thuyết,Cơ khí và Công nghệ,,,1
-421,2,205-N4,CS1,50,3,LT,Lý thuyết,"Khoa Kinh tế, Du lịch và Truyền thông",,,1
-254,2,206-N1,CS1,60,3,LT,Lý thuyết,Cơ khí và Công nghệ,,,1
-418,2,206-N4,CS1,50,3,LT,Lý thuyết,Cơ khí và Công nghệ,,,1
-255,2,207-N1,CS1,60,3,LT,Lý thuyết,Phòng Đào Tạo,,,1
-425,2,207-N4,CS1,90,5,LT,Lý thuyết,Cơ khí và Công nghệ,,,1
-256,2,208-N1,CS1,200,10,LT,Lý thuyết,Cơ khí và Công nghệ,,,1
-257,2,209-N1,CS1,160,8,LT,Lý thuyết,Cơ khí và Công nghệ,,,1
-258,2,210-N1,CS1,60,3,LT,Lý thuyết,Phòng Đào Tạo,,,1
-259,2,211-N1,CS1,60,3,LT,Lý thuyết,Phòng Đào Tạo,,,1
-260,2,212-N1,CS1,60,3,LT,Lý thuyết,Cơ khí và Công nghệ,,,1
-146,3,301 (PHONG MAY),CS1,40,2,TH,Thực hành tin học,Cơ khí và Công nghệ,,301 (Phòng máy),1
-444,3,301-N1(PHONG MAY AO),CS1,40,2,TH,Thực hành tin học,Cơ khí và Công nghệ,,Phòng ảo dùng để xếp TKB,1
-426,3,301-N4,CS1,90,5,LT,Lý thuyết,Cơ khí và Công nghệ,,,1
-147,3,302 (PHONG MAY),CS1,50,3,TH,Thực hành tin học,Cơ khí và Công nghệ,,302 (Phòng máy),1
-432,3,302-N4,CS1,40,2,LT,Lý thuyết,Cơ khí và Công nghệ,,,1
-398,3,303 (PHONG AO),CS1,40,2,LT,Lý thuyết,Công nghệ thông tin,Công nghệ thông tin,,1
-148,3,303 (PHONG MAY),CS1,40,2,TH,Thực hành tin học,Cơ khí và Công nghệ,,303 (Phòng máy),1
-451,3,303-N4,CS1,40,2,LT,Lý thuyết,Cơ khí và Công nghệ,,,1
-149,3,304 (PHONG MAY),CS1,45,2,TH,Thực hành tin học,Phòng Đào Tạo,,304 (Phòng máy),1
-150,3,305 (PHONG MAY),CS1,60,3,TH,Thực hành tin học,Cơ khí và Công nghệ,,305 (Phòng máy),1
-427,3,306-N4,CS1,90,5,LT,Lý thuyết,Cơ khí và Công nghệ,,,1
-269,4,401-N1,CS1,60,3,LT,Lý thuyết,Cơ khí và Công nghệ,,,1
-303,4,401-N2,CS1,35,2,LT,Lý thuyết,Cơ khí và Công nghệ,Cơ khí và Công nghệ,,1
-428,4,401-N4,CS1,40,2,LT,Lý thuyết,Cơ khí và Công nghệ,,,1
-152,4,402 (PHONG CO DIEN TU),CS1,50,3,LT,Lý thuyết,Cơ khí và Công nghệ,Cơ khí và Công nghệ,402 (Phòng cơ điện tử),1
-270,4,402-N1,CS1,100,5,LT,Lý thuyết,Cơ khí và Công nghệ,,,1
-304,4,402-N2,CS1,35,2,LT,Lý thuyết,Cơ khí và Công nghệ,Cơ khí và Công nghệ,,1
-429,4,402-N4,CS1,90,5,LT,Lý thuyết,Cơ khí và Công nghệ,,,1
-271,4,403-N1,CS1,60,3,LT,Lý thuyết,Cơ khí và Công nghệ,,,1
-386,4,403-N1 (PHONG AO),CS1,40,2,LT,Lý thuyết,"Khoa Kinh tế, Du lịch và Truyền thông",,,1
-305,4,403-N2,CS1,35,2,LT,Lý thuyết,Cơ khí và Công nghệ,Cơ khí và Công nghệ,,1
-272,4,404-N1,CS1,60,3,LT,Lý thuyết,Cơ khí và Công nghệ,,,1
-306,4,404-N2,CS1,35,2,LT,Lý thuyết,Cơ khí và Công nghệ,Cơ khí và Công nghệ,,1
-430,4,404-N4,CS1,100,5,LT,Lý thuyết,Cơ khí và Công nghệ,,,1
-273,4,405-N1,CS1,60,3,LT,Lý thuyết,Cơ khí và Công nghệ,,,1
-307,4,405-N2,CS1,35,2,LT,Lý thuyết,Cơ khí và Công nghệ,Cơ khí và Công nghệ,,1
-431,4,405-N4,CS1,100,5,LT,Lý thuyết,Cơ khí và Công nghệ,,,1
-274,4,406-N1,CS1,60,3,LT,Lý thuyết,Phòng Đào Tạo,,,1
-308,4,406-N2,CS1,35,2,LT,Lý thuyết,Cơ khí và Công nghệ,Cơ khí và Công nghệ,,1
-275,4,407-N1,CS1,60,3,LT,Lý thuyết,Cơ khí và Công nghệ,,,1
-309,4,407-N2,CS1,35,2,LT,Lý thuyết,Cơ khí và Công nghệ,Cơ khí và Công nghệ,,1
-157,4,408 (PHONG NHIEP ANH),CS1,50,3,LT,Lý thuyết,Cơ khí và Công nghệ,Cơ khí và Công nghệ,408 (Phòng nhiếp ảnh),1
-276,4,408-N1,CS1,60,3,LT,Lý thuyết,Cơ khí và Công nghệ,,,1
-310,4,408-N2,CS1,35,2,LT,Lý thuyết,Cơ khí và Công nghệ,Cơ khí và Công nghệ,,1
-277,4,409-N1,CS1,60,3,LT,Lý thuyết,Phòng Đào Tạo,,,1
-311,4,409-N2,CS1,35,2,LT,Lý thuyết,Cơ khí và Công nghệ,Cơ khí và Công nghệ,,1
-278,4,410-N1,CS1,60,3,LT,Lý thuyết,Phòng Đào Tạo,,,1
-312,4,410-N2,CS1,35,2,LT,Lý thuyết,Cơ khí và Công nghệ,Cơ khí và Công nghệ,,1
-279,4,411-N1,CS1,60,3,LT,Lý thuyết,Phòng Đào Tạo,,,1
-313,4,411-N2,CS1,35,2,LT,Lý thuyết,Cơ khí và Công nghệ,Cơ khí và Công nghệ,,1
-280,4,412-N1,CS1,60,3,LT,Lý thuyết,Phòng Đào Tạo,,,1
-314,4,412-N2,CS1,35,2,LT,Lý thuyết,Cơ khí và Công nghệ,Cơ khí và Công nghệ,,1
-281,5,501-N1,CS1,60,3,LT,Lý thuyết,Phòng Đào Tạo,,,1
-282,5,502-N1,CS1,60,3,LT,Lý thuyết,Phòng Đào Tạo,,,1
-283,5,503-N1,CS1,60,3,LT,Lý thuyết,Phòng Đào Tạo,,,1
-443,5,503-N1 (PHONG AO),CS1,60,3,LT,Lý thuyết,Phòng Đào Tạo,,,1
-284,5,504-N1,CS1,60,3,LT,Lý thuyết,Phòng Đào Tạo,,,1
-286,5,506-N1,CS1,60,3,LT,Lý thuyết,Cơ khí và Công nghệ,,,1
-287,5,507-N1,CS1,60,3,LT,Lý thuyết,Phòng Đào Tạo,,,1
-288,5,508-N1,CS1,60,3,LT,Lý thuyết,Phòng Đào Tạo,,,1
-289,5,509-N1,CS1,60,3,LT,Lý thuyết,Phòng Đào Tạo,,,1
-316,5,510-N1,CS1,50,3,LT,Lý thuyết,Cơ khí và Công nghệ,,,1
-317,5,511-N1,CS1,50,3,LT,Lý thuyết,Cơ khí và Công nghệ,,,1
-318,5,512-N1,CS1,70,4,LT,Lý thuyết,Cơ khí và Công nghệ,,,1
-408,2,B201-N2,CS1,40,2,LT,Lý thuyết,Khoa Chăm sóc sức khỏe,,,1
-382,2,B202-N2 (CSSD),CS1,40,2,LT,Lý thuyết,Khoa Chăm sóc sức khỏe,,,1
-248,2,B203 - N2 (KAIGO),CS1,24,1,LT,Lý thuyết,Phòng Đào Tạo,,PHÒNG KAIGO,1
-376,2,B204-N2 (CO DIEN TU),CS1,40,2,LT,Lý thuyết,Cơ khí và Công nghệ,,,1
-381,3,B304-N2,CS1,30,2,LT,Lý thuyết,Cơ khí và Công nghệ,,,1
-377,3,B305-N2,CS1,30,2,LT,Lý thuyết,Ngoại ngữ,,,1
-400,3,B306-N2,CS1,26,1,LT,Lý thuyết,Cơ khí và Công nghệ,,,1
-401,3,B307-N1,CS1,25,1,LT,Lý thuyết,Cơ khí và Công nghệ,,,1
-402,3,B307-N2,CS1,25,1,LT,Lý thuyết,Cơ khí và Công nghệ,,,1
-403,3,B308-N2,CS1,25,1,LT,Lý thuyết,Cơ khí và Công nghệ,,,1
-404,3,B309-N2,CS1,25,1,LT,Lý thuyết,Cơ khí và Công nghệ,,,1
-405,3,B310-N2,CS1,25,1,LT,Lý thuyết,Cơ khí và Công nghệ,,,1
-406,3,B311-N2,CS1,25,1,LT,Lý thuyết,Cơ khí và Công nghệ,,,1
-407,3,B312-N2,CS1,25,1,LT,Lý thuyết,Cơ khí và Công nghệ,,,1
-378,4,B406-N2,CS1,30,2,LT,Lý thuyết,Cơ khí và Công nghệ,,,1
-379,4,B407-N2,CS1,40,2,LT,Lý thuyết,Cơ khí và Công nghệ,,,1
-442,2,BVDK HA DONG,CS1,25,1,K,Khác,Khoa Chăm sóc sức khỏe,Khoa Chăm sóc sức khỏe,,1
-223,THUC TAP,DOANH NGHIEP 1,CS1,100,5,K,Khác,Cơ khí và Công nghệ,Cơ khí và Công nghệ,Thực tập tại DN,1
-391,1,DOANH NGHIEP 10,CS1,100,5,K,Khác,Cơ khí và Công nghệ,,,1
-392,1,DOANH NGHIEP 11,CS1,100,5,K,Khác,Cơ khí và Công nghệ,,,1
-224,THUC TAP,DOANH NGHIEP 2,CS1,100,5,K,Khác,Cơ khí và Công nghệ,Cơ khí và Công nghệ,,1
-225,THUC TAP,DOANH NGHIEP 3,CS1,100,5,K,Khác,Cơ khí và Công nghệ,Cơ khí và Công nghệ,,1
-226,THUC TAP,DOANH NGHIEP 4,CS1,100,5,K,Khác,Cơ khí và Công nghệ,Cơ khí và Công nghệ,,1
-227,THUC TAP,DOANH NGHIEP 5,CS1,100,5,K,Khác,Cơ khí và Công nghệ,Cơ khí và Công nghệ,,1
-228,THUC TAP,DOANH NGHIEP 6,CS1,100,5,K,Khác,Cơ khí và Công nghệ,Cơ khí và Công nghệ,,1
-229,THUC TAP,DOANH NGHIEP 7,CS1,100,5,K,Khác,Cơ khí và Công nghệ,Cơ khí và Công nghệ,,1
-230,THUC TAP,DOANH NGHIEP 8,CS1,100,5,K,Khác,Cơ khí và Công nghệ,Cơ khí và Công nghệ,,1
-231,THUC TAP,DOANH NGHIEP 9,CS1,100,5,K,Khác,Cơ khí và Công nghệ,Cơ khí và Công nghệ,,1
-132,1,HOI TRUONG 1,CS1,120,6,LT,Lý thuyết,Phòng Đào Tạo,,,1
-414,1,HOI TRUONG 2,CS1,120,6,LT,Lý thuyết,Cơ khí và Công nghệ,,,1
-358,1,KHU 1- NHA N2,CS1,50,3,X,Xưởng thực hành,Cơ khí và Công nghệ,,,1
-367,1,KHU 10-NHA N2,CS1,60,3,LT,Lý thuyết,Cơ khí và Công nghệ,,,1
-368,1,KHU 11-NHA N2,CS1,50,3,LT,Lý thuyết,Cơ khí và Công nghệ,,,1
-359,1,KHU 2-NHA N2,CS1,50,3,LT,Lý thuyết,Cơ khí và Công nghệ,,,1
-360,1,KHU 3-NHA N2,CS1,50,3,LT,Lý thuyết,Cơ khí và Công nghệ,,,1
-361,1,KHU 4-NHA N2,CS1,50,3,LT,Lý thuyết,Cơ khí và Công nghệ,,,1
-362,1,KHU 5-NHA N2,CS1,50,3,LT,Lý thuyết,Cơ khí và Công nghệ,,,1
-363,1,KHU 6-NHA N2,CS1,50,3,LT,Lý thuyết,Cơ khí và Công nghệ,,,1
-364,1,KHU 7-NHA N2,CS1,50,3,LT,Lý thuyết,Cơ khí và Công nghệ,,,1
-365,1,KHU 8-NHA N2,CS1,50,3,LT,Lý thuyết,Cơ khí và Công nghệ,,,1
-366,1,KHU 9-NHA N2,CS1,50,3,LT,Lý thuyết,Cơ khí và Công nghệ,,,1
-222,THUC HANH,NHA MAY,CS1,200,10,K,Khác,Phòng Đào Tạo,Phòng Đào Tạo,,1
-416,1,PHONG HOP 1,CS1,20,1,K,Khác,Phòng Tổ Chức Hành Chính,,,1
-417,1,PHONG HOP 2,CS1,10,1,K,Khác,Phòng Tổ Chức Hành Chính,,,1
-221,1,SAN TRUONG,CS1,500,25,K,Khác,Cơ khí và Công nghệ,,,1
-242,1,SAN TRUONG 2,CS1,500,25,K,Khác,Cơ khí và Công nghệ,,,1
-323,1,SAN TRUONG CT,CS1,300,15,K,Khác,Cơ bản,Cơ bản,,1
-441,1,VAN PHONG N4,CS1,20,1,LT,Lý thuyết,"Khoa Kinh tế, Du lịch và Truyền thông","Khoa Kinh tế, Du lịch và Truyền thông",,1
-409,1,VUON UOM,CS1,40,2,LT,Lý thuyết,Công nghệ thông tin,,,1
-380,1,XUONG NAU AN,CS1,60,3,LT,Lý thuyết,"Khoa Kinh tế, Du lịch và Truyền thông",,,1
-385,1,XUONG NAU AN 1,CS1,40,2,LT,Lý thuyết,"Khoa Kinh tế, Du lịch và Truyền thông",,,1
+﻿room_name,building_floor,room_label,campus_code,capacity,min_capacity,room_property_code,room_property_name,home_department,using_department,note,in_use,priority_room
+424,1,101-N4,CS1,80,4,LT,Lý thuyết,Cơ khí và Công nghệ,,,1,
+413,1,102-N4,CS1,70,4,LT,Lý thuyết,"Khoa Kinh tế, Du lịch và Truyền thông",,,1,
+437,1,103-N4,CS1,50,3,LT,Lý thuyết,Cơ khí và Công nghệ,,,1,
+438,1,104-N4,CS1,50,3,LT,Lý thuyết,Phòng Đào Tạo,,,1,
+439,1,105-N4,CS1,50,3,LT,Lý thuyết,Phòng Đào Tạo,,,1,
+415,1,106-N4,CS1,100,5,LT,Lý thuyết,Cơ khí và Công nghệ,,,1,
+420,1,107-N4,CS1,50,3,LT,Lý thuyết,Cơ khí và Công nghệ,,,1,
+423,2,201-N4,CS1,50,3,LT,Lý thuyết,"Khoa Kinh tế, Du lịch và Truyền thông",,,1,
+135,2,202 (PHONG MAY),CS1,65,3,TH,Thực hành tin học,Công nghệ thông tin,Công nghệ thông tin,,1,"CNTT, CKCN"
+422,2,202-N4,CS1,50,3,LT,Lý thuyết,"Khoa Kinh tế, Du lịch và Truyền thông",,,1,
+251,2,203-N1 (PHONG MAY),CS1,65,3,TH,Thực hành tin học,Cơ khí và Công nghệ,,,1,"CNTT, CKCN"
+435,2,203-N1(PHONG MAY AO),CS1,65,3,TH,Thực hành tin học,Hội đồng quản trị,,Phòng ảo xếp TKB,1,"CNTT, CKCN"
+433,2,203-N4,CS1,40,2,LT,Lý thuyết,Cơ khí và Công nghệ,,,1,
+252,2,204-N1 (PHONG MAY),CS1,70,4,TH,Thực hành tin học,Cơ khí và Công nghệ,,,1,"CNTT, CKCN"
+440,2,204-N4,CS1,40,2,LT,Lý thuyết,"Khoa Kinh tế, Du lịch và Truyền thông","Khoa Kinh tế, Du lịch và Truyền thông",,1,
+253,2,205-N1,CS1,60,3,LT,Lý thuyết,Cơ khí và Công nghệ,,,1,
+421,2,205-N4,CS1,50,3,LT,Lý thuyết,"Khoa Kinh tế, Du lịch và Truyền thông",,,1,
+254,2,206-N1,CS1,60,3,LT,Lý thuyết,Cơ khí và Công nghệ,,,1,
+418,2,206-N4,CS1,50,3,LT,Lý thuyết,Cơ khí và Công nghệ,,,1,
+255,2,207-N1,CS1,60,3,LT,Lý thuyết,Phòng Đào Tạo,,,1,
+425,2,207-N4,CS1,90,5,LT,Lý thuyết,Cơ khí và Công nghệ,,,1,
+256,2,208-N1,CS1,200,10,LT,Lý thuyết,Cơ khí và Công nghệ,,,1,
+257,2,209-N1,CS1,160,8,LT,Lý thuyết,Cơ khí và Công nghệ,,,1,
+258,2,210-N1,CS1,60,3,LT,Lý thuyết,Phòng Đào Tạo,,,1,
+259,2,211-N1,CS1,60,3,LT,Lý thuyết,Phòng Đào Tạo,,,1,
+260,2,212-N1,CS1,60,3,LT,Lý thuyết,Cơ khí và Công nghệ,,,1,
+146,3,301 (PHONG MAY),CS1,40,2,TH,Thực hành tin học,Cơ khí và Công nghệ,,301 (Phòng máy),1,"CNTT, CKCN"
+444,3,301-N1(PHONG MAY AO),CS1,40,2,TH,Thực hành tin học,Cơ khí và Công nghệ,,Phòng ảo dùng để xếp TKB,1,"CNTT, CKCN"
+426,3,301-N4,CS1,90,5,LT,Lý thuyết,Cơ khí và Công nghệ,,,1,
+147,3,302 (PHONG MAY),CS1,50,3,TH,Thực hành tin học,Cơ khí và Công nghệ,,302 (Phòng máy),1,
+432,3,302-N4,CS1,40,2,LT,Lý thuyết,Cơ khí và Công nghệ,,,1,
+398,3,303 (PHONG AO),CS1,40,2,LT,Lý thuyết,Công nghệ thông tin,Công nghệ thông tin,,1,
+148,3,303 (PHONG MAY),CS1,40,2,TH,Thực hành tin học,Cơ khí và Công nghệ,,303 (Phòng máy),1,
+451,3,303-N4,CS1,40,2,LT,Lý thuyết,Cơ khí và Công nghệ,,,1,
+149,3,304 (PHONG MAY),CS1,45,2,TH,Thực hành tin học,Phòng Đào Tạo,,304 (Phòng máy),1,"CNTT, CKCN"
+150,3,305 (PHONG MAY),CS1,60,3,TH,Thực hành tin học,Cơ khí và Công nghệ,,305 (Phòng máy),1,"CNTT, CKCN"
+427,3,306-N4,CS1,90,5,LT,Lý thuyết,Cơ khí và Công nghệ,,,1,
+303,4,401-N2,CS1,35,2,LT,Lý thuyết,Cơ khí và Công nghệ,Cơ khí và Công nghệ,,1,
+428,4,401-N4,CS1,40,2,LT,Lý thuyết,Cơ khí và Công nghệ,,,1,
+152,4,402 (PHONG CO DIEN TU),CS1,50,3,LT,Lý thuyết,Cơ khí và Công nghệ,Cơ khí và Công nghệ,402 (Phòng cơ điện tử),1,CKCN
+304,4,402-N2,CS1,35,2,LT,Lý thuyết,Cơ khí và Công nghệ,Cơ khí và Công nghệ,,1,
+429,4,402-N4,CS1,90,5,LT,Lý thuyết,Cơ khí và Công nghệ,,,1,
+306,4,404-N2,CS1,35,2,LT,Lý thuyết,Cơ khí và Công nghệ,Cơ khí và Công nghệ,,1,
+430,4,404-N4,CS1,100,5,LT,Lý thuyết,Cơ khí và Công nghệ,,,1,
+307,4,405-N2,CS1,35,2,LT,Lý thuyết,Cơ khí và Công nghệ,Cơ khí và Công nghệ,,1,
+431,4,405-N4,CS1,100,5,LT,Lý thuyết,Cơ khí và Công nghệ,,,1,
+308,4,406-N2,CS1,35,2,LT,Lý thuyết,Cơ khí và Công nghệ,Cơ khí và Công nghệ,,1,
+275,4,407-N1,CS1,60,3,LT,Lý thuyết,Cơ khí và Công nghệ,,,1,
+309,4,407-N2,CS1,35,2,LT,Lý thuyết,Cơ khí và Công nghệ,Cơ khí và Công nghệ,,1,
+157,4,408 (PHONG NHIEP ANH),CS1,50,3,LT,Lý thuyết,Cơ khí và Công nghệ,Cơ khí và Công nghệ,408 (Phòng nhiếp ảnh),1,
+276,4,408-N1,CS1,60,3,LT,Lý thuyết,Cơ khí và Công nghệ,,,1,
+310,4,408-N2,CS1,35,2,LT,Lý thuyết,Cơ khí và Công nghệ,Cơ khí và Công nghệ,,1,
+277,4,409-N1,CS1,60,3,LT,Lý thuyết,Phòng Đào Tạo,,,1,
+311,4,409-N2,CS1,35,2,LT,Lý thuyết,Cơ khí và Công nghệ,Cơ khí và Công nghệ,,1,
+278,4,410-N1,CS1,60,3,LT,Lý thuyết,Phòng Đào Tạo,,,1,
+312,4,410-N2,CS1,35,2,LT,Lý thuyết,Cơ khí và Công nghệ,Cơ khí và Công nghệ,,1,
+279,4,411-N1,CS1,60,3,LT,Lý thuyết,Phòng Đào Tạo,,,1,
+313,4,411-N2,CS1,35,2,LT,Lý thuyết,Cơ khí và Công nghệ,Cơ khí và Công nghệ,,1,
+280,4,412-N1,CS1,60,3,LT,Lý thuyết,Phòng Đào Tạo,,,1,
+314,4,412-N2,CS1,35,2,LT,Lý thuyết,Cơ khí và Công nghệ,Cơ khí và Công nghệ,,1,
+281,5,501-N1,CS1,60,3,LT,Lý thuyết,Phòng Đào Tạo,,,1,
+282,5,502-N1,CS1,60,3,LT,Lý thuyết,Phòng Đào Tạo,,,1,
+283,5,503-N1,CS1,60,3,LT,Lý thuyết,Phòng Đào Tạo,,,1,
+443,5,503-N1 (PHONG AO),CS1,60,3,LT,Lý thuyết,Phòng Đào Tạo,,,1,
+284,5,504-N1,CS1,60,3,LT,Lý thuyết,Phòng Đào Tạo,,,1,
+286,5,506-N1,CS1,60,3,LT,Lý thuyết,Cơ khí và Công nghệ,,,1,
+287,5,507-N1,CS1,60,3,LT,Lý thuyết,Phòng Đào Tạo,,,1,
+288,5,508-N1,CS1,60,3,LT,Lý thuyết,Phòng Đào Tạo,,,1,
+289,5,509-N1,CS1,60,3,LT,Lý thuyết,Phòng Đào Tạo,,,1,
+316,5,510-N1,CS1,50,3,LT,Lý thuyết,Cơ khí và Công nghệ,,,1,
+317,5,511-N1,CS1,50,3,LT,Lý thuyết,Cơ khí và Công nghệ,,,1,
+318,5,512-N1,CS1,70,4,LT,Lý thuyết,Cơ khí và Công nghệ,,,1,
+408,2,B201-N2,CS1,40,2,LT,Lý thuyết,Khoa Chăm sóc sức khỏe,,,1,DDSK
+382,2,B202-N2 (CSSD),CS1,40,2,LT,Lý thuyết,Khoa Chăm sóc sức khỏe,,,1,DDSK
+376,2,B204-N2 (CO DIEN TU),CS1,40,2,LT,Lý thuyết,Cơ khí và Công nghệ,,,1,CKCN
+381,3,B304-N2,CS1,30,2,LT,Lý thuyết,Cơ khí và Công nghệ,,,1,
+377,3,B305-N2,CS1,30,2,LT,Lý thuyết,Ngoại ngữ,,,1,
+400,3,B306-N2,CS1,26,1,LT,Lý thuyết,Cơ khí và Công nghệ,,,1,
+401,3,B307-N1,CS1,25,1,LT,Lý thuyết,Cơ khí và Công nghệ,,,1,
+402,3,B307-N2,CS1,25,1,LT,Lý thuyết,Cơ khí và Công nghệ,,,1,
+403,3,B308-N2,CS1,25,1,LT,Lý thuyết,Cơ khí và Công nghệ,,,1,
+404,3,B309-N2,CS1,25,1,LT,Lý thuyết,Cơ khí và Công nghệ,,,1,
+405,3,B310-N2,CS1,25,1,LT,Lý thuyết,Cơ khí và Công nghệ,,,1,
+406,3,B311-N2,CS1,25,1,LT,Lý thuyết,Cơ khí và Công nghệ,,,1,
+407,3,B312-N2,CS1,25,1,LT,Lý thuyết,Cơ khí và Công nghệ,,,1,
+378,4,B406-N2,CS1,30,2,LT,Lý thuyết,Cơ khí và Công nghệ,,,1,
+379,4,B407-N2,CS1,40,2,LT,Lý thuyết,Cơ khí và Công nghệ,,,1,
+442,2,BVDK HA DONG,CS1,25,1,K,Khác,Khoa Chăm sóc sức khỏe,Khoa Chăm sóc sức khỏe,,1,
+223,THUC TAP,DOANH NGHIEP 1,CS1,100,5,K,Khác,Cơ khí và Công nghệ,Cơ khí và Công nghệ,Thực tập tại DN,1,
+391,1,DOANH NGHIEP 10,CS1,100,5,K,Khác,Cơ khí và Công nghệ,,,1,
+392,1,DOANH NGHIEP 11,CS1,100,5,K,Khác,Cơ khí và Công nghệ,,,1,
+224,THUC TAP,DOANH NGHIEP 2,CS1,100,5,K,Khác,Cơ khí và Công nghệ,Cơ khí và Công nghệ,,1,
+225,THUC TAP,DOANH NGHIEP 3,CS1,100,5,K,Khác,Cơ khí và Công nghệ,Cơ khí và Công nghệ,,1,
+226,THUC TAP,DOANH NGHIEP 4,CS1,100,5,K,Khác,Cơ khí và Công nghệ,Cơ khí và Công nghệ,,1,
+227,THUC TAP,DOANH NGHIEP 5,CS1,100,5,K,Khác,Cơ khí và Công nghệ,Cơ khí và Công nghệ,,1,
+228,THUC TAP,DOANH NGHIEP 6,CS1,100,5,K,Khác,Cơ khí và Công nghệ,Cơ khí và Công nghệ,,1,
+229,THUC TAP,DOANH NGHIEP 7,CS1,100,5,K,Khác,Cơ khí và Công nghệ,Cơ khí và Công nghệ,,1,
+230,THUC TAP,DOANH NGHIEP 8,CS1,100,5,K,Khác,Cơ khí và Công nghệ,Cơ khí và Công nghệ,,1,
+231,THUC TAP,DOANH NGHIEP 9,CS1,100,5,K,Khác,Cơ khí và Công nghệ,Cơ khí và Công nghệ,,1,
+132,1,HOI TRUONG 1,CS1,120,6,LT,Lý thuyết,Phòng Đào Tạo,,,1,
+414,1,HOI TRUONG 2,CS1,120,6,LT,Lý thuyết,Cơ khí và Công nghệ,,,1,
+358,1,KHU 1- NHA N2,CS1,50,3,X,Xưởng thực hành,Cơ khí và Công nghệ,,,1,CKCN
+367,1,KHU 10-NHA N2,CS1,60,3,LT,Lý thuyết,Cơ khí và Công nghệ,,,1,CKCN
+368,1,KHU 11-NHA N2,CS1,50,3,LT,Lý thuyết,Cơ khí và Công nghệ,,,1,CKCN
+359,1,KHU 2-NHA N2,CS1,50,3,LT,Lý thuyết,Cơ khí và Công nghệ,,,1,CKCN
+360,1,KHU 3-NHA N2,CS1,50,3,LT,Lý thuyết,Cơ khí và Công nghệ,,,1,CKCN
+361,1,KHU 4-NHA N2,CS1,50,3,LT,Lý thuyết,Cơ khí và Công nghệ,,,1,CKCN
+362,1,KHU 5-NHA N2,CS1,50,3,LT,Lý thuyết,Cơ khí và Công nghệ,,,1,CKCN
+363,1,KHU 6-NHA N2,CS1,50,3,LT,Lý thuyết,Cơ khí và Công nghệ,,,1,CKCN
+364,1,KHU 7-NHA N2,CS1,50,3,LT,Lý thuyết,Cơ khí và Công nghệ,,,1,CKCN
+365,1,KHU 8-NHA N2,CS1,50,3,LT,Lý thuyết,Cơ khí và Công nghệ,,,1,CKCN
+366,1,KHU 9-NHA N2,CS1,50,3,LT,Lý thuyết,Cơ khí và Công nghệ,,,1,CKCN
+222,THUC HANH,NHA MAY,CS1,200,10,K,Khác,Phòng Đào Tạo,Phòng Đào Tạo,,1,
+416,1,PHONG HOP 1,CS1,20,1,K,Khác,Phòng Tổ Chức Hành Chính,,,1,
+417,1,PHONG HOP 2,CS1,10,1,K,Khác,Phòng Tổ Chức Hành Chính,,,1,
+221,1,SAN TRUONG,CS1,500,25,K,Khác,Cơ khí và Công nghệ,,,1,
+242,1,SAN TRUONG 2,CS1,500,25,K,Khác,Cơ khí và Công nghệ,,,1,
+323,1,SAN TRUONG CT,CS1,300,15,K,Khác,Cơ bản,Cơ bản,,1,
+441,1,VAN PHONG N4,CS1,20,1,LT,Lý thuyết,"Khoa Kinh tế, Du lịch và Truyền thông","Khoa Kinh tế, Du lịch và Truyền thông",,1,
+409,1,VUON UOM,CS1,40,2,LT,Lý thuyết,Công nghệ thông tin,,,1,
+380,1,XUONG NAU AN,CS1,60,3,LT,Lý thuyết,"Khoa Kinh tế, Du lịch và Truyền thông",,,1,KHCB
+385,1,XUONG NAU AN 1,CS1,40,2,LT,Lý thuyết,"Khoa Kinh tế, Du lịch và Truyền thông",,,1,KHCB

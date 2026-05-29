@@ -1,0 +1,64 @@
+{
+  "_comment": "Cấu hình ràng buộc xếp thời khóa biểu",
+
+  "general": {
+    "days": [2, 3, 4, 5, 6, 7],
+    "periods_per_day": 10,
+    "morning_periods": [1, 2, 3, 4, 5],
+    "afternoon_periods": [6, 7, 8, 9, 10],
+    "default_lessons_cluster": 5,
+    "max_time_seconds": 120,
+    "num_workers": 4
+  },
+
+  "hard_constraints": {
+    "no_room_conflict": true,
+    "no_teacher_conflict": true,
+    "no_class_group_conflict": true,
+    "respect_teacher_availability": true,
+    "trung_cap_morning_only": true,
+    "match_room_type": true,
+    "match_room_capacity": true,
+    "max_spw_trung_cap": 6,
+    "max_spw_cao_dang": 12,
+    "fixed_rooms_by_subject_keyword": [
+      {
+        "keywords": ["giáo dục thể chất", "thể chất"],
+        "room_names": ["221", "242", "323"],
+        "description": "Môn GDTC chỉ học ở 3 sân trường"
+      }
+    ]
+  },
+
+  "soft_constraints": {
+    "prioritize_thinh_giang": {
+      "enabled": true,
+      "weight": 10,
+      "description": "GV thỉnh giảng ưu tiên được xếp trước (slot tốt hơn)"
+    },
+    "prioritize_trung_cap": {
+      "enabled": true,
+      "weight": 5,
+      "description": "Trung cấp ưu tiên xếp trước cao đẳng"
+    },
+    "prefer_early_periods": {
+      "enabled": true,
+      "weight": 1,
+      "description": "Ưu tiên tiết sớm trong ngày"
+    },
+    "prefer_room_fit": {
+      "enabled": true,
+      "weight": 1,
+      "description": "Ưu tiên phòng có capacity gần sĩ số lớp (penalty (cap - class_size) // 10 * weight)"
+    }
+  },
+
+  "schedule_order": {
+    "description": "Thứ tự xếp: xếp trước = ưu tiên chọn slot tốt hơn",
+    "order": [
+      {"key": "thinh_giang", "label": "GV thỉnh giảng (mời từ bên ngoài)"},
+      {"key": "trung_cap", "label": "Trung cấp (chỉ học sáng, ít slot)"},
+      {"key": "cao_dang", "label": "Cao đẳng (linh hoạt sáng + chiều)"}
+    ]
+  }
+}

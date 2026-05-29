@@ -27,17 +27,16 @@ class TermPaths:
         return self.shared_dir / "rooms.csv"
 
     @property
-    def projects_xls(self) -> Path:
-        """Deprecated: dùng DepartmentPaths.projects_xls thay thế."""
-        return self.shared_dir / "projects.xls"
-
-    @property
     def term_dir(self) -> Path:
         return self.data_root / "terms" / self.term_code
 
     @property
     def weeks_csv(self) -> Path:
         return self.term_dir / "weeks.csv"
+
+    @property
+    def holidays_csv(self) -> Path:
+        return self.term_dir / "holidays.csv"
 
     @property
     def departments_dir(self) -> Path:
@@ -59,7 +58,7 @@ class TermPaths:
 
 @dataclass(frozen=True)
 class DepartmentPaths:
-    """Đường dẫn cho một khoa trong một học kỳ."""
+    """Đường dẫn cho một khoa trong một học kỳ. Pipeline mới chỉ đọc cleans/."""
 
     term: TermPaths
     dept_code: str
@@ -69,33 +68,17 @@ class DepartmentPaths:
         return self.term.departments_dir / self.dept_code
 
     @property
-    def raw_dir(self) -> Path:
-        return self.dept_dir / "raw"
-
-    @property
     def cleans_dir(self) -> Path:
         return self.dept_dir / "cleans"
-
-    @property
-    def classes_project_xls(self) -> Path:
-        return self.raw_dir / "classes_project.xls"
 
     @property
     def classes_csv(self) -> Path:
         return self.cleans_dir / "classes.csv"
 
     @property
-    def teachers_csv(self) -> Path:
-        return self.cleans_dir / "teachers.csv"
+    def teacher_subjects_xlsx(self) -> Path:
+        return self.cleans_dir / "teacher_subjects.xlsx"
 
     @property
-    def teacher_aliases_csv(self) -> Path:
-        return self.cleans_dir / "teacher_aliases.csv"
-
-    @property
-    def teacher_busy_csv(self) -> Path:
-        return self.cleans_dir / "teacher_busy.csv"
-
-    @property
-    def projects_xls(self) -> Path:
-        return self.raw_dir / "projects.xls"
+    def teacher_subjects_csv(self) -> Path:
+        return self.cleans_dir / "teacher_subjects.csv"

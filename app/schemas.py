@@ -25,6 +25,11 @@ class Classroom(BaseModel):
     )
     type_code: Optional[str] = None
     campus_code: Optional[str] = None
+    home_department: Optional[str] = Field(None, description="Mã khoa sở hữu phòng (nếu có)")
+    priority_departments: list[str] = Field(
+        default_factory=list,
+        description="Danh sách mã khoa được ưu tiên dùng phòng. Trống = bất kỳ khoa nào",
+    )
 
 
 class Assignment(BaseModel):
@@ -48,6 +53,11 @@ class Assignment(BaseModel):
 
     department_code: str = Field("", description="Mã khoa (vd cntt, kt)")
     term_code: str = Field("", description="Mã học kỳ (vd 2025_2026_HK2)")
+
+    class_size: Optional[int] = Field(
+        None,
+        description="Sĩ số lớp (từ classes.csv). Dùng để lọc phòng đủ capacity và soft prefer phòng vừa.",
+    )
 
 
 class GenerateRequest(BaseModel):
@@ -74,3 +84,4 @@ class GenerateResponse(BaseModel):
     objective: Optional[int] = None
     sessions: list[ScheduledSession] = Field(default_factory=list)
     message: Optional[str] = None
+    warnings: list[str] = Field(default_factory=list)

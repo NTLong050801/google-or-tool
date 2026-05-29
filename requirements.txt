@@ -4,3 +4,5 @@ pydantic>=2.6
 ortools>=9.10
 pandas>=2.0
 openpyxl>=3.1
+pymysql>=1.1
+python-dotenv>=1.0

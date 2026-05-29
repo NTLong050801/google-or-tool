@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git rm *)",
+      "Bash(git mv *)",
+      "Bash(rm -f app/data/cleans/rooms.csv app/data/cleans/weeks.csv app/data/cleans/classes.csv app/data/cleans/teachers.csv app/data/cleans/classes_active_2026.csv app/data/projects.xls app/data/classes_project.xls app/data/edu_courses.csv app/data/edu_weeks.csv app/data/rooms.xls app/data/teachers.xls app/data/filter_edu_courses.py app/data/filter_edu_weeks.py)",
+      "Bash(rmdir app/data/cleans)",
+      "Bash(rm -rf app/data/output)",
+      "Bash(python -m app.local_timetable --seconds 10)",
+      "Bash(python -m app.local_timetable --seconds 60)",
+      "Bash(python -m app.local_timetable --seconds 30)",
+      "Bash(python -c ' *)",
+      "Bash(python -m app.local_timetable --seconds 120)"
+    ]
+  }
+}
