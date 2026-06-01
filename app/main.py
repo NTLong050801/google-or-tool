@@ -16,6 +16,7 @@ from .db_reader import (
     db_available,
     load_availability_from_db,
     load_holidays_from_db,
+    load_subject_registrations_from_db,
 )
 from .paths import TermPaths, _default_data_root
 from .schemas import GenerateRequest, GenerateResponse, ScheduledSession
@@ -129,6 +130,7 @@ def generate_timetable(req: GenerateTimetableRequest) -> GenerateTimetableRespon
     avail_override = None
     holidays_override = None
     holiday_reasons_override = None
+    teacher_subjects_override = None
 
     if req.use_db:
         try:
@@ -137,6 +139,9 @@ def generate_timetable(req: GenerateTimetableRequest) -> GenerateTimetableRespon
             )
             holidays_override, holiday_reasons_override = load_holidays_from_db(
                 req.schoolyear, req.semester
+            )
+            teacher_subjects_override = load_subject_registrations_from_db(
+                req.schoolyear, req.semester, only_submitted=req.only_submitted
             )
         except Exception as e:
             raise HTTPException(503, f"Không kết nối được DB cdata: {e}")
@@ -148,6 +153,7 @@ def generate_timetable(req: GenerateTimetableRequest) -> GenerateTimetableRespon
         availability_override=avail_override,
         holidays_override=holidays_override,
         holiday_reasons_override=holiday_reasons_override,
+        teacher_subjects_override=teacher_subjects_override,
     )
 
     cfg = br.config

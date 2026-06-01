@@ -1,10 +1,10 @@
-"""Đọc availability + holidays trực tiếp từ DB cdata (thay cho file CSV)."""
+"""Đọc availability + holidays + subject_registrations từ DB cdata."""
 
 from __future__ import annotations
 
 import os
 from contextlib import contextmanager
-from typing import Dict, Optional, Set, Tuple
+from typing import Dict, List, Optional, Set, Tuple
 
 import pymysql
 
@@ -107,3 +107,45 @@ def db_available() -> bool:
         return True
     except Exception:
         return False
+
+
+def load_subject_registrations_from_db(
+    schoolyear: str,
+    semester: int,
+    only_submitted: bool = True,
+) -> List[Dict]:
+    """Đọc đăng ký môn dạy của GV từ DB → thay thế teacher_subjects.xlsx.
+
+    Trả về list[dict] với các key:
+      teacher_id   : username GV (vd "CT176")
+      subject_code : mã môn
+      priority     : 1/2/3
+      teacher_type : "cơ hữu" / "thỉnh giảng"
+
+    JOIN sang cbase_v2.users để lấy username từ numeric teacher_id.
+    """
+    sql = """
+        SELECT u.username, r.subject_code, r.priority, r.teacher_type
+        FROM cd_edu_subject_registrations r
+        JOIN {ctool}.users u ON u.id = r.teacher_id
+        WHERE r.schoolyear = %s AND r.semester = %s
+    """.format(ctool=_ctool_db())
+    params = [schoolyear, semester]
+    if only_submitted:
+        sql += " AND r.status = 'submitted'"
+
+    rows: List[Dict] = []
+    with _connect() as conn:
+        with conn.cursor() as cur:
+            cur.execute(sql, params)
+            for username, subject_code, priority, teacher_type in cur.fetchall():
+                username = (username or "").strip()
+                if not username:
+                    continue
+                rows.append({
+                    "teacher_id":   username,
+                    "subject_code": (subject_code or "").strip(),
+                    "priority":     int(priority or 2),
+                    "teacher_type": (teacher_type or "cơ hữu").strip(),
+                })
+    return rows

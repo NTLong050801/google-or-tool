@@ -243,12 +243,15 @@ def build_generate_request(
     availability_override: Optional[Dict[str, Set[Tuple[int, int, int]]]] = None,
     holidays_override: Optional[Set[int]] = None,
     holiday_reasons_override: Optional[Dict[int, str]] = None,
+    teacher_subjects_override: Optional[List[Dict]] = None,
 ) -> BuildResult:
     """Build GenerateRequest từ data mới (dao_tao_*.xlsx + availability + shared).
 
     availability_override / holidays_override / holiday_reasons_override:
-    nếu pass vào (vd từ DB cdata) → dùng thay cho file CSV. Hữu ích khi
-    gọi qua API.
+    nếu pass vào (vd từ DB cdata) → dùng thay cho file CSV.
+
+    teacher_subjects_override: list[{teacher_id, subject_code, priority, teacher_type}]
+    nếu pass vào → dùng thay cho teacher_subjects.xlsx của từng khoa.
     """
     root = data_root or _default_data_root()
     tp = TermPaths(data_root=root, term_code=term_code)
@@ -305,9 +308,16 @@ def build_generate_request(
                 all_availability[tid] = set()
             all_availability[tid].update(slots)
 
-        # Load teacher_subjects của khoa (ưu tiên .xlsx, fallback .csv)
-        ts_path = dp.teacher_subjects_xlsx if dp.teacher_subjects_xlsx.is_file() else dp.teacher_subjects_csv
-        ts = load_teacher_subjects(ts_path)
+        # Load teacher_subjects: dùng override từ DB nếu có, fallback file xlsx/csv
+        if teacher_subjects_override is not None:
+            ts = {
+                (r["teacher_id"], r["subject_code"]): int(r.get("priority", 2))
+                for r in teacher_subjects_override
+                if r.get("teacher_id") and r.get("subject_code")
+            }
+        else:
+            ts_path = dp.teacher_subjects_xlsx if dp.teacher_subjects_xlsx.is_file() else dp.teacher_subjects_csv
+            ts = load_teacher_subjects(ts_path)
         teacher_subjects_pool.update(ts)
 
         # Sĩ số lớp
