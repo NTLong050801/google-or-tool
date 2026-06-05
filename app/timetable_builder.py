@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import hashlib
 import math
 from dataclasses import dataclass, field
 from datetime import datetime
@@ -20,6 +21,8 @@ from .teacher_assigner import (
     assign_teachers,
 )
 from .timetable_loader import (
+    load_class_excluded_weeks_csv,
+    load_class_week_starts_csv,
     load_class_sizes,
     load_classrooms_from_csv,
     load_holidays,
@@ -43,6 +46,8 @@ class BuildResult:
     week_dates: Dict[int, Tuple[str, str]] = field(default_factory=dict)
     holiday_reasons: Dict[int, str] = field(default_factory=dict)
     assigner_log: List[Dict] = field(default_factory=list)
+    class_excluded_weeks: Dict[str, Dict[int, str]] = field(default_factory=dict)
+    class_week_starts: Dict[str, int] = field(default_factory=dict)
 
 
 # --- Helpers ---
@@ -244,6 +249,8 @@ def build_generate_request(
     holidays_override: Optional[Set[int]] = None,
     holiday_reasons_override: Optional[Dict[int, str]] = None,
     teacher_subjects_override: Optional[List[Dict]] = None,
+    class_excluded_weeks_override: Optional[Dict[str, Dict[int, str]]] = None,
+    class_week_starts_override: Optional[Dict[str, int]] = None,
 ) -> BuildResult:
     """Build GenerateRequest từ data mới (dao_tao_*.xlsx + availability + shared).
 
@@ -283,6 +290,28 @@ def build_generate_request(
     if holidays:
         warnings.append(
             f"Holiday weeks: {sorted(holidays)} (extend week_end để bù tuần dạy)"
+        )
+
+    # Class excluded weeks: override từ DB nếu có, fallback đọc CSV (trả {} nếu file không tồn tại)
+    if class_excluded_weeks_override is not None:
+        class_excluded_weeks: Dict[str, Dict[int, str]] = dict(class_excluded_weeks_override)
+    else:
+        class_excluded_weeks = load_class_excluded_weeks_csv(tp.class_excluded_weeks_csv)
+    if class_excluded_weeks:
+        total_excl = sum(len(v) for v in class_excluded_weeks.values())
+        warnings.append(
+            f"Class excluded weeks: {len(class_excluded_weeks)} lớp, "
+            f"{total_excl} tuần loại trừ (thi/dự phòng/...)"
+        )
+
+    # class_week_starts: override từ DB nếu có, fallback CSV (trả {} nếu file không tồn tại)
+    if class_week_starts_override is not None:
+        class_week_starts: Dict[str, int] = dict(class_week_starts_override)
+    else:
+        class_week_starts = load_class_week_starts_csv(tp.class_week_starts_csv)
+    if class_week_starts:
+        warnings.append(
+            f"Class week starts: {len(class_week_starts)} lớp có tuần bắt đầu riêng"
         )
 
     all_assignments: List[Assignment] = []
@@ -387,13 +416,18 @@ def build_generate_request(
                     total_hours, cfg.default_lessons_cluster, spw_override
                 )
                 num_weeks_needed = math.ceil(total_sessions / sessions_pw)
+                # Per-class week_start: từ DB/CSV, mặc định week_lo
+                class_week_start = max(week_lo, class_week_starts.get(class_id, week_lo))
+                # Hợp nhất: tuần nghỉ toàn trường + tuần loại trừ riêng của lớp này
+                class_excluded_for_class = set(class_excluded_weeks.get(class_id, {}).keys())
+                combined_excluded = holidays | class_excluded_for_class
                 a_week_end, missing_weeks = _compute_week_end_skip_holidays(
-                    week_lo, week_hi, num_weeks_needed, holidays
+                    class_week_start, week_hi, num_weeks_needed, combined_excluded
                 )
                 if missing_weeks > 0:
                     warnings.append(
                         f"[{dept_code}/{program_level}] {class_id} | {subject_name}: "
-                        f"thiếu {missing_weeks} tuần dạy do holiday đẩy ngoài term "
+                        f"thiếu {missing_weeks} tuần dạy do holiday/excluded đẩy ngoài term "
                         f"(cần {num_weeks_needed} tuần, term còn {num_weeks_needed - missing_weeks})"
                     )
 
@@ -415,6 +449,7 @@ def build_generate_request(
                     "total_hours": total_hours,
                     "classroom_type": classroom_type,
                     "room_type_raw": room_type_raw,
+                    "week_start": class_week_start,
                     "week_end": a_week_end,
                     "class_size": class_size,
                 })
@@ -477,20 +512,29 @@ def build_generate_request(
         teacher_name = teacher_info.get("teacher_name", teacher_id)
         teacher_type = teacher_info.get("teacher_type", "")
 
+        # Tuần loại trừ riêng của lớp này (thi/dự phòng/...) trong phạm vi week_start..week_end.
+        # Không gồm global holidays (đã được truyền riêng qua holiday_weeks).
+        class_excl_set = set(class_excluded_weeks.get(d["class_id"], {}).keys())
+        excl_in_range = class_excl_set & set(range(d["week_start"], d["week_end"] + 1))
+
+        # Dùng MD5 thay hash() để class_group_id ổn định qua các lần chạy
+        stable_gid = int(hashlib.md5(d["class_id"].encode()).hexdigest(), 16) % (10**9)
+
         all_assignments.append(
             Assignment(
                 id=aid,
                 teacher_id=teacher_id,
                 course_id=d["subject_code"],
-                class_group_id=hash(d["class_id"]) % (10**9),
+                class_group_id=stable_gid,
                 classroom_type=d["classroom_type"],
                 sessions_per_week=d["sessions_per_week"],
                 lessons_cluster=cfg.default_lessons_cluster,
-                week_start=week_lo,
+                week_start=d["week_start"],
                 week_end=d["week_end"],
                 department_code=d["dept_code"],
                 term_code=term_code,
                 class_size=d["class_size"],
+                excluded_weeks=excl_in_range,
             )
         )
         total_hours = d["total_hours"]
@@ -553,16 +597,20 @@ def build_generate_request(
         for idx_pos, i in enumerate(indices):
             a = all_assignments[i]
             new_spw = max(1, new_spw_list[idx_pos])
+            cls_id_for_a = all_labels.get(a.id, {}).get("class_id", "")
+            class_excl_for_a = set(class_excluded_weeks.get(cls_id_for_a, {}).keys())
+            combined_excl_for_a = holidays | class_excl_for_a
             old_total_sessions = (a.week_end - a.week_start + 1 - sum(
-                1 for h in holidays if a.week_start <= h <= a.week_end
+                1 for h in combined_excl_for_a if a.week_start <= h <= a.week_end
             )) * a.sessions_per_week
             new_total_sessions = max(1, old_total_sessions)
             new_end, _ = _compute_week_end_skip_holidays(
                 a.week_start,
                 week_hi,
                 math.ceil(new_total_sessions / new_spw),
-                holidays,
+                combined_excl_for_a,
             )
+            new_excl = class_excl_for_a & set(range(a.week_start, new_end + 1))
             all_assignments[i] = Assignment(
                 id=a.id,
                 teacher_id=a.teacher_id,
@@ -576,6 +624,7 @@ def build_generate_request(
                 department_code=a.department_code,
                 term_code=a.term_code,
                 class_size=a.class_size,
+                excluded_weeks=new_excl,
             )
         class_id = all_labels.get(all_assignments[indices[0]].id, {}).get("class_id", "?")
         warnings.append(
@@ -601,4 +650,6 @@ def build_generate_request(
         week_dates=week_dates,
         holiday_reasons=holiday_reasons,
         assigner_log=assigner_res.log_rows,
+        class_excluded_weeks=class_excluded_weeks,
+        class_week_starts=class_week_starts,
     )

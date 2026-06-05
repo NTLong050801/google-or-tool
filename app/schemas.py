@@ -58,6 +58,11 @@ class Assignment(BaseModel):
         None,
         description="Sĩ số lớp (từ classes.csv). Dùng để lọc phòng đủ capacity và soft prefer phòng vừa.",
     )
+    excluded_weeks: set[int] = Field(
+        default_factory=set,
+        description="Tuần không dạy riêng của lớp này (thi/dự phòng/...). "
+                    "Solver bỏ qua khi check availability GV. Không gồm holiday_weeks toàn trường.",
+    )
 
 
 class GenerateRequest(BaseModel):

@@ -97,6 +97,55 @@ def load_holidays_from_db(
     return weeks, reasons
 
 
+def load_class_week_starts_from_db(
+    schoolyear: str,
+    semester: int,
+) -> Dict[str, int]:
+    """Trả về {class_id: week_start}.
+
+    Truy vấn bảng cd_edu_class_week_starts (prefix cd_ là tên thật trong DB).
+    """
+    sql = """
+        SELECT class_id, week_start
+        FROM cd_edu_class_week_starts
+        WHERE schoolyear = %s AND semester = %s
+    """
+    result: Dict[str, int] = {}
+    with _connect() as conn:
+        with conn.cursor() as cur:
+            cur.execute(sql, [schoolyear, semester])
+            for class_id, week_start in cur.fetchall():
+                cid = (class_id or "").strip()
+                if cid:
+                    result[cid] = int(week_start)
+    return result
+
+
+def load_class_excluded_weeks_from_db(
+    schoolyear: str,
+    semester: int,
+) -> Dict[str, Dict[int, str]]:
+    """Trả về {class_id: {week_order: reason}}.
+
+    Truy vấn bảng cd_edu_class_excluded_weeks (prefix cd_ là tên thật trong DB).
+    Ví dụ: {"TK603-K14": {15: "thi", 16: "du_phong"}, "LT21CNTT1": {18: "thi"}}
+    """
+    sql = """
+        SELECT class_id, week_order, reason
+        FROM cd_edu_class_excluded_weeks
+        WHERE schoolyear = %s AND semester = %s
+    """
+    result: Dict[str, Dict[int, str]] = {}
+    with _connect() as conn:
+        with conn.cursor() as cur:
+            cur.execute(sql, [schoolyear, semester])
+            for class_id, week_order, reason in cur.fetchall():
+                cid = (class_id or "").strip()
+                if cid:
+                    result.setdefault(cid, {})[int(week_order)] = (reason or "").strip()
+    return result
+
+
 def db_available() -> bool:
     """Check kết nối DB - dùng cho health check."""
     try:

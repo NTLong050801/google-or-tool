@@ -15,6 +15,8 @@ from pydantic import BaseModel, Field
 from .db_reader import (
     db_available,
     load_availability_from_db,
+    load_class_excluded_weeks_from_db,
+    load_class_week_starts_from_db,
     load_holidays_from_db,
     load_subject_registrations_from_db,
 )
@@ -131,6 +133,8 @@ def generate_timetable(req: GenerateTimetableRequest) -> GenerateTimetableRespon
     holidays_override = None
     holiday_reasons_override = None
     teacher_subjects_override = None
+    class_excluded_override = None
+    class_week_starts_override = None
 
     if req.use_db:
         try:
@@ -143,6 +147,12 @@ def generate_timetable(req: GenerateTimetableRequest) -> GenerateTimetableRespon
             teacher_subjects_override = load_subject_registrations_from_db(
                 req.schoolyear, req.semester, only_submitted=req.only_submitted
             )
+            class_excluded_override = load_class_excluded_weeks_from_db(
+                req.schoolyear, req.semester
+            )
+            class_week_starts_override = load_class_week_starts_from_db(
+                req.schoolyear, req.semester
+            )
         except Exception as e:
             raise HTTPException(503, f"Không kết nối được DB cdata: {e}")
 
@@ -154,6 +164,8 @@ def generate_timetable(req: GenerateTimetableRequest) -> GenerateTimetableRespon
         holidays_override=holidays_override,
         holiday_reasons_override=holiday_reasons_override,
         teacher_subjects_override=teacher_subjects_override,
+        class_excluded_weeks_override=class_excluded_override,
+        class_week_starts_override=class_week_starts_override,
     )
 
     cfg = br.config
@@ -211,6 +223,7 @@ def generate_timetable(req: GenerateTimetableRequest) -> GenerateTimetableRespon
                 xlsx_path=dept_out / "timetable_by_class.xlsx",
                 week_dates=br.week_dates,
                 holiday_reasons=br.holiday_reasons,
+                class_excluded_weeks=br.class_excluded_weeks,
             )
             departments_used.append(dept_code)
 
