@@ -19,6 +19,17 @@ _PROGRAM_LABEL = {
     "lien_thong": "Liên thông",
 }
 
+_REASON_LABELS: dict = {
+    "thi":      "Tuần thi",
+    "du_phong": "Dự phòng",
+    "quan_su":  "Quân sự",
+    "nghi_le":  "Nghỉ lễ",
+    "thi_lai":  "Thi lại",
+    "nghi":     "Nghỉ",
+    "thuc_te":  "Thực tế/Thực tập",
+    "khac":     "Khác",
+}
+
 _THIN = Side(style="thin", color="888888")
 _BORDER = Border(left=_THIN, right=_THIN, top=_THIN, bottom=_THIN)
 _HEADER_FILL = PatternFill("solid", fgColor="D9E1F2")
@@ -56,6 +67,22 @@ def _format_date(s: str) -> str:
         return s
 
 
+def _format_week_ranges(weeks: list[int]) -> str:
+    """Chuyển danh sách tuần thành chuỗi range: [24,26,27,28,31] → '24, 26-28, 31'."""
+    if not weeks:
+        return ""
+    ranges = []
+    start = end = weeks[0]
+    for w in weeks[1:]:
+        if w == end + 1:
+            end = w
+        else:
+            ranges.append(str(start) if start == end else f"{start}-{end}")
+            start = end = w
+    ranges.append(str(start) if start == end else f"{start}-{end}")
+    return ", ".join(ranges)
+
+
 def _build_cell_text(
     s: ScheduledSession,
     a: Optional[Assignment],
@@ -63,6 +90,7 @@ def _build_cell_text(
     classrooms_by_id: Dict[int, Classroom],
     week_dates: Dict[int, Tuple[str, str]],
     holiday_reasons: Dict[int, str],
+    class_excluded_weeks: Dict[str, Dict[int, str]],
 ) -> str:
     sub_code = label.get("subject_code", "")
     sub_name = label.get("subject_name", "")
@@ -79,17 +107,37 @@ def _build_cell_text(
     w_end = int(s.week_end)
     fd_start, _ = week_dates.get(w_start, ("", ""))
     _, td_end = week_dates.get(w_end, ("", ""))
-    week_range = f"Tuần {w_start}-{w_end}"
-    if fd_start and td_end:
-        week_range += f" ({_format_date(fd_start)} → {_format_date(td_end)})"
 
-    holidays_in_range = sorted(
-        w for w in range(w_start, w_end + 1) if w in holiday_reasons
-    )
-    holiday_text = ""
-    if holidays_in_range:
-        items = [f"W{w} ({holiday_reasons.get(w, 'Nghỉ')})" for w in holidays_in_range]
-        holiday_text = "Nghỉ: " + ", ".join(items)
+    # Gom tất cả tuần không dạy trong phạm vi: nghỉ lễ toàn trường + thi/dự phòng riêng lớp
+    cls_id = label.get("class_id", "")
+    class_excl = class_excluded_weeks.get(cls_id, {})
+    excl_in_range = {w: r for w, r in class_excl.items() if w_start <= w <= w_end}
+    holidays_in_range = {w: holiday_reasons.get(w, "Nghỉ") for w in range(w_start, w_end + 1) if w in holiday_reasons}
+    all_skipped = {**holidays_in_range, **excl_in_range}  # excl_in_range ghi đè nếu trùng
+
+    # Tuần thực dạy (loại bỏ nghỉ lễ + thi/dự phòng)
+    teaching_weeks = sorted(w for w in range(w_start, w_end + 1) if w not in all_skipped)
+    teaching_range = _format_week_ranges(teaching_weeks)
+
+    # Dòng tuần: chỉ hiển thị tuần thực dạy kèm ngày tháng
+    if teaching_weeks:
+        fd_teach, _ = week_dates.get(teaching_weeks[0], ("", ""))
+        _, td_teach = week_dates.get(teaching_weeks[-1], ("", ""))
+        week_line = f"Tuần {teaching_range}"
+        if fd_teach and td_teach:
+            week_line += f" ({_format_date(fd_teach)} → {_format_date(td_teach)})"
+        week_line += f"  [{len(teaching_weeks)} tuần thực dạy]"
+    else:
+        week_line = f"Tuần {w_start}-{w_end}  [0 tuần thực dạy]"
+
+    # Dòng các tuần không dạy (gom chung, kèm lý do)
+    skipped_text = ""
+    if all_skipped:
+        skipped_items = [
+            f"W{w} ({_REASON_LABELS.get(r, r)})"
+            for w, r in sorted(all_skipped.items())
+        ]
+        skipped_text = "Không dạy: " + " | ".join(skipped_items)
 
     teacher_line = f"GV: {teacher_name}"
     if teacher_type:
@@ -100,10 +148,11 @@ def _build_cell_text(
         f"Tổng: {total_sessions} buổi ({total_hours}h) · {cluster} tiết/buổi",
         teacher_line,
         f"Phòng: {room_label}",
-        week_range,
+        week_line,
     ]
-    if holiday_text:
-        parts.append(holiday_text)
+    if skipped_text:
+        parts.append(skipped_text)
+
     return "\n".join(p for p in parts if p)
 
 
@@ -119,12 +168,14 @@ def export_timetable_by_class(
     xlsx_path: Path,
     week_dates: Optional[Dict[int, Tuple[str, str]]] = None,
     holiday_reasons: Optional[Dict[int, str]] = None,
+    class_excluded_weeks: Optional[Dict[str, Dict[int, str]]] = None,
 ) -> None:
     """Xuất Excel: mỗi sheet = 1 lớp, lưới hàng=Tiết × cột=Thứ. Slot 5 tiết → merge."""
     a_by_id = {int(a.id): a for a in assignments}
     room_by_id = {int(c.id): c for c in classrooms}
     week_dates = week_dates or {}
     holiday_reasons = holiday_reasons or {}
+    class_excluded_weeks = class_excluded_weeks or {}
 
     by_class: Dict[str, List[ScheduledSession]] = {}
     for s in sessions:
@@ -193,7 +244,7 @@ def export_timetable_by_class(
             a = a_by_id.get(int(s.assignment_id))
             cluster = int(a.lessons_cluster) if a else (int(s.period_end) - int(s.period_start) + 1)
             lab = assignment_labels.get(int(s.assignment_id), {})
-            content = _build_cell_text(s, a, lab, room_by_id, week_dates, holiday_reasons)
+            content = _build_cell_text(s, a, lab, room_by_id, week_dates, holiday_reasons, class_excluded_weeks)
             key = (int(s.day), int(s.period_start))
             slot_content.setdefault(key, []).append(content)
             slot_span[key] = cluster

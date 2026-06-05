@@ -133,6 +133,45 @@ def load_week_dates(path: Path) -> Dict[int, Tuple[str, str]]:
     return out
 
 
+def load_class_week_starts_csv(path: Path) -> Dict[str, int]:
+    """terms/<term>/class_week_starts.csv → {class_id: week_start}.
+
+    Cột: class_id, week_start
+    File không tồn tại → trả {} (không lỗi).
+    """
+    out: Dict[str, int] = {}
+    if not path.is_file():
+        return out
+    with path.open(encoding="utf-8-sig", newline="") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            cid = (row.get("class_id") or "").strip()
+            ws  = (row.get("week_start") or "").strip()
+            if cid and ws.isdigit() and int(ws) > 0:
+                out[cid] = int(ws)
+    return out
+
+
+def load_class_excluded_weeks_csv(path: Path) -> Dict[str, Dict[int, str]]:
+    """terms/<term>/class_excluded_weeks.csv → {class_id: {week_order: reason}}.
+
+    Format CSV: class_id, week_order, reason, note
+    File không tồn tại → trả về dict rỗng (không lỗi).
+    """
+    out: Dict[str, Dict[int, str]] = {}
+    if not path.is_file():
+        return out
+    with path.open(encoding="utf-8-sig", newline="") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            cid = (row.get("class_id") or "").strip()
+            wo_raw = (row.get("week_order") or "").strip()
+            reason = (row.get("reason") or "khac").strip()
+            if cid and wo_raw.isdigit():
+                out.setdefault(cid, {})[int(wo_raw)] = reason
+    return out
+
+
 def load_teacher_subjects(path: Path) -> Dict[Tuple[str, str], int]:
     """Đọc teacher_subjects.xlsx hoặc .csv → dict[(teacher_id, subject_code) → priority(1/2/3)].
 

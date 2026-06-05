@@ -52,6 +52,14 @@ class TermPaths:
         return sorted(p.name for p in d.iterdir() if p.is_dir())
 
     @property
+    def class_excluded_weeks_csv(self) -> Path:
+        return self.term_dir / "class_excluded_weeks.csv"
+
+    @property
+    def class_week_starts_csv(self) -> Path:
+        return self.term_dir / "class_week_starts.csv"
+
+    @property
     def output_dir(self) -> Path:
         return self.data_root / "output" / self.term_code
 

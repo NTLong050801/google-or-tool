@@ -216,11 +216,13 @@ def solve_weekly_timetable(
             if tid not in teacher_day_sessions:
                 teacher_day_sessions[tid] = set()
             teacher_slots = availability[tid]
+            # Tuần không được tính: nghỉ toàn trường + thi/dự phòng riêng lớp này
+            skip_weeks = holiday_weeks | set(a.excluded_weeks)
             for d in days:
                 for s in [1, 2]:
                     if any((w, d, s) in teacher_slots
                            for w in range(int(a.week_start), int(a.week_end) + 1)
-                           if w not in holiday_weeks):
+                           if w not in skip_weeks):
                         teacher_day_sessions[tid].add((d, s))
 
         for tid, spw in teacher_spw.items():
@@ -276,10 +278,12 @@ def solve_weekly_timetable(
             teacher_slots = availability[tid]
             day_value = days[k.day_idx]
             session_id = 1 if k.p_start <= (morning_periods[-1] if morning_periods else 5) else 2
+            # Bỏ qua nghỉ toàn trường + tuần thi/dự phòng riêng lớp này
+            skip_weeks = holiday_weeks | set(a.excluded_weeks)
             has_slot = any(
                 (w, day_value, session_id) in teacher_slots
                 for w in range(int(a.week_start), int(a.week_end) + 1)
-                if w not in holiday_weeks
+                if w not in skip_weeks
             )
             if not has_slot:
                 model.add(var == 0)

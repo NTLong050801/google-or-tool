@@ -152,6 +152,7 @@ def main() -> None:
             xlsx_path=dept_out / "timetable_by_class.xlsx",
             week_dates=br.week_dates,
             holiday_reasons=br.holiday_reasons,
+            class_excluded_weeks=br.class_excluded_weeks,
         )
         print(f"written: [{dept_code}] {len(dept_sessions)} sessions → {dept_out}/")
 
