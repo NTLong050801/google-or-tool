@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """Entry point: chạy FastAPI + ghi log ra file logs/app.log"""
 
 from __future__ import annotations
