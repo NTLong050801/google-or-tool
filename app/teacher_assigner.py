@@ -27,6 +27,9 @@ class SubjectClassDemand:
     program_level: str          # "trung_cap" / "cao_dang"
     sessions_per_week: int
     total_sessions: int         # tổng buổi qua cả kỳ (để cân bằng tải)
+    week_start: Optional[int] = None
+    week_end: Optional[int] = None
+    excluded_weeks: Set[int] = field(default_factory=set)
 
 
 @dataclass
@@ -60,23 +63,31 @@ def _availability_score(
     sessions_per_week: int,
     availability: Dict[str, Set[Tuple[int, int, int]]],
     days: List[int],
+    week_start: Optional[int] = None,
+    week_end: Optional[int] = None,
+    excluded_weeks: Optional[Set[int]] = None,
 ) -> int:
-    """Đếm số (day, session) khác nhau GV rảnh, ưu tiên nếu nhiều slot khớp.
+    """Đếm số (day, session) GV rảnh trong dải tuần thực dạy của môn.
 
-    Trả về 0 nếu không đủ slot cho sessions_per_week.
+    Trả về penalty nặng nếu không đủ slot cho sessions_per_week.
     """
     if teacher_id not in availability:
         return 50  # GV chưa đăng ký availability → coi như rảnh tất cả, score trung bình
     slots = availability[teacher_id]
+    skip = excluded_weeks or set()
     day_sessions: Set[Tuple[int, int]] = set()
-    for _, d, s in slots:
+    for w, d, s in slots:
+        # Lọc theo dải tuần thực dạy của assignment (bỏ nghỉ lễ + thi/dự phòng)
+        if week_start is not None and week_end is not None:
+            if w < week_start or w > week_end or w in skip:
+                continue
         if d in days:
             # Trung cấp chỉ học sáng → chỉ tính session=1
             if program_level == "trung_cap" and s != 1:
                 continue
             day_sessions.add((d, s))
     if len(day_sessions) < sessions_per_week:
-        return -1000  # nặng penalty: GV không đủ slot cho môn này
+        return -1000  # nặng penalty: GV không đủ slot trong tuần thực dạy
     return min(100, len(day_sessions) * 10)
 
 
@@ -97,16 +108,23 @@ def _difficulty_score(
     availability: Dict[str, Set[Tuple[int, int, int]]],
     days: List[int],
 ) -> int:
-    """Càng khó → assign sớm. Khó = ít GV ứng viên, ít slot khả dụng."""
+    """Càng khó → assign sớm. Khó = ít GV ứng viên, ít slot khả dụng trong tuần thực dạy."""
     n = len(candidates)
     if n == 0:
         return 999  # cao nhất
+    skip = demand.excluded_weeks or set()
     available_count = 0
     for tid, _ in candidates:
         slots = availability.get(tid, set())
-        ds = {(d, s) for _, d, s in slots if d in days}
-        if demand.program_level == "trung_cap":
-            ds = {p for p in ds if p[1] == 1}
+        ds: Set[Tuple[int, int]] = set()
+        for w, d, s in slots:
+            if demand.week_start is not None and demand.week_end is not None:
+                if w < demand.week_start or w > demand.week_end or w in skip:
+                    continue
+            if d in days:
+                if demand.program_level == "trung_cap" and s != 1:
+                    continue
+                ds.add((d, s))
         if len(ds) >= demand.sessions_per_week or tid not in availability:
             available_count += 1
     if available_count == 0:
@@ -190,7 +208,10 @@ def assign_teachers(
             type_bonus = _TYPE_BONUS.get(type_key, 0)
             prio_bonus = _PRIORITY_BONUS.get(prio, _PRIORITY_BONUS[2])
             avail_bonus = _availability_score(
-                tid, d.program_level, d.sessions_per_week, availability, days
+                tid, d.program_level, d.sessions_per_week, availability, days,
+                week_start=d.week_start,
+                week_end=d.week_end,
+                excluded_weeks=d.excluded_weeks,
             )
             load_bonus = _load_balance_score(tid, teacher_load, avg_load)
             score = prio_bonus + type_bonus + avail_bonus + load_bonus

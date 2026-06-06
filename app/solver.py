@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import math
 from dataclasses import dataclass
 from typing import Dict, List, Optional, Set, Tuple
 
@@ -50,6 +51,7 @@ def solve_weekly_timetable(
     assignment_labels: Optional[Dict[int, Dict[str, str]]] = None,
     config: Optional[SchedulingConfig] = None,
     holiday_weeks: Optional[Set[int]] = None,
+    holiday_reasons: Optional[Dict[int, str]] = None,
     max_time_seconds: float = 120.0,
 ) -> GenerateResponse:
     """Xếp lịch theo tuần với availability + config rules."""
@@ -65,6 +67,8 @@ def solve_weekly_timetable(
         config = SchedulingConfig()
     if holiday_weeks is None:
         holiday_weeks = set()
+    if holiday_reasons is None:
+        holiday_reasons = {}
 
     a_by_id: Dict[int, Assignment] = {int(a.id): a for a in assignments}
 
@@ -218,11 +222,15 @@ def solve_weekly_timetable(
             teacher_slots = availability[tid]
             # Tuần không được tính: nghỉ toàn trường + thi/dự phòng riêng lớp này
             skip_weeks = holiday_weeks | set(a.excluded_weeks)
+            teaching_weeks_a = [
+                w for w in range(int(a.week_start), int(a.week_end) + 1)
+                if w not in skip_weeks
+            ]
+            min_weeks = max(1, math.ceil(len(teaching_weeks_a) * config.availability_week_threshold))
             for d in days:
                 for s in [1, 2]:
-                    if any((w, d, s) in teacher_slots
-                           for w in range(int(a.week_start), int(a.week_end) + 1)
-                           if w not in skip_weeks):
+                    avail_count = sum(1 for w in teaching_weeks_a if (w, d, s) in teacher_slots)
+                    if avail_count >= min_weeks:
                         teacher_day_sessions[tid].add((d, s))
 
         for tid, spw in teacher_spw.items():
@@ -277,16 +285,18 @@ def solve_weekly_timetable(
                 continue
             teacher_slots = availability[tid]
             day_value = days[k.day_idx]
-            session_id = 1 if k.p_start <= (morning_periods[-1] if morning_periods else 5) else 2
+            session_id = 1 if k.p_start <= (max(morning_periods) if morning_periods else 5) else 2
             # Bỏ qua nghỉ toàn trường + tuần thi/dự phòng riêng lớp này
             skip_weeks = holiday_weeks | set(a.excluded_weeks)
-            has_slot = any(
-                (w, day_value, session_id) in teacher_slots
-                for w in range(int(a.week_start), int(a.week_end) + 1)
+            teaching_weeks_k = [
+                w for w in range(int(a.week_start), int(a.week_end) + 1)
                 if w not in skip_weeks
-            )
-            if not has_slot:
-                model.add(var == 0)
+            ]
+            if teaching_weeks_k:
+                avail_count = sum(1 for w in teaching_weeks_k if (w, day_value, session_id) in teacher_slots)
+                min_weeks = max(1, math.ceil(len(teaching_weeks_k) * config.availability_week_threshold))
+                if avail_count < min_weeks:
+                    model.add(var == 0)
 
     # --- Room conflict: at most 1 assignment per room per period ---
     if config.no_room_conflict:
@@ -401,6 +411,20 @@ def solve_weekly_timetable(
         period_start = int(k.p_start)
         period_end = int(k.p_start + int(a.lessons_cluster) - 1)
         room = classrooms[int(k.room_idx)]
+
+        # Tính tuần thực dạy: loại nghỉ lễ toàn trường + tuần thi/dự phòng riêng lớp
+        all_skipped: Dict[int, str] = {}
+        for w in range(int(a.week_start), int(a.week_end) + 1):
+            if w in holiday_weeks:
+                all_skipped[w] = holiday_reasons.get(w, "Nghỉ")
+            elif w in a.excluded_weeks:
+                # Dùng lý do thực (thi, du_phong, ...) nếu có, fallback "excluded"
+                all_skipped[w] = a.excluded_week_reasons.get(w, "excluded")
+        teaching_weeks = sorted(
+            w for w in range(int(a.week_start), int(a.week_end) + 1)
+            if w not in all_skipped
+        )
+
         sessions.append(
             ScheduledSession(
                 assignment_id=int(a.id),
@@ -413,6 +437,8 @@ def solve_weekly_timetable(
                 week_start=int(a.week_start),
                 week_end=int(a.week_end),
                 department_code=str(a.department_code),
+                teaching_weeks=teaching_weeks,
+                skipped_weeks=all_skipped,
             )
         )
 

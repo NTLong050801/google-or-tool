@@ -63,6 +63,11 @@ class Assignment(BaseModel):
         description="Tuần không dạy riêng của lớp này (thi/dự phòng/...). "
                     "Solver bỏ qua khi check availability GV. Không gồm holiday_weeks toàn trường.",
     )
+    excluded_week_reasons: dict[int, str] = Field(
+        default_factory=dict,
+        description="Lý do từng tuần trong excluded_weeks: {week_order: reason}. "
+                    "Vd: {15: 'thi', 16: 'du_phong'}.",
+    )
 
 
 class GenerateRequest(BaseModel):
@@ -82,6 +87,14 @@ class ScheduledSession(BaseModel):
     week_start: int
     week_end: int
     department_code: str = ""
+    teaching_weeks: list[int] = Field(
+        default_factory=list,
+        description="Danh sách tuần thực dạy (đã loại nghỉ lễ + thi/dự phòng riêng lớp).",
+    )
+    skipped_weeks: dict[int, str] = Field(
+        default_factory=dict,
+        description="Tuần không dạy trong khoảng [week_start, week_end]: {week_order: reason}.",
+    )
 
 
 class GenerateResponse(BaseModel):

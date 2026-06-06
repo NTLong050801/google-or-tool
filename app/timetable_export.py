@@ -75,6 +75,11 @@ def export_timetable_csv(
                 "Mã tính chất phòng (rooms.csv)": room_prop,
                 "Tuần từ": int(s.week_start),
                 "Tuần đến": int(s.week_end),
+                "Tuần thực dạy": " ".join(str(w) for w in s.teaching_weeks) if s.teaching_weeks else "",
+                "Số tuần thực dạy": len(s.teaching_weeks) if s.teaching_weeks else "",
+                "Tuần không dạy": "; ".join(
+                    f"T{w}({r})" for w, r in sorted(s.skipped_weeks.items())
+                ) if s.skipped_weeks else "",
             }
         )
 
