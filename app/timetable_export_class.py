@@ -108,15 +108,22 @@ def _build_cell_text(
     fd_start, _ = week_dates.get(w_start, ("", ""))
     _, td_end = week_dates.get(w_end, ("", ""))
 
-    # Gom tất cả tuần không dạy trong phạm vi: nghỉ lễ toàn trường + thi/dự phòng riêng lớp
-    cls_id = label.get("class_id", "")
-    class_excl = class_excluded_weeks.get(cls_id, {})
-    excl_in_range = {w: r for w, r in class_excl.items() if w_start <= w <= w_end}
-    holidays_in_range = {w: holiday_reasons.get(w, "Nghỉ") for w in range(w_start, w_end + 1) if w in holiday_reasons}
-    all_skipped = {**holidays_in_range, **excl_in_range}  # excl_in_range ghi đè nếu trùng
-
-    # Tuần thực dạy (loại bỏ nghỉ lễ + thi/dự phòng)
-    teaching_weeks = sorted(w for w in range(w_start, w_end + 1) if w not in all_skipped)
+    # Dùng teaching_weeks/skipped_weeks từ solver nếu có (đã tính sẵn, nhất quán với solver)
+    # Fallback: tự tính từ holiday_reasons + class_excluded_weeks (backward compat)
+    if s.teaching_weeks:
+        teaching_weeks = s.teaching_weeks
+        all_skipped: Dict[int, str] = dict(s.skipped_weeks)
+    else:
+        cls_id = label.get("class_id", "")
+        class_excl = class_excluded_weeks.get(cls_id, {})
+        excl_in_range = {w: r for w, r in class_excl.items() if w_start <= w <= w_end}
+        holidays_in_range = {
+            w: holiday_reasons.get(w, "Nghỉ")
+            for w in range(w_start, w_end + 1)
+            if w in holiday_reasons
+        }
+        all_skipped = {**holidays_in_range, **excl_in_range}
+        teaching_weeks = sorted(w for w in range(w_start, w_end + 1) if w not in all_skipped)
     teaching_range = _format_week_ranges(teaching_weeks)
 
     # Dòng tuần: chỉ hiển thị tuần thực dạy kèm ngày tháng

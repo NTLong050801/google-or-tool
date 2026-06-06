@@ -33,6 +33,10 @@ class SchedulingConfig:
     no_teacher_conflict: bool = True
     no_class_group_conflict: bool = True
     respect_teacher_availability: bool = True
+    # Tỉ lệ tuần thực dạy tối thiểu GV phải có slot khả dụng cho (ngày, buổi) đó.
+    # 1.0 = phải rảnh TẤT CẢ tuần dạy (đúng nhất với weekly-template).
+    # 0.0 = chỉ cần 1 tuần bất kỳ (hành vi cũ, sai logic).
+    availability_week_threshold: float = 1.0
     trung_cap_morning_only: bool = True
     match_room_type: bool = True
     match_room_capacity: bool = True
@@ -75,6 +79,7 @@ def load_config(path: Optional[Path] = None) -> SchedulingConfig:
         no_teacher_conflict=hard.get("no_teacher_conflict", True),
         no_class_group_conflict=hard.get("no_class_group_conflict", True),
         respect_teacher_availability=hard.get("respect_teacher_availability", True),
+        availability_week_threshold=float(hard.get("availability_week_threshold", 1.0)),
         trung_cap_morning_only=hard.get("trung_cap_morning_only", True),
         match_room_type=hard.get("match_room_type", True),
         match_room_capacity=hard.get("match_room_capacity", True),

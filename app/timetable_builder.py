@@ -487,6 +487,11 @@ def build_generate_request(
             program_level=d["program_level"],
             sessions_per_week=d["sessions_per_week"],
             total_sessions=d["total_sessions"],
+            week_start=d["week_start"],
+            week_end=d["week_end"],
+            excluded_weeks=(
+                holidays | set(class_excluded_weeks.get(d["class_id"], {}).keys())
+            ),
         )
         for d in demands_buffer
     ]
@@ -514,8 +519,12 @@ def build_generate_request(
 
         # Tuần loại trừ riêng của lớp này (thi/dự phòng/...) trong phạm vi week_start..week_end.
         # Không gồm global holidays (đã được truyền riêng qua holiday_weeks).
-        class_excl_set = set(class_excluded_weeks.get(d["class_id"], {}).keys())
-        excl_in_range = class_excl_set & set(range(d["week_start"], d["week_end"] + 1))
+        class_excl_dict = class_excluded_weeks.get(d["class_id"], {})  # {week: reason}
+        excl_reasons_in_range = {
+            w: r for w, r in class_excl_dict.items()
+            if d["week_start"] <= w <= d["week_end"]
+        }
+        excl_in_range = set(excl_reasons_in_range.keys())
 
         # Dùng MD5 thay hash() để class_group_id ổn định qua các lần chạy
         stable_gid = int(hashlib.md5(d["class_id"].encode()).hexdigest(), 16) % (10**9)
@@ -535,6 +544,7 @@ def build_generate_request(
                 term_code=term_code,
                 class_size=d["class_size"],
                 excluded_weeks=excl_in_range,
+                excluded_week_reasons=excl_reasons_in_range,
             )
         )
         total_hours = d["total_hours"]
@@ -598,7 +608,8 @@ def build_generate_request(
             a = all_assignments[i]
             new_spw = max(1, new_spw_list[idx_pos])
             cls_id_for_a = all_labels.get(a.id, {}).get("class_id", "")
-            class_excl_for_a = set(class_excluded_weeks.get(cls_id_for_a, {}).keys())
+            class_excl_dict_for_a = class_excluded_weeks.get(cls_id_for_a, {})  # {week: reason}
+            class_excl_for_a = set(class_excl_dict_for_a.keys())
             combined_excl_for_a = holidays | class_excl_for_a
             old_total_sessions = (a.week_end - a.week_start + 1 - sum(
                 1 for h in combined_excl_for_a if a.week_start <= h <= a.week_end
@@ -610,7 +621,11 @@ def build_generate_request(
                 math.ceil(new_total_sessions / new_spw),
                 combined_excl_for_a,
             )
-            new_excl = class_excl_for_a & set(range(a.week_start, new_end + 1))
+            new_excl_reasons = {
+                w: r for w, r in class_excl_dict_for_a.items()
+                if a.week_start <= w <= new_end
+            }
+            new_excl = set(new_excl_reasons.keys())
             all_assignments[i] = Assignment(
                 id=a.id,
                 teacher_id=a.teacher_id,
@@ -625,6 +640,7 @@ def build_generate_request(
                 term_code=a.term_code,
                 class_size=a.class_size,
                 excluded_weeks=new_excl,
+                excluded_week_reasons=new_excl_reasons,
             )
         class_id = all_labels.get(all_assignments[indices[0]].id, {}).get("class_id", "?")
         warnings.append(

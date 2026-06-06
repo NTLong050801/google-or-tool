@@ -93,6 +93,7 @@ def main() -> None:
         assignment_labels=br.assignment_labels,
         config=cfg,
         holiday_weeks=br.holidays,
+        holiday_reasons=br.holiday_reasons,
         max_time_seconds=float(max_seconds),
     )
 
