@@ -111,22 +111,40 @@ def _sessions_from_hours(
 
 
 def _load_shared_teachers(shared_dir: Path) -> Dict[str, Dict]:
-    """Load teachers từ shared/teachers.xlsx → dict[teacher_id → info]."""
+    """Load teachers từ shared/teachers.xlsx → dict[teacher_id → info].
+
+    Key dùng cả 2 dạng để match với pipeline:
+    - "Mã CB" (vd CT085) — key gốc dùng khi đọc từ file CSV
+    - "NV<gv_id>" (vd NV166) — alias để match username từ CTool DB
+      (DB sync GV qua users.id, username CTool có format "NV"+id).
+    """
     path = shared_dir / "teachers.xlsx"
     if not path.is_file():
         return {}
     df = pd.read_excel(path, engine="openpyxl")
-    teachers = {}
+    teachers: Dict[str, Dict] = {}
     for _, row in df.iterrows():
         tid = str(row.get("Mã CB", "")).strip()
         if not tid:
             continue
-        teachers[tid] = {
+        info = {
             "teacher_id": tid,
             "teacher_name": str(row.get("Họ Tên", "")).strip(),
             "department_code": str(row.get("Mã đơn vị", "")).strip(),
             "teacher_type": str(row.get("Phân Loại", "")).strip(),
         }
+        teachers[tid] = info
+
+        # Alias theo gv_id CTool (cho phép tra cứu ngược từ username DB)
+        gv_id_raw = row.get("gv_id (CTOOL)")
+        if gv_id_raw is not None and not pd.isna(gv_id_raw):
+            try:
+                gv_id_int = int(float(gv_id_raw))
+                alias = f"NV{gv_id_int}"
+                if alias not in teachers:
+                    teachers[alias] = {**info, "teacher_id": alias, "alias_for": tid}
+            except (TypeError, ValueError):
+                pass
     return teachers
 
 
@@ -217,6 +235,132 @@ def _load_curriculum(
     return df, warnings
 
 
+def _detect_study_periods(
+    week_lo: int,
+    week_hi: int,
+    excluded_dict: Dict[int, str],
+) -> List[Tuple[int, int]]:
+    """Tách các đợt học dựa vào cluster thi/dự phòng/thi lại trong excluded_weeks.
+
+    Đợt học = dải tuần liên tiếp [start..end], bị ngắt bởi cluster tuần thi.
+    Tuần `nghi`/`nghi_le`/`quan_su`/`thuc_te` là gap trong đợt, KHÔNG ngắt đợt.
+    Đợt mà toàn bộ tuần đều excluded (không có tuần dạy) → bỏ.
+    """
+    EXAM_REASONS = {"thi", "thi_lai", "du_phong"}
+
+    # Chỉ xét tuần thi trong phạm vi [week_lo, week_hi] — bỏ qua HK trước
+    exam_weeks = sorted(
+        w for w, r in excluded_dict.items()
+        if r in EXAM_REASONS and week_lo <= w <= week_hi
+    )
+    clusters: List[List[int]] = []
+    if exam_weeks:
+        cur = [exam_weeks[0]]
+        for w in exam_weeks[1:]:
+            if w == cur[-1] + 1:
+                cur.append(w)
+            else:
+                clusters.append(cur)
+                cur = [w]
+        clusters.append(cur)
+
+    periods: List[Tuple[int, int]] = []
+    cursor = week_lo
+    for cluster in clusters:
+        c_start, c_end = cluster[0], cluster[-1]
+        if cursor < c_start:
+            periods.append((cursor, min(week_hi, c_start - 1)))
+        cursor = c_end + 1
+    if cursor <= week_hi:
+        periods.append((cursor, week_hi))
+
+    # Lọc đợt rỗng (toàn bộ tuần đều excluded)
+    excluded_set = set(excluded_dict.keys())
+    periods = [
+        (s, e) for s, e in periods
+        if any(w not in excluded_set for w in range(s, e + 1))
+    ]
+    return periods
+
+
+def _assign_subjects_to_periods(
+    demands: List[Dict],
+    periods: List[Tuple[int, int]],
+    excluded_set: Set[int],
+    holidays: Set[int],
+    max_spw_per_class: int = 12,
+) -> List[Tuple[Dict, int, int]]:
+    """Phân bổ mỗi môn vào 1 hoặc nhiều đợt liên tiếp.
+
+    Quy tắc:
+    - Mỗi đợt có capacity = max_spw_per_class buổi/tuần đồng thời.
+    - Mỗi môn cần nw tuần dạy thực và spw buổi/tuần.
+    - Sort môn nặng (nw cao) trước, gán vào đợt sớm nhất còn capacity.
+    - Cho phép môn span qua nhiều đợt liên tiếp nếu đợt đơn không đủ tuần.
+    - Goal: spread môn ra các đợt → balance số môn dạy đồng thời.
+    """
+    if not periods:
+        return [(d, d.get("_week_lo", d["week_start"]), d.get("_week_hi", d["week_end"])) for d in demands]
+
+    skip = excluded_set | holidays
+
+    def teaching_weeks(s: int, e: int) -> List[int]:
+        return [w for w in range(s, e + 1) if w not in skip]
+
+    period_teaching = [teaching_weeks(s, e) for s, e in periods]
+    # capacity spw đã dùng & số môn đã gán cho mỗi đợt
+    period_spw_used = [0] * len(periods)
+    period_subj_count = [0] * len(periods)
+
+    indexed = list(enumerate(demands))
+    def _nw(d):
+        return math.ceil(d["total_sessions"] / max(1, d["sessions_per_week"]))
+    indexed.sort(key=lambda x: _nw(x[1]), reverse=True)
+
+    result: Dict[int, Tuple[Dict, int, int]] = {}
+    for orig_idx, d in indexed:
+        spw = max(1, d["sessions_per_week"])
+        nw = _nw(d)
+
+        # Tìm đợt khởi đầu (start_period): đợt đầu tiên còn capacity spw
+        # Ưu tiên đợt có ít môn nhất → spread đều
+        eligible = [
+            pi for pi in range(len(periods))
+            if period_spw_used[pi] + spw <= max_spw_per_class
+        ]
+        if not eligible:
+            # Tất cả đợt đã đầy → vẫn gán vào đợt 0 (vượt cap, sẽ skip ở step sau)
+            eligible = [0]
+
+        start_p = min(eligible, key=lambda pi: (period_subj_count[pi], period_spw_used[pi], pi))
+
+        # Từ đợt khởi đầu, gom tuần dạy đến khi đủ nw — span qua các đợt liên tiếp nếu cần
+        cumulative_weeks: List[int] = []
+        end_p = start_p
+        for pi in range(start_p, len(periods)):
+            cumulative_weeks.extend(period_teaching[pi])
+            end_p = pi
+            if len(cumulative_weeks) >= nw:
+                break
+
+        if len(cumulative_weeks) < nw:
+            # Hết tuần ở các đợt sau → span ngược về sau cùng
+            ps = periods[start_p][0]
+            we = periods[-1][1]
+        else:
+            ps = periods[start_p][0]
+            # week_end = tuần thứ nw (sau khi đã skip excluded)
+            we = cumulative_weeks[nw - 1]
+
+        result[orig_idx] = (d, ps, we)
+        # Đánh dấu spw consume vào tất cả đợt mà môn span qua
+        for pi in range(start_p, end_p + 1):
+            period_spw_used[pi] += spw
+        period_subj_count[start_p] += 1
+
+    return [result[i] for i in range(len(demands))]
+
+
 def _compute_week_end_skip_holidays(
     week_lo: int,
     week_hi: int,
@@ -254,11 +398,9 @@ def build_generate_request(
 ) -> BuildResult:
     """Build GenerateRequest từ data mới (dao_tao_*.xlsx + availability + shared).
 
-    availability_override / holidays_override / holiday_reasons_override:
-    nếu pass vào (vd từ DB cdata) → dùng thay cho file CSV.
-
-    teacher_subjects_override: list[{teacher_id, subject_code, priority, teacher_type}]
-    nếu pass vào → dùng thay cho teacher_subjects.xlsx của từng khoa.
+    Các *_override: nếu pass vào (từ DB) → dùng thay cho file CSV.
+    holidays_override / holiday_reasons_override: thay holidays.csv — truyền từ cd_edu_week_holidays.
+    class_excluded_weeks_override: thay class_excluded_weeks.csv — từ cd_edu_class_excluded_weeks.
     """
     root = data_root or _default_data_root()
     tp = TermPaths(data_root=root, term_code=term_code)
@@ -416,8 +558,13 @@ def build_generate_request(
                     total_hours, cfg.default_lessons_cluster, spw_override
                 )
                 num_weeks_needed = math.ceil(total_sessions / sessions_pw)
-                # Per-class week_start: từ DB/CSV, mặc định week_lo
-                class_week_start = max(week_lo, class_week_starts.get(class_id, week_lo))
+                # Per-class week_start: DB lưu số thứ tự tương đối (1=tuần đầu kỳ, 3=tuần thứ 3...)
+                # → convert sang order_id tuyệt đối: week_lo + (relative - 1)
+                raw_start = class_week_starts.get(class_id)
+                if raw_start is not None:
+                    class_week_start = max(week_lo, week_lo + int(raw_start) - 1)
+                else:
+                    class_week_start = week_lo
                 # Hợp nhất: tuần nghỉ toàn trường + tuần loại trừ riêng của lớp này
                 class_excluded_for_class = set(class_excluded_weeks.get(class_id, {}).keys())
                 combined_excluded = holidays | class_excluded_for_class
@@ -461,6 +608,40 @@ def build_generate_request(
                 f"[{dept_code}] {len(missing_sizes)} lớp không có class_size trong classes.csv → bỏ qua check capacity: {sample}{extra}"
             )
 
+    # --- Pass 1.5: phân bổ môn vào các đợt học (theo cluster thi/dự phòng) ---
+    # Mục đích: thay vì pack tất cả môn vào đầu kỳ, trải đều ra các đợt giữa các lần thi.
+    # Logic: với mỗi class_id, phát hiện đợt từ excluded_weeks rồi gán mỗi môn vào 1 đợt
+    # dựa vào số tiết (môn nặng xếp đợt còn nhiều capacity, môn nhẹ vào đợt nhỏ).
+    from collections import defaultdict as _dd
+    by_class_demands: Dict[str, List[int]] = _dd(list)  # class_id → list[demand_index]
+    for di, d in enumerate(demands_buffer):
+        by_class_demands[d["class_id"]].append(di)
+
+    for class_id, indices in by_class_demands.items():
+        # week_lo riêng của lớp (sau khi đã apply class_week_start)
+        cls_week_starts_in_demands = [demands_buffer[i]["week_start"] for i in indices]
+        cls_week_lo = min(cls_week_starts_in_demands) if cls_week_starts_in_demands else week_lo
+        excl_dict = class_excluded_weeks.get(class_id, {})
+        periods = _detect_study_periods(cls_week_lo, week_hi, excl_dict)
+
+        if len(periods) <= 1:
+            continue  # không có cluster thi → giữ logic cũ (đã pack từ week_start)
+
+        sub_demands = [demands_buffer[i] for i in indices]
+        # Bổ sung _week_lo/_week_hi để hàm phân bổ biết phạm vi
+        for d in sub_demands:
+            d["_week_lo"] = cls_week_lo
+            d["_week_hi"] = week_hi
+        excluded_set = set(excl_dict.keys())
+        # Cap spw đồng thời mỗi đợt theo level (trung_cap nhỏ hơn nếu morning_only)
+        first_level = sub_demands[0].get("program_level", "cao_dang") if sub_demands else "cao_dang"
+        max_spw = cfg.max_spw_trung_cap if first_level == "trung_cap" else cfg.max_spw_cao_dang
+        placements = _assign_subjects_to_periods(sub_demands, periods, excluded_set, holidays, max_spw_per_class=max_spw)
+        for (orig_idx, _), (d, ws, we) in zip(enumerate(indices), placements):
+            di = indices[orig_idx]
+            demands_buffer[di]["week_start"] = ws
+            demands_buffer[di]["week_end"] = we
+
     # --- Pass 2: phân công GV ---
     # Override availability từ DB nếu có (replace, không merge)
     if availability_override is not None:
@@ -503,6 +684,8 @@ def build_generate_request(
         teacher_info=teacher_info_map,
         days=cfg.days,
         locked=locked_assignments,
+        max_spw_per_teacher=cfg.max_spw_per_teacher,
+        max_spw_trung_cap=cfg.max_spw_trung_cap,
     )
     warnings.extend(assigner_res.warnings)
 

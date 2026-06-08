@@ -26,6 +26,11 @@ from .solver import solve_weekly_timetable
 from .timetable_builder import build_generate_request
 from .timetable_export import export_timetable_csv
 from .timetable_export_class import export_timetable_by_class
+from .availability_report import export_availability_report
+from .dept_output import (
+    write_per_dept_assignment_log,
+    write_per_dept_warnings,
+)
 
 load_dotenv()
 
@@ -189,10 +194,33 @@ def generate_timetable(req: GenerateTimetableRequest) -> GenerateTimetableRespon
     tp = TermPaths(data_root=_default_data_root(), term_code=req.term_code)
     out_dir = tp.output_dir
     out_dir.mkdir(parents=True, exist_ok=True)
+    by_dept_dir = out_dir / "by_department"
 
     all_warnings = br.warnings + [f"[solver] {w}" for w in res.warnings]
     if all_warnings:
         (out_dir / "warnings.txt").write_text("\n".join(all_warnings), encoding="utf-8")
+
+    # availability_report.csv — báo cáo GV chưa/thiếu đăng ký, theo khoa
+    if res.availability_report and res.availability_report.has_issues():
+        export_availability_report(
+            res.availability_report,
+            out_dir / "availability_report.csv",
+        )
+
+    # Danh sách khoa: ưu tiên req.departments, fallback từ assignments
+    if req.departments:
+        dept_codes_for_split = list(req.departments)
+    else:
+        dept_codes_for_split = sorted({
+            (br.assignment_labels.get(a.id, {}).get("department_code") or "_unknown")
+            for a in br.request.assignments
+        })
+
+    # Per-dept assignment_log.xlsx + warnings.txt
+    if br.assigner_log:
+        write_per_dept_assignment_log(by_dept_dir, br.assigner_log, dept_codes_for_split)
+    if all_warnings:
+        write_per_dept_warnings(by_dept_dir, all_warnings, dept_codes_for_split)
 
     departments_used: List[str] = []
     if res.status in ("OPTIMAL", "FEASIBLE") and res.sessions:
@@ -200,7 +228,6 @@ def generate_timetable(req: GenerateTimetableRequest) -> GenerateTimetableRespon
         for s in res.sessions:
             sessions_by_dept[str(s.department_code).strip() or "_unknown"].append(s)
 
-        by_dept_dir = out_dir / "by_department"
         for dept_code, dept_sessions in sorted(sessions_by_dept.items()):
             dept_out = by_dept_dir / dept_code
             dept_out.mkdir(parents=True, exist_ok=True)

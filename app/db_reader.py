@@ -33,6 +33,16 @@ def _connect():
         conn.close()
 
 
+@contextmanager
+def _ctool_connect():
+    cfg = {**_config(), "database": _ctool_db()}
+    conn = pymysql.connect(**cfg)
+    try:
+        yield conn
+    finally:
+        conn.close()
+
+
 def load_availability_from_db(
     schoolyear: str,
     semester: int,
@@ -144,6 +154,51 @@ def load_class_excluded_weeks_from_db(
                 if cid:
                     result.setdefault(cid, {})[int(week_order)] = (reason or "").strip()
     return result
+
+
+def load_week_dates_from_db(
+    schoolyear: str,
+    semester: int,
+    unit_id: Optional[int] = None,
+) -> Dict[int, Tuple[str, str]]:
+    """Trả về {order_id: (from_date, to_date)} dạng 'YYYY-MM-DD'.
+
+    Đọc từ edu_weeks (CTool DB). Nếu có nhiều unit, dedup — mỗi order_id lấy 1 lần.
+    """
+    sql = """
+        SELECT order_id, from_date, to_date
+        FROM edu_weeks
+        WHERE schoolyear = %s AND semester = %s
+    """
+    params = [schoolyear, semester]
+    if unit_id is not None:
+        sql += " AND unit_id = %s"
+        params.append(unit_id)
+    sql += " ORDER BY order_id"
+
+    result: Dict[int, Tuple[str, str]] = {}
+    with _ctool_connect() as conn:
+        with conn.cursor() as cur:
+            cur.execute(sql, params)
+            for order_id, from_date, to_date in cur.fetchall():
+                oid = int(order_id)
+                if oid not in result:
+                    fd = from_date.strftime("%Y-%m-%d") if hasattr(from_date, "strftime") else str(from_date)
+                    td = to_date.strftime("%Y-%m-%d") if hasattr(to_date, "strftime") else str(to_date)
+                    result[oid] = (fd, td)
+    return result
+
+
+
+    """Check kết nối DB - dùng cho health check."""
+    try:
+        with _connect() as conn:
+            with conn.cursor() as cur:
+                cur.execute("SELECT 1")
+                cur.fetchone()
+        return True
+    except Exception:
+        return False
 
 
 def db_available() -> bool:
