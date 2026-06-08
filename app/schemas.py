@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from typing import Literal, Optional
+from typing import Dict, List, Literal, Optional
 
 from pydantic import BaseModel, Field
 
@@ -103,3 +103,44 @@ class GenerateResponse(BaseModel):
     sessions: list[ScheduledSession] = Field(default_factory=list)
     message: Optional[str] = None
     warnings: list[str] = Field(default_factory=list)
+    availability_report: Optional["AvailabilityReport"] = None
+
+
+class AvailabilityIssue(BaseModel):
+    """Một vấn đề availability của 1 GV trong 1 khoa."""
+    department_code: str
+    teacher_id: str
+    teacher_name: str
+    teacher_type: str
+    status: Literal["chua_dang_ky", "thieu_slot"]
+    weeks_registered: int        # số tuần GV có slot trong DB
+    weeks_needed: int            # tổng sessions_per_week cần xếp
+    slots_available: int         # số (day, session) pass được threshold
+    affected_classes: List[str]  # danh sách "môn (lớp X, N buổi/tuần)"
+
+
+class AvailabilityReport(BaseModel):
+    """Tổng hợp vấn đề availability sau một lần chạy solver."""
+    issues: List[AvailabilityIssue] = Field(default_factory=list)
+
+    def has_issues(self) -> bool:
+        return len(self.issues) > 0
+
+    def summary_warnings(self) -> List[str]:
+        """Chuỗi tóm tắt ngắn gọn để đưa vào warnings.txt."""
+        if not self.issues:
+            return []
+        not_registered = [i for i in self.issues if i.status == "chua_dang_ky"]
+        low_slots = [i for i in self.issues if i.status == "thieu_slot"]
+        lines: List[str] = []
+        if not_registered:
+            lines.append(
+                f"[AVAILABILITY] {len(not_registered)} GV chưa đăng ký availability "
+                f"→ xem availability_report.csv"
+            )
+        if low_slots:
+            lines.append(
+                f"[AVAILABILITY] {len(low_slots)} GV đăng ký không đủ slot "
+                f"→ xem availability_report.csv"
+            )
+        return lines

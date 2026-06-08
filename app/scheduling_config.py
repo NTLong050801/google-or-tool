@@ -34,15 +34,15 @@ class SchedulingConfig:
     no_class_group_conflict: bool = True
     respect_teacher_availability: bool = True
     # Tỉ lệ tuần thực dạy tối thiểu GV phải có slot khả dụng cho (ngày, buổi) đó.
-    # 1.0 = phải rảnh TẤT CẢ tuần dạy (đúng nhất với weekly-template).
-    # 0.0 = chỉ cần 1 tuần bất kỳ (hành vi cũ, sai logic).
-    availability_week_threshold: float = 1.0
+    # 0.0 = chỉ cần xuất hiện trong 1 tuần bất kỳ (phù hợp khi GV đăng ký availability dạng mẫu tuần).
+    availability_week_threshold: float = 0.0
     trung_cap_morning_only: bool = True
     match_room_type: bool = True
     match_room_capacity: bool = True
 
-    max_spw_trung_cap: int = 6   # HC-005: 25-30 tiết/tuần ÷ 5 tiết/buổi
-    max_spw_cao_dang: int = 12   # HC-005: 60 tiết/tuần ÷ 5 tiết/buổi
+    max_spw_trung_cap: int = 6    # HC-005: 25-30 tiết/tuần ÷ 5 tiết/buổi
+    max_spw_cao_dang: int = 12    # HC-005: 60 tiết/tuần ÷ 5 tiết/buổi
+    max_spw_per_teacher: int = 12 # Hard cap: tối đa 12 buổi/tuần cho 1 GV (6 ngày × 2 buổi)
 
     # Mỗi entry: {"keywords": [...], "room_names": [...], "description": "..."}
     # Môn match keyword chỉ được xếp vào các phòng có room_name trong room_names.
@@ -79,12 +79,13 @@ def load_config(path: Optional[Path] = None) -> SchedulingConfig:
         no_teacher_conflict=hard.get("no_teacher_conflict", True),
         no_class_group_conflict=hard.get("no_class_group_conflict", True),
         respect_teacher_availability=hard.get("respect_teacher_availability", True),
-        availability_week_threshold=float(hard.get("availability_week_threshold", 1.0)),
+        availability_week_threshold=float(hard.get("availability_week_threshold", 0.0)),
         trung_cap_morning_only=hard.get("trung_cap_morning_only", True),
         match_room_type=hard.get("match_room_type", True),
         match_room_capacity=hard.get("match_room_capacity", True),
         max_spw_trung_cap=hard.get("max_spw_trung_cap", 6),
         max_spw_cao_dang=hard.get("max_spw_cao_dang", 12),
+        max_spw_per_teacher=hard.get("max_spw_per_teacher", 12),
         fixed_rooms_by_subject_keyword=hard.get("fixed_rooms_by_subject_keyword", []) or [],
     )
 

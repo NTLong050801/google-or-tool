@@ -39,6 +39,116 @@ _CONFLICT_FILL = PatternFill("solid", fgColor="F8CBAD")
 _CENTER = Alignment(horizontal="center", vertical="center", wrap_text=True)
 _LEFT = Alignment(horizontal="left", vertical="center", wrap_text=True)
 
+# Màu cho bảng tóm tắt tuần
+_WEEK_HEADER_FILL  = PatternFill("solid", fgColor="2F4F8F")   # xanh đậm — header
+_WEEK_STUDY_FILL   = PatternFill("solid", fgColor="E2EFDA")   # xanh nhạt — tuần học
+_WEEK_HOLIDAY_FILL = PatternFill("solid", fgColor="FCE4D6")   # cam nhạt — nghỉ lễ
+_WEEK_EXAM_FILL    = PatternFill("solid", fgColor="FFF2CC")   # vàng — thi
+_WEEK_RESERVE_FILL = PatternFill("solid", fgColor="EDEDED")   # xám — dự phòng
+_WEEK_MILITARY_FILL= PatternFill("solid", fgColor="D6E4F0")   # xanh dương nhạt — quân sự
+_WEEK_OTHER_FILL   = PatternFill("solid", fgColor="F2F2F2")   # xám nhạt — khác
+
+_REASON_TO_FILL = {
+    "nghi_le":  _WEEK_HOLIDAY_FILL,
+    "nghi":     _WEEK_HOLIDAY_FILL,
+    "thi":      _WEEK_EXAM_FILL,
+    "thi_lai":  _WEEK_EXAM_FILL,
+    "du_phong": _WEEK_RESERVE_FILL,
+    "quan_su":  _WEEK_MILITARY_FILL,
+    "thuc_te":  _WEEK_OTHER_FILL,
+    "khac":     _WEEK_OTHER_FILL,
+}
+
+
+def _write_week_summary(
+    ws,
+    start_row: int,
+    cls_id: str,
+    week_dates: Dict[int, Tuple[str, str]],
+    holiday_reasons: Dict[int, str],
+    class_excluded_weeks: Dict[str, Dict[int, str]],
+    class_week_start: Optional[int],
+    class_week_end: Optional[int],
+    n_cols: int,
+) -> None:
+    """Vẽ bảng tóm tắt tuần phía dưới lưới TKB.
+
+    Mỗi hàng = 1 tuần. Cột: STT tuần | Ngày bắt đầu | Ngày kết thúc | Trạng thái | Ghi chú.
+    Tuần học  → xanh nhạt. Tuần nghỉ/thi/dự phòng → màu riêng.
+    Tuần ngoài phạm vi lớp (trước week_start) → xám, label "Chưa bắt đầu".
+    """
+    class_excl = class_excluded_weeks.get(cls_id, {})
+
+    # Header bảng tóm tắt
+    header_row = start_row
+    header_font = Font(bold=True, color="FFFFFF")
+    header_cols = ["Tuần", "Từ ngày", "Đến ngày", "Trạng thái", "Ghi chú"]
+
+    title_cell = ws.cell(row=header_row - 1, column=1, value="LỊCH TUẦN HỌC KỲ")
+    title_cell.font = Font(bold=True, size=11)
+    title_cell.alignment = _LEFT
+    if n_cols > 1:
+        ws.merge_cells(
+            start_row=header_row - 1, start_column=1,
+            end_row=header_row - 1, end_column=min(n_cols, 5),
+        )
+
+    for ci, col_name in enumerate(header_cols):
+        c = ws.cell(row=header_row, column=1 + ci, value=col_name)
+        c.font = header_font
+        c.fill = _WEEK_HEADER_FILL
+        c.alignment = _CENTER
+        c.border = _BORDER
+
+    # Một hàng mỗi tuần, theo thứ tự week_order
+    for ri, week_order in enumerate(sorted(week_dates.keys()), start=1):
+        from_date, to_date = week_dates[week_order]
+        row = header_row + ri
+
+        # Xác định trạng thái và màu
+        if week_order in holiday_reasons:
+            reason_key = holiday_reasons[week_order]
+            status = _REASON_LABELS.get(reason_key, reason_key)
+            note = ""
+            fill = _REASON_TO_FILL.get(reason_key, _WEEK_OTHER_FILL)
+        elif week_order in class_excl:
+            reason_key = class_excl[week_order]
+            status = _REASON_LABELS.get(reason_key, reason_key)
+            note = "(riêng lớp)"
+            fill = _REASON_TO_FILL.get(reason_key, _WEEK_OTHER_FILL)
+        elif class_week_start is not None and week_order < class_week_start:
+            status = "Chưa bắt đầu"
+            note = ""
+            fill = _WEEK_RESERVE_FILL
+        elif class_week_end is not None and week_order > class_week_end:
+            status = "Kết thúc"
+            note = ""
+            fill = _WEEK_RESERVE_FILL
+        else:
+            status = "Học"
+            note = ""
+            fill = _WEEK_STUDY_FILL
+
+        row_data = [
+            f"Tuần {week_order}",
+            _format_date(from_date),
+            _format_date(to_date),
+            status,
+            note,
+        ]
+        for ci, val in enumerate(row_data):
+            c = ws.cell(row=row, column=1 + ci, value=val)
+            c.fill = fill
+            c.border = _BORDER
+            c.alignment = _CENTER
+
+    # Điều chỉnh độ rộng cột bảng tóm tắt
+    col_widths = [10, 13, 13, 16, 14]
+    for ci, w in enumerate(col_widths):
+        col_letter = get_column_letter(1 + ci)
+        current = ws.column_dimensions[col_letter].width or 0
+        ws.column_dimensions[col_letter].width = max(current, w)
+
 
 def _safe_sheet_name(raw: str, used: set) -> str:
     """Excel sheet name: max 31 chars, không chứa : \\ / ? * [ ]."""
@@ -287,6 +397,29 @@ def export_timetable_by_class(
         ws.row_dimensions[header_row].height = 18
 
         ws.freeze_panes = ws.cell(row=header_row + 1, column=2)
+
+        # --- Bảng tóm tắt tuần học kỳ ---
+        if week_dates:
+            # week_start của lớp: lấy từ sessions (tuần thực dạy sớm nhất)
+            cls_week_starts = [int(s.week_start) for s in cls_sessions]
+            cls_week_start  = min(cls_week_starts) if cls_week_starts else None
+            # week_end: KHÔNG lấy từ sessions (sessions chỉ có tuần học, không có tuần thi/nghỉ)
+            # → dùng None để hiển thị toàn bộ tuần kỳ học với trạng thái đúng từ excluded_weeks
+            cls_week_end = None
+
+            # Khoảng cách 2 hàng trống sau lưới TKB
+            summary_start_row = header_row + periods_per_day + 3
+            _write_week_summary(
+                ws,
+                start_row=summary_start_row,
+                cls_id=cls_name,
+                week_dates=week_dates,
+                holiday_reasons=holiday_reasons,
+                class_excluded_weeks=class_excluded_weeks,
+                class_week_start=cls_week_start,
+                class_week_end=cls_week_end,
+                n_cols=n_cols,
+            )
 
     xlsx_path.parent.mkdir(parents=True, exist_ok=True)
     wb.save(xlsx_path)

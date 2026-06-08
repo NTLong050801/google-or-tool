@@ -7,7 +7,10 @@ from typing import Dict, List, Optional, Set, Tuple
 from ortools.sat.python import cp_model
 
 from .scheduling_config import SchedulingConfig
-from .schemas import Assignment, Classroom, GenerateResponse, ScheduledSession
+from .schemas import (
+    Assignment, AvailabilityIssue, AvailabilityReport,
+    Classroom, GenerateResponse, ScheduledSession,
+)
 
 
 @dataclass(frozen=True)
@@ -238,6 +241,7 @@ def solve_weekly_timetable(
                 skipped_teachers.add(tid)
 
     solver_warnings: List[str] = []
+    avail_issues: List[AvailabilityIssue] = []
 
     if rooms_missing_capacity:
         sample_rooms = sorted(int(classrooms[r].id) for r in list(rooms_missing_capacity)[:5])
@@ -250,30 +254,76 @@ def solve_weekly_timetable(
             f"{len(assignments_missing_size)} phân công thiếu class_size → bỏ qua check capacity"
         )
 
+    # Build AvailabilityReport — nhóm 1: GV chưa đăng ký gì cả
+    if config.respect_teacher_availability:
+        missing_avail: Dict[str, Dict] = {}
+        for a in assignments:
+            tid = str(a.teacher_id)
+            if tid in availability:
+                continue
+            label = assignment_labels.get(int(a.id), {})
+            if tid not in missing_avail:
+                missing_avail[tid] = {
+                    "name": label.get("teacher_name", tid),
+                    "type": label.get("teacher_type", ""),
+                    "dept": str(a.department_code),
+                    "spw": 0,
+                    "affected": [],
+                }
+            missing_avail[tid]["spw"] += int(a.sessions_per_week)
+            missing_avail[tid]["affected"].append(
+                f"{label.get('subject_name', a.course_id)} "
+                f"(lớp {label.get('class_id', '?')}, {a.sessions_per_week} buổi/tuần)"
+            )
+        for tid, info in missing_avail.items():
+            avail_issues.append(AvailabilityIssue(
+                department_code=info["dept"],
+                teacher_id=tid,
+                teacher_name=info["name"],
+                teacher_type=info["type"],
+                status="chua_dang_ky",
+                weeks_registered=0,
+                weeks_needed=info["spw"],
+                slots_available=0,
+                affected_classes=info["affected"],
+            ))
+
+    # Nhóm 2: GV có đăng ký nhưng thiếu slot
     for tid in sorted(skipped_teachers):
-        # Tìm tên + loại GV từ assignment_labels
         teacher_name = tid
         teacher_type = ""
-        teacher_assigns_detail: List[str] = []
+        dept = ""
+        affected: List[str] = []
         for a in assignments:
             if str(a.teacher_id) != tid:
                 continue
             label = assignment_labels.get(int(a.id), {})
-            if not teacher_name or teacher_name == tid:
+            if teacher_name == tid:
                 teacher_name = label.get("teacher_name", tid)
             if not teacher_type:
                 teacher_type = label.get("teacher_type", "")
-            teacher_assigns_detail.append(
-                f"    - {label.get('subject_name', a.course_id)} (lớp {label.get('class_id', '?')}, {a.sessions_per_week} buổi/tuần)"
+            if not dept:
+                dept = str(a.department_code)
+            affected.append(
+                f"{label.get('subject_name', a.course_id)} "
+                f"(lớp {label.get('class_id', '?')}, {a.sessions_per_week} buổi/tuần)"
             )
-        type_label = f" [{teacher_type}]" if teacher_type else ""
-        slots_count = len(teacher_day_sessions.get(tid, set()))
-        header = (
-            f"GV {tid} - {teacher_name}{type_label}: "
-            f"cần {teacher_spw[tid]} buổi/tuần nhưng chỉ đăng ký {slots_count} slot → bỏ qua availability"
-        )
-        solver_warnings.append(header)
-        solver_warnings.extend(teacher_assigns_detail)
+        slots = len(teacher_day_sessions.get(tid, set()))
+        weeks_reg = len(set(w for w, d, s in availability.get(tid, set())))
+        avail_issues.append(AvailabilityIssue(
+            department_code=dept,
+            teacher_id=tid,
+            teacher_name=teacher_name,
+            teacher_type=teacher_type,
+            status="thieu_slot",
+            weeks_registered=weeks_reg,
+            weeks_needed=teacher_spw[tid],
+            slots_available=slots,
+            affected_classes=affected,
+        ))
+
+    avail_report = AvailabilityReport(issues=avail_issues)
+    solver_warnings.extend(avail_report.summary_warnings())
 
     if config.respect_teacher_availability:
         for k, var in x.items():
@@ -443,4 +493,10 @@ def solve_weekly_timetable(
         )
 
     objective = int(solver.objective_value) if objective_terms else None
-    return GenerateResponse(status=status_str, objective=objective, sessions=sessions, warnings=solver_warnings)
+    return GenerateResponse(
+        status=status_str,
+        objective=objective,
+        sessions=sessions,
+        warnings=solver_warnings,
+        availability_report=avail_report,
+    )

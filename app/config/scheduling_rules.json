@@ -15,7 +15,7 @@
     "no_room_conflict": true,
     "no_teacher_conflict": true,
     "no_class_group_conflict": true,
-    "respect_teacher_availability": true,
+    "respect_teacher_availability": false,
     "trung_cap_morning_only": true,
     "match_room_type": true,
     "match_room_capacity": true,

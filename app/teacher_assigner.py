@@ -140,9 +140,16 @@ def assign_teachers(
     teacher_info: Dict[str, TeacherInfo],
     days: List[int],
     *,
-    locked: Optional[Dict[Tuple[str, str], str]] = None,  # (subj, cls) → teacher_id (đã chốt sẵn)
+    locked: Optional[Dict[Tuple[str, str], str]] = None,
+    max_spw_per_teacher: int = 12,
+    max_spw_trung_cap: int = 6,
 ) -> AssignmentResult:
-    """Greedy assign: gán môn-lớp khó nhất trước, mỗi lần chọn GV có score cao nhất."""
+    """Greedy assign: gán môn-lớp khó nhất trước, mỗi lần chọn GV có score cao nhất.
+
+    Trung cấp dùng riêng cap max_spw_trung_cap (mặc định 6 = 6 ngày × 1 buổi sáng).
+    Cao đẳng/khác dùng max_spw_per_teacher.
+    Cap được track riêng theo program_level vì 1 GV có thể dạy cả 2 hệ.
+    """
     locked = locked or {}
     res = AssignmentResult()
 
@@ -152,13 +159,19 @@ def assign_teachers(
         subject_to_teachers.setdefault(sub, []).append((tid, prio))
 
     # Apply locked trước
-    teacher_load: Dict[str, int] = {}  # teacher_id → tổng total_sessions đã gán
+    teacher_load: Dict[str, int] = {}          # tổng total_sessions — load_balance_score
+    teacher_spw_load: Dict[str, int] = {}      # tổng spw (cao_dang + khác) — hard cap
+    teacher_tc_spw_load: Dict[str, int] = {}   # tổng spw trung_cap — hard cap riêng
     for d in demands:
         key = (d.subject_code, d.class_id)
         if key in locked:
             tid = locked[key]
             res.assignments[key] = tid
             teacher_load[tid] = teacher_load.get(tid, 0) + d.total_sessions
+            if d.program_level == "trung_cap":
+                teacher_tc_spw_load[tid] = teacher_tc_spw_load.get(tid, 0) + d.sessions_per_week
+            else:
+                teacher_spw_load[tid] = teacher_spw_load.get(tid, 0) + d.sessions_per_week
 
     # Pending = các demand chưa lock
     pending = [d for d in demands if (d.subject_code, d.class_id) not in res.assignments]
@@ -200,9 +213,52 @@ def assign_teachers(
             })
             continue
 
-        # Tính score cho mỗi candidate
+        # Lọc GV đã đạt hard cap buổi/tuần.
+        # Cap kép:
+        #   1) Tổng (trung_cap + cao_dang) ≤ max_spw_per_teacher (= số slot/tuần khả dụng = 12)
+        #   2) Riêng trung_cap ≤ max_spw_trung_cap (nếu morning_only thì = 6, ngược lại = 12)
+        is_tc = d.program_level == "trung_cap"
+        def _can_take(tid: str) -> bool:
+            cur_total = teacher_spw_load.get(tid, 0) + teacher_tc_spw_load.get(tid, 0)
+            if cur_total + d.sessions_per_week > max_spw_per_teacher:
+                return False
+            if is_tc:
+                cur_tc = teacher_tc_spw_load.get(tid, 0)
+                if cur_tc + d.sessions_per_week > max_spw_trung_cap:
+                    return False
+            return True
+
+        available_candidates = [(tid, prio) for tid, prio in candidates if _can_take(tid)]
+        if not available_candidates:
+            # Tất cả GV đều đã full — ghi warning, bỏ qua môn này
+            full_teachers = ", ".join(
+                f"{tid}({teacher_spw_load.get(tid,0)+teacher_tc_spw_load.get(tid,0)}b/t)"
+                for tid, _ in candidates[:3]
+            )
+            extra = f" (và {len(candidates)-3} GV khác)" if len(candidates) > 3 else ""
+            res.warnings.append(
+                f"[assign] {d.dept_code}/{d.program_level} {d.class_id} | {d.subject_name}: "
+                f"tất cả GV đăng ký đã đạt max {max_spw_per_teacher} buổi/tuần "
+                f"→ {full_teachers}{extra}"
+            )
+            res.log_rows.append({
+                "Khoa": d.dept_code,
+                "Hệ": d.program_level,
+                "Lớp": d.class_id,
+                "Mã môn": d.subject_code,
+                "Tên môn": d.subject_name,
+                "GV được gán": "",
+                "Tên GV": "",
+                "Loại GV": "",
+                "Ưu tiên": "",
+                "Score": "",
+                "Trạng thái": f"GV đã full ({max_spw_per_teacher}b/t)",
+            })
+            continue
+
+        # Tính score cho mỗi candidate còn trong ngưỡng
         scored: List[Tuple[int, str, int, Dict]] = []
-        for tid, prio in candidates:
+        for tid, prio in available_candidates:
             info = teacher_info.get(tid, TeacherInfo(tid, tid, ""))
             type_key = info.teacher_type.strip().lower()
             type_bonus = _TYPE_BONUS.get(type_key, 0)
@@ -234,6 +290,10 @@ def assign_teachers(
 
         res.assignments[(d.subject_code, d.class_id)] = best_tid
         teacher_load[best_tid] = teacher_load.get(best_tid, 0) + d.total_sessions
+        if d.program_level == "trung_cap":
+            teacher_tc_spw_load[best_tid] = teacher_tc_spw_load.get(best_tid, 0) + d.sessions_per_week
+        else:
+            teacher_spw_load[best_tid] = teacher_spw_load.get(best_tid, 0) + d.sessions_per_week
 
         info = teacher_info.get(best_tid, TeacherInfo(best_tid, best_tid, ""))
         res.log_rows.append({
