@@ -26,6 +26,7 @@ from .solver import solve_weekly_timetable
 from .timetable_builder import build_generate_request
 from .timetable_export import export_timetable_csv
 from .timetable_export_class import export_timetable_by_class
+from .timetable_export_teacher import export_timetable_by_teacher
 from .availability_report import export_availability_report
 from .dept_output import (
     write_per_dept_assignment_log,
@@ -193,6 +194,9 @@ def generate_timetable(req: GenerateTimetableRequest) -> GenerateTimetableRespon
 
     tp = TermPaths(data_root=_default_data_root(), term_code=req.term_code)
     out_dir = tp.output_dir
+    import shutil
+    if out_dir.exists():
+        shutil.rmtree(out_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
     by_dept_dir = out_dir / "by_department"
 
@@ -249,6 +253,19 @@ def generate_timetable(req: GenerateTimetableRequest) -> GenerateTimetableRespon
                 periods_per_day=br.request.or_tools.periods_per_day,
                 morning_periods=br.request.or_tools.morning_periods,
                 xlsx_path=dept_out / "timetable_by_class.xlsx",
+                week_dates=br.week_dates,
+                holiday_reasons=br.holiday_reasons,
+                class_excluded_weeks=br.class_excluded_weeks,
+            )
+            export_timetable_by_teacher(
+                dept_sessions,
+                br.request.assignments,
+                br.assignment_labels,
+                br.request.classrooms,
+                days=br.request.or_tools.days,
+                periods_per_day=br.request.or_tools.periods_per_day,
+                morning_periods=br.request.or_tools.morning_periods,
+                xlsx_path=dept_out / "timetable_by_teacher.xlsx",
                 week_dates=br.week_dates,
                 holiday_reasons=br.holiday_reasons,
                 class_excluded_weeks=br.class_excluded_weeks,

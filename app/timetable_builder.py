@@ -148,6 +148,52 @@ def _load_shared_teachers(shared_dir: Path) -> Dict[str, Dict]:
     return teachers
 
 
+def _enrich_teachers_from_db(
+    shared_teachers: Dict[str, Dict],
+    nv_ids: List[str],
+) -> None:
+    """Bổ sung vào shared_teachers các NV* có trong teacher_subjects_pool nhưng thiếu trong teachers.xlsx.
+
+    Query CTool DB lấy fullname + is_fulltime. Chỉ gọi khi DB available.
+    Mutates shared_teachers in-place.
+    """
+    missing = [tid for tid in nv_ids if tid not in shared_teachers]
+    if not missing:
+        return
+    try:
+        import os
+        import pymysql
+        cfg = {
+            "host":     os.getenv("CDATA_DB_HOST", "127.0.0.1"),
+            "port":     int(os.getenv("CDATA_DB_PORT", "3306")),
+            "user":     os.getenv("CDATA_DB_USER", "root"),
+            "password": os.getenv("CDATA_DB_PASSWORD", ""),
+            "database": os.getenv("CTOOL_DB_NAME", "cbase_v2"),
+            "charset":  "utf8mb4",
+        }
+        conn = pymysql.connect(**cfg)
+        try:
+            with conn.cursor() as cur:
+                placeholders = ",".join(["%s"] * len(missing))
+                cur.execute(
+                    f"SELECT username, fullname, is_fulltime FROM users WHERE username IN ({placeholders})",
+                    missing,
+                )
+                for username, fullname, is_fulltime in cur.fetchall():
+                    tid = (username or "").strip()
+                    if tid and tid not in shared_teachers:
+                        shared_teachers[tid] = {
+                            "teacher_id":      tid,
+                            "teacher_name":    (fullname or tid).strip(),
+                            "department_code": "",
+                            "teacher_type":    "Cơ hữu" if is_fulltime else "Thỉnh giảng",
+                        }
+        finally:
+            conn.close()
+    except Exception:
+        pass  # DB không available — giữ nguyên, tên sẽ fallback về mã
+
+
 def _load_department_name_map(shared_dir: Path) -> Dict[str, str]:
     """Map tên đầy đủ khoa → mã khoa (uppercase). Đọc shared/departments.xlsx."""
     path = shared_dir / "departments.xlsx"
@@ -643,6 +689,10 @@ def build_generate_request(
             demands_buffer[di]["week_end"] = we
 
     # --- Pass 2: phân công GV ---
+    # Bổ sung tên GV từ DB cho các NV* có trong pool nhưng thiếu trong teachers.xlsx
+    nv_ids_in_pool = [tid for tid, _ in teacher_subjects_pool.keys() if tid.startswith("NV")]
+    _enrich_teachers_from_db(shared_teachers, nv_ids_in_pool)
+
     # Override availability từ DB nếu có (replace, không merge)
     if availability_override is not None:
         all_availability = {k: set(v) for k, v in availability_override.items()}
