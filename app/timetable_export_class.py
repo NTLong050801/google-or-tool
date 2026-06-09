@@ -20,14 +20,17 @@ _PROGRAM_LABEL = {
 }
 
 _REASON_LABELS: dict = {
-    "thi":      "Tuần thi",
-    "du_phong": "Dự phòng",
-    "quan_su":  "Quân sự",
-    "nghi_le":  "Nghỉ lễ",
-    "thi_lai":  "Thi lại",
-    "nghi":     "Nghỉ",
-    "thuc_te":  "Thực tế/Thực tập",
-    "khac":     "Khác",
+    "thi":            "Tuần thi",
+    "du_phong":       "Dự phòng",
+    "quan_su":        "Quân sự",
+    "nghi_le":        "Nghỉ lễ",
+    "thi_lai":        "Thi lại",
+    "thi_tot_nghiep": "Thi tốt nghiệp",
+    "thuc_tap":       "Thực tập",
+    "tttn":           "Thực tập tốt nghiệp",
+    "nghi":           "Nghỉ",
+    "thuc_te":        "Thực tế/Thực tập",
+    "khac":           "Khác",
 }
 
 _THIN = Side(style="thin", color="888888")
@@ -49,14 +52,17 @@ _WEEK_MILITARY_FILL= PatternFill("solid", fgColor="D6E4F0")   # xanh dương nh�
 _WEEK_OTHER_FILL   = PatternFill("solid", fgColor="F2F2F2")   # xám nhạt — khác
 
 _REASON_TO_FILL = {
-    "nghi_le":  _WEEK_HOLIDAY_FILL,
-    "nghi":     _WEEK_HOLIDAY_FILL,
-    "thi":      _WEEK_EXAM_FILL,
-    "thi_lai":  _WEEK_EXAM_FILL,
-    "du_phong": _WEEK_RESERVE_FILL,
-    "quan_su":  _WEEK_MILITARY_FILL,
-    "thuc_te":  _WEEK_OTHER_FILL,
-    "khac":     _WEEK_OTHER_FILL,
+    "nghi_le":        _WEEK_HOLIDAY_FILL,
+    "nghi":           _WEEK_HOLIDAY_FILL,
+    "thi":            _WEEK_EXAM_FILL,
+    "thi_lai":        _WEEK_EXAM_FILL,
+    "thi_tot_nghiep": _WEEK_EXAM_FILL,
+    "tttn":           _WEEK_EXAM_FILL,
+    "du_phong":       _WEEK_RESERVE_FILL,
+    "quan_su":        _WEEK_MILITARY_FILL,
+    "thuc_tap":       _WEEK_OTHER_FILL,
+    "thuc_te":        _WEEK_OTHER_FILL,
+    "khac":           _WEEK_OTHER_FILL,
 }
 
 
