@@ -355,29 +355,45 @@ def export_timetable_by_class(
                 c.fill = _MORNING_FILL if p <= last_morning else _AFTERNOON_FILL
 
         # Đặt nội dung từng session
-        slot_content: Dict[Tuple[int, int], List[str]] = {}
+        slot_content: Dict[Tuple[int, int], List[tuple]] = {}
         slot_span: Dict[Tuple[int, int], int] = {}
         for s in cls_sessions:
             a = a_by_id.get(int(s.assignment_id))
             cluster = int(a.lessons_cluster) if a else (int(s.period_end) - int(s.period_start) + 1)
             lab = assignment_labels.get(int(s.assignment_id), {})
             content = _build_cell_text(s, a, lab, room_by_id, week_dates, holiday_reasons, class_excluded_weeks)
+            if s.teaching_weeks:
+                tw = set(s.teaching_weeks)
+            else:
+                cls_excl = class_excluded_weeks.get(str(lab.get("class_id", "")), {})
+                w_start, w_end = int(s.week_start), int(s.week_end)
+                tw = set(
+                    w for w in range(w_start, w_end + 1)
+                    if w not in holiday_reasons and w not in cls_excl
+                )
             key = (int(s.day), int(s.period_start))
-            slot_content.setdefault(key, []).append(content)
+            slot_content.setdefault(key, []).append((content, tw))
             slot_span[key] = cluster
 
-        for (day, p_start), contents in slot_content.items():
+        for (day, p_start), entries in slot_content.items():
             if day not in days:
                 continue
             col = 2 + days.index(day)
             row = header_row + p_start
             cluster = slot_span[(day, p_start)]
-            text = "\n──────\n".join(contents)
+            text = "\n──────\n".join(e[0] for e in entries)
             cell = ws.cell(row=row, column=col, value=text)
             cell.alignment = _CENTER
             cell.border = _BORDER
-            if len(contents) > 1:
-                cell.fill = _CONFLICT_FILL
+            if len(entries) > 1:
+                all_tw = [e[1] for e in entries]
+                has_conflict = any(
+                    all_tw[i] & all_tw[j]
+                    for i in range(len(all_tw))
+                    for j in range(i + 1, len(all_tw))
+                )
+                if has_conflict:
+                    cell.fill = _CONFLICT_FILL
 
             if cluster > 1:
                 ws.merge_cells(

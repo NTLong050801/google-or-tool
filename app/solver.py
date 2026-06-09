@@ -349,43 +349,79 @@ def solve_weekly_timetable(
                     model.add(var == 0)
 
     # --- Room conflict: at most 1 assignment per room per period ---
+    # Chỉ áp khi 2 assignment có tuần thực dạy overlap.
     if config.no_room_conflict:
         for (d_i, r_i), kv_list in vars_by_day_room.items():
-            periods_used: Dict[int, List[cp_model.IntVar]] = {}
+            period_vars: Dict[int, List[Tuple[cp_model.IntVar, int]]] = {}
             for k, var in kv_list:
                 a = a_by_id[k.a_id]
                 cluster = int(a.lessons_cluster)
                 for p in range(k.p_start, k.p_start + cluster):
-                    periods_used.setdefault(p, []).append(var)
-            for p, p_vars in periods_used.items():
-                if len(p_vars) > 1:
-                    model.add(sum(p_vars) <= 1)
+                    period_vars.setdefault(p, []).append((var, k.a_id))
+            for p, aid_vars in period_vars.items():
+                if len(aid_vars) <= 1:
+                    continue
+                for i in range(len(aid_vars)):
+                    for j in range(i + 1, len(aid_vars)):
+                        var_i, aid_i = aid_vars[i]
+                        var_j, aid_j = aid_vars[j]
+                        tw_i = _teaching_weeks_set(a_by_id[aid_i])
+                        tw_j = _teaching_weeks_set(a_by_id[aid_j])
+                        if tw_i & tw_j:
+                            model.add(var_i + var_j <= 1)
 
     # --- Teacher conflict: at most 1 assignment per teacher per period ---
+    # Chỉ áp khi 2 assignment có tuần thực dạy overlap.
     if config.no_teacher_conflict:
         for (d_i, tid), kv_list in vars_by_day_teacher.items():
-            periods_used: Dict[int, List[cp_model.IntVar]] = {}
+            period_vars: Dict[int, List[Tuple[cp_model.IntVar, int]]] = {}
             for k, var in kv_list:
                 a = a_by_id[k.a_id]
                 cluster = int(a.lessons_cluster)
                 for p in range(k.p_start, k.p_start + cluster):
-                    periods_used.setdefault(p, []).append(var)
-            for p, p_vars in periods_used.items():
-                if len(p_vars) > 1:
-                    model.add(sum(p_vars) <= 1)
+                    period_vars.setdefault(p, []).append((var, k.a_id))
+            for p, aid_vars in period_vars.items():
+                if len(aid_vars) <= 1:
+                    continue
+                for i in range(len(aid_vars)):
+                    for j in range(i + 1, len(aid_vars)):
+                        var_i, aid_i = aid_vars[i]
+                        var_j, aid_j = aid_vars[j]
+                        tw_i = _teaching_weeks_set(a_by_id[aid_i])
+                        tw_j = _teaching_weeks_set(a_by_id[aid_j])
+                        if tw_i & tw_j:
+                            model.add(var_i + var_j <= 1)
 
     # --- Class group conflict: at most 1 assignment per group per period ---
+    # Chỉ áp constraint khi 2 assignment có tuần thực dạy giao nhau.
+    # 2 môn cùng lớp nhưng dạy ở 2 đợt tách biệt (tuần không overlap) được phép
+    # xếp cùng slot (day, period) vì thực tế không xung đột.
     if config.no_class_group_conflict:
+        # Tính teaching_weeks cho mỗi assignment (dùng lại holiday_weeks)
+        def _teaching_weeks_set(a: Assignment) -> Set[int]:
+            excl = set(a.excluded_weeks) | holiday_weeks
+            return {w for w in range(int(a.week_start), int(a.week_end) + 1) if w not in excl}
+
         for (d_i, g_id), kv_list in vars_by_day_group.items():
-            periods_used: Dict[int, List[cp_model.IntVar]] = {}
+            # Gom theo period, nhưng chỉ pair các var có tuần overlap
+            period_vars: Dict[int, List[Tuple[cp_model.IntVar, int]]] = {}
             for k, var in kv_list:
                 a = a_by_id[k.a_id]
                 cluster = int(a.lessons_cluster)
                 for p in range(k.p_start, k.p_start + cluster):
-                    periods_used.setdefault(p, []).append(var)
-            for p, p_vars in periods_used.items():
-                if len(p_vars) > 1:
-                    model.add(sum(p_vars) <= 1)
+                    period_vars.setdefault(p, []).append((var, k.a_id))
+            for p, aid_vars in period_vars.items():
+                if len(aid_vars) <= 1:
+                    continue
+                # Với mỗi cặp (i, j), chỉ add constraint nếu tuần overlap
+                for i in range(len(aid_vars)):
+                    for j in range(i + 1, len(aid_vars)):
+                        var_i, aid_i = aid_vars[i]
+                        var_j, aid_j = aid_vars[j]
+                        tw_i = _teaching_weeks_set(a_by_id[aid_i])
+                        tw_j = _teaching_weeks_set(a_by_id[aid_j])
+                        if tw_i & tw_j:
+                            model.add(var_i + var_j <= 1)
 
     # --- Objective ---
     objective_terms: List[cp_model.LinearExpr] = []
