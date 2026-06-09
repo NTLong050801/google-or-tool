@@ -240,13 +240,13 @@ def _detect_study_periods(
     week_hi: int,
     excluded_dict: Dict[int, str],
 ) -> List[Tuple[int, int]]:
-    """Tách các đợt học dựa vào cluster thi/dự phòng/thi lại trong excluded_weeks.
+    """Tách các đợt học dựa vào cluster thi/dự phòng/thực tập trong excluded_weeks.
 
-    Đợt học = dải tuần liên tiếp [start..end], bị ngắt bởi cluster tuần thi.
-    Tuần `nghi`/`nghi_le`/`quan_su`/`thuc_te` là gap trong đợt, KHÔNG ngắt đợt.
+    Đợt học = dải tuần liên tiếp [start..end], bị ngắt bởi cluster tuần thi/thực tập.
+    Tuần `nghi`/`nghi_le`/`quan_su`/`thuc_te`/`khac` là gap trong đợt, KHÔNG ngắt đợt.
     Đợt mà toàn bộ tuần đều excluded (không có tuần dạy) → bỏ.
     """
-    EXAM_REASONS = {"thi", "thi_lai", "du_phong"}
+    EXAM_REASONS = {"thi", "thi_lai", "du_phong", "thi_tot_nghiep", "tttn", "thuc_tap"}
 
     # Chỉ xét tuần thi trong phạm vi [week_lo, week_hi] — bỏ qua HK trước
     exam_weeks = sorted(
