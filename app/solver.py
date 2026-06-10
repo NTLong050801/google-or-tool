@@ -50,36 +50,51 @@ def _assign_rooms(
     assignment_labels: Dict[int, Dict[str, str]],
     holiday_weeks: Set[int],
     config: SchedulingConfig,
+    warnings: List[str],
 ) -> Dict[int, int]:
     """Greedy room assignment sau khi CP-SAT đã xếp slot.
 
     Trả về {assignment_id: room_idx}.
-    Ưu tiên: phòng vừa sĩ số (capacity gần class_size nhất).
     Đảm bảo HC-2: không 2 assignment có tuần overlap dùng cùng phòng cùng (day, period).
+
+    Mỗi assignment có thể có nhiều slot (sessions_per_week > 1).
+    Phòng được gán 1 lần per assignment và mark busy cho tất cả slot của assignment đó.
     """
     # room_busy[(day_value, p, room_idx)] = set of teaching_weeks đang bị chiếm
     room_busy: Dict[Tuple[int, int, int], Set[int]] = {}
 
-    result: Dict[int, int] = {}
+    result: Dict[int, int] = {}  # assignment_id → room_idx
 
     def teaching_weeks_set(a: Assignment) -> Set[int]:
         excl = set(a.excluded_weeks) | holiday_weeks
         return {w for w in range(int(a.week_start), int(a.week_end) + 1) if w not in excl}
 
+    # Group slots by assignment_id — 1 assignment có thể có nhiều (day, p_start)
+    from collections import defaultdict as _dd
+    slots_by_aid: Dict[int, List[Tuple[int, int]]] = _dd(list)
+    assignment_by_id: Dict[int, Assignment] = {}
+    for a, day_value, p_start in slot_results:
+        aid = int(a.id)
+        slots_by_aid[aid].append((day_value, p_start))
+        assignment_by_id[aid] = a
+
     # Sắp xếp: class_size lớn trước (phòng lớn khó gán hơn)
-    sorted_slots = sorted(
-        slot_results,
-        key=lambda t: -(int(t[0].class_size) if t[0].class_size is not None else 0),
+    sorted_aids = sorted(
+        slots_by_aid.keys(),
+        key=lambda aid: -(int(assignment_by_id[aid].class_size)
+                          if assignment_by_id[aid].class_size is not None else 0),
     )
 
-    for a, day_value, p_start in sorted_slots:
+    for aid in sorted_aids:
+        a = assignment_by_id[aid]
+        slots = slots_by_aid[aid]  # list of (day_value, p_start) cho assignment này
         cluster = int(a.lessons_cluster)
-        label = assignment_labels.get(int(a.id), {})
+        label = assignment_labels.get(aid, {})
         subject_name_lc = (label.get("subject_name") or "").strip().lower()
         dept_code = str(a.department_code).strip().upper()
         tw = teaching_weeks_set(a)
 
-        # Xác định candidate rooms (cùng logic với phần build biến cũ)
+        # Xác định candidate rooms
         candidate_rooms = list(rooms_by_type.get(int(a.classroom_type), room_indices))
 
         # fixed_rooms override
@@ -110,24 +125,6 @@ def _assign_rooms(
             if sized:
                 candidate_rooms = sized
 
-        # Lọc phòng còn trống cho (day, period range) với teaching_weeks này
-        periods = list(range(p_start, p_start + cluster))
-        available = []
-        for r_i in candidate_rooms:
-            conflict = False
-            for p in periods:
-                busy_weeks = room_busy.get((day_value, p, r_i), set())
-                if busy_weeks & tw:
-                    conflict = True
-                    break
-            if not conflict:
-                available.append(r_i)
-
-        if not available:
-            # Fallback: dùng bất kỳ phòng nào trong candidate (có thể conflict nhỏ)
-            available = candidate_rooms if candidate_rooms else room_indices
-
-        # Chọn phòng vừa sĩ số nhất
         def room_score(r_i: int) -> int:
             cap = classrooms[r_i].capacity
             if cap is None or a.class_size is None:
@@ -135,13 +132,44 @@ def _assign_rooms(
             slack = int(cap) - int(a.class_size)
             return slack if slack >= 0 else 10000
 
-        chosen = min(available, key=room_score)
-        result[int(a.id)] = chosen
+        # Assignment không có tuần dạy nào (toàn bộ bị excluded) — bỏ qua
+        if not tw:
+            continue
 
-        # Đánh dấu phòng đã dùng
-        for p in periods:
-            key = (day_value, p, chosen)
-            room_busy.setdefault(key, set()).update(tw)
+        # Phòng hợp lệ = không conflict trên BẤT KỲ slot nào của assignment này
+        def has_conflict(r_i: int) -> bool:
+            for day_value, p_start in slots:
+                for p in range(p_start, p_start + cluster):
+                    if room_busy.get((day_value, p, r_i), set()) & tw:
+                        return True
+            return False
+
+        available = [r_i for r_i in candidate_rooms if not has_conflict(r_i)]
+
+        if not available:
+            # Fallback: chọn phòng ít tuần conflict nhất
+            pool = candidate_rooms if candidate_rooms else room_indices
+            def total_conflict_weeks(r_i: int) -> int:
+                n = 0
+                for day_value, p_start in slots:
+                    for p in range(p_start, p_start + cluster):
+                        n += len(room_busy.get((day_value, p, r_i), set()) & tw)
+                return n
+            chosen = min(pool, key=lambda r: (total_conflict_weeks(r), room_score(r)))
+            warnings.append(
+                f"[room] Không đủ phòng: {label.get('class_id','')} | "
+                f"{label.get('subject_name','')} — "
+                f"xếp {classrooms[chosen].name} (có thể trùng phòng)"
+            )
+        else:
+            chosen = min(available, key=room_score)
+
+        result[aid] = chosen
+
+        # Mark busy cho TẤT CẢ slot của assignment này
+        for day_value, p_start in slots:
+            for p in range(p_start, p_start + cluster):
+                room_busy.setdefault((day_value, p, chosen), set()).update(tw)
 
     return result
 
@@ -502,7 +530,90 @@ def solve_weekly_timetable(
                         if _teaching_weeks_set(a_by_id[aid_i]) & _teaching_weeks_set(a_by_id[aid_j]):
                             model.add(var_i + var_j <= 1)
 
-    # ── Objective ────────────────────────────────────────────────────────────
+    # ── HC-2: Room capacity constraint (week-aware) ──────────────────────────
+    # Với mỗi (day, period), số assignments có tuần overlap không được vượt số
+    # phòng khả dụng thực tế (sau filter priority_departments) cho dept đó.
+    if config.no_room_conflict:
+        # Pre-compute: số phòng available per (room_type, dept_code)
+        # Phòng pass filter nếu: priority rỗng HOẶC dept_code trong priority HOẶC dept_code == home
+        def _n_rooms_for(rt: int, dept_code: str) -> int:
+            dept_upper = dept_code.strip().upper()
+            count = 0
+            for r_i in rooms_by_type.get(rt, room_indices):
+                room = classrooms[r_i]
+                priority = [p.upper() for p in (room.priority_departments or [])]
+                home = (room.home_department or "").strip().upper()
+                if not priority or dept_upper in priority or dept_upper == home:
+                    count += 1
+            return count if count > 0 else len(rooms_by_type.get(rt, room_indices))
+
+        # Build index: (day_idx, room_type) → list[(k, var)]
+        vars_by_day_rtype: Dict[Tuple[int, int], List[Tuple[_SlotKey, cp_model.IntVar]]] = {}
+        for k, var in x.items():
+            a = a_by_id.get(int(k.a_id))
+            if not a:
+                continue
+            rt = int(a.classroom_type)
+            vars_by_day_rtype.setdefault((k.day_idx, rt), []).append((k, var))
+
+        for (d_i, rt), kv_list in vars_by_day_rtype.items():
+            # Group by (aid, p_start): 1 assignment có thể có nhiều biến trên cùng day_idx
+            # Tạo 1 indicator var per assignment: "assignment được đặt vào ngày d_i"
+            # = OR of all vars of that assignment on day d_i
+            aid_day_vars: Dict[int, List[cp_model.IntVar]] = {}
+            aid_day_pstart: Dict[int, List[int]] = {}
+            for k, var in kv_list:
+                aid_day_vars.setdefault(k.a_id, []).append(var)
+                aid_day_pstart.setdefault(k.a_id, []).append(k.p_start)
+
+            # Group by period (sử dụng indicator vars)
+            # indicator[aid] = bool var "assignment aid assigned on day d_i"
+            indicators: Dict[int, cp_model.IntVar] = {}
+            for aid, vars_list in aid_day_vars.items():
+                if len(vars_list) == 1:
+                    indicators[aid] = vars_list[0]
+                else:
+                    ind = model.new_bool_var(f"ind_d{d_i}_a{aid}")
+                    model.add_bool_or(vars_list).only_enforce_if(ind)
+                    model.add_bool_and([v.negated() for v in vars_list]).only_enforce_if(ind.negated())
+                    indicators[aid] = ind
+
+            # Build period_aids: per period p, list of (indicator, aid) that cover p
+            period_aids: Dict[int, List[Tuple[cp_model.IntVar, int]]] = {}
+            for k, var in kv_list:
+                a = a_by_id[k.a_id]
+                cluster = int(a.lessons_cluster)
+                ind = indicators[k.a_id]
+                for p in range(k.p_start, k.p_start + cluster):
+                    # Add (ind, aid) only once per (p, aid)
+                    existing = period_aids.setdefault(p, [])
+                    if not any(aid_i == k.a_id for _, aid_i in existing):
+                        existing.append((ind, k.a_id))
+
+            for p, ind_aids in period_aids.items():
+                if len(ind_aids) <= 1:
+                    continue
+                # Nhóm assignments có tuần overlap với ít nhất 1 assignment khác
+                tw_cache = {aid: _teaching_weeks_set(a_by_id[aid]) for _, aid in ind_aids}
+                overlap_inds = []
+                for ind_i, aid_i in ind_aids:
+                    tw_i = tw_cache[aid_i]
+                    for ind_j, aid_j in ind_aids:
+                        if aid_i != aid_j and tw_i & tw_cache[aid_j]:
+                            overlap_inds.append((ind_i, aid_i))
+                            break
+                if len(overlap_inds) <= 1:
+                    continue
+                n_rooms = min(
+                    _n_rooms_for(rt, str(a_by_id[aid].department_code))
+                    for _, aid in overlap_inds
+                )
+                if n_rooms == 0:
+                    continue
+                if len(overlap_inds) > n_rooms:
+                    model.add(sum(v for v, _ in overlap_inds) <= n_rooms)
+
+
     objective_terms: List[cp_model.LinearExpr] = []
 
     if config.prefer_early_periods.enabled:
@@ -569,6 +680,7 @@ def solve_weekly_timetable(
         assignment_labels,
         holiday_weeks,
         config,
+        solver_warnings,
     )
 
     # ── Build ScheduledSession list ──────────────────────────────────────────
