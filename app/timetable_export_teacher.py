@@ -20,14 +20,17 @@ _PROGRAM_LABEL = {
 }
 
 _REASON_LABELS: dict = {
-    "thi":      "Tuần thi",
-    "du_phong": "Dự phòng",
-    "quan_su":  "Quân sự",
-    "nghi_le":  "Nghỉ lễ",
-    "thi_lai":  "Thi lại",
-    "nghi":     "Nghỉ",
-    "thuc_te":  "Thực tế/Thực tập",
-    "khac":     "Khác",
+    "thi":            "Tuần thi",
+    "du_phong":       "Dự phòng",
+    "quan_su":        "Quân sự",
+    "nghi_le":        "Nghỉ lễ",
+    "thi_lai":        "Thi lại",
+    "thi_tot_nghiep": "Thi tốt nghiệp",
+    "thuc_tap":       "Thực tập",
+    "tttn":           "Thực tập tốt nghiệp",
+    "nghi":           "Nghỉ",
+    "thuc_te":        "Thực tế/Thực tập",
+    "khac":           "Khác",
 }
 
 _THIN          = Side(style="thin", color="888888")

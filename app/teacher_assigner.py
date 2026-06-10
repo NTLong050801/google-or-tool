@@ -142,13 +142,13 @@ def assign_teachers(
     *,
     locked: Optional[Dict[Tuple[str, str], str]] = None,
     max_spw_per_teacher: int = 12,
-    max_spw_trung_cap: int = 6,
+    max_spw_trung_cap: int = 6,  # unused — constraint của lớp, không phải GV
 ) -> AssignmentResult:
     """Greedy assign: gán môn-lớp khó nhất trước, mỗi lần chọn GV có score cao nhất.
 
-    Trung cấp dùng riêng cap max_spw_trung_cap (mặc định 6 = 6 ngày × 1 buổi sáng).
-    Cao đẳng/khác dùng max_spw_per_teacher.
-    Cap được track riêng theo program_level vì 1 GV có thể dạy cả 2 hệ.
+    max_spw_per_teacher: tổng buổi/tuần tối đa cho 1 GV (tính cả trung_cap + cao_đẳng).
+    max_spw_trung_cap: constraint của lớp học (1 lớp TC chỉ có 6 buổi sáng/tuần),
+                       không áp lên GV — GV có thể dạy nhiều lớp TC + CĐ cùng tuần.
     """
     locked = locked or {}
     res = AssignmentResult()
@@ -158,20 +158,49 @@ def assign_teachers(
     for (tid, sub), prio in teacher_subjects.items():
         subject_to_teachers.setdefault(sub, []).append((tid, prio))
 
+    # Track tải theo tuần: teacher_week_load[tid][week] = tổng spw trong tuần đó
+    # Dùng để kiểm tra peak load thực sự thay vì cộng dồn toàn kỳ.
+    from collections import defaultdict as _dd
+    teacher_week_load: Dict[str, Dict[int, int]] = _dd(lambda: _dd(int))
+    teacher_load: Dict[str, int] = {}  # tổng total_sessions — dùng cho load_balance_score
+
+    def _week_range(d: SubjectClassDemand) -> range:
+        if d.week_start is None or d.week_end is None:
+            return range(0, 0)
+        excl = d.excluded_weeks or set()
+        return range(d.week_start, d.week_end + 1)
+
+    def _peak_load_after(tid: str, d: SubjectClassDemand) -> int:
+        """Trả về peak spw tổng nếu gán thêm demand d cho GV tid.
+
+        Tính max spw trong các tuần d thực dạy (bỏ excluded_weeks).
+        max_spw_trung_cap là constraint của lớp, không phải của GV —
+        GV có thể dạy cả trung_cap lẫn cao_đẳng trong cùng tuần.
+        """
+        excl = d.excluded_weeks or set()
+        weeks = [w for w in _week_range(d) if w not in excl]
+        if not weeks:
+            cur_all = sum(v for k, v in teacher_week_load[tid].items() if k > 0)
+            return (cur_all or 0) + d.sessions_per_week
+        return max(teacher_week_load[tid].get(w, 0) + d.sessions_per_week for w in weeks)
+
+    def _commit_load(tid: str, d: SubjectClassDemand) -> None:
+        excl = d.excluded_weeks or set()
+        weeks = [w for w in _week_range(d) if w not in excl]
+        if not weeks:
+            teacher_week_load[tid][0] = teacher_week_load[tid].get(0, 0) + d.sessions_per_week
+        else:
+            for w in weeks:
+                teacher_week_load[tid][w] = teacher_week_load[tid].get(w, 0) + d.sessions_per_week
+
     # Apply locked trước
-    teacher_load: Dict[str, int] = {}          # tổng total_sessions — load_balance_score
-    teacher_spw_load: Dict[str, int] = {}      # tổng spw (cao_dang + khác) — hard cap
-    teacher_tc_spw_load: Dict[str, int] = {}   # tổng spw trung_cap — hard cap riêng
     for d in demands:
         key = (d.subject_code, d.class_id)
         if key in locked:
             tid = locked[key]
             res.assignments[key] = tid
             teacher_load[tid] = teacher_load.get(tid, 0) + d.total_sessions
-            if d.program_level == "trung_cap":
-                teacher_tc_spw_load[tid] = teacher_tc_spw_load.get(tid, 0) + d.sessions_per_week
-            else:
-                teacher_spw_load[tid] = teacher_spw_load.get(tid, 0) + d.sessions_per_week
+            _commit_load(tid, d)
 
     # Pending = các demand chưa lock
     pending = [d for d in demands if (d.subject_code, d.class_id) not in res.assignments]
@@ -214,25 +243,15 @@ def assign_teachers(
             continue
 
         # Lọc GV đã đạt hard cap buổi/tuần.
-        # Cap kép:
-        #   1) Tổng (trung_cap + cao_dang) ≤ max_spw_per_teacher (= số slot/tuần khả dụng = 12)
-        #   2) Riêng trung_cap ≤ max_spw_trung_cap (nếu morning_only thì = 6, ngược lại = 12)
-        is_tc = d.program_level == "trung_cap"
+        # Dùng peak load theo tuần thực dạy thay vì cộng dồn toàn kỳ:
+        # GV dạy môn A tuần 24-31 và môn B tuần 33-41 → mỗi tuần chỉ 1 môn, không full.
         def _can_take(tid: str) -> bool:
-            cur_total = teacher_spw_load.get(tid, 0) + teacher_tc_spw_load.get(tid, 0)
-            if cur_total + d.sessions_per_week > max_spw_per_teacher:
-                return False
-            if is_tc:
-                cur_tc = teacher_tc_spw_load.get(tid, 0)
-                if cur_tc + d.sessions_per_week > max_spw_trung_cap:
-                    return False
-            return True
+            return _peak_load_after(tid, d) <= max_spw_per_teacher
 
         available_candidates = [(tid, prio) for tid, prio in candidates if _can_take(tid)]
         if not available_candidates:
-            # Tất cả GV đều đã full — ghi warning, bỏ qua môn này
             full_teachers = ", ".join(
-                f"{tid}({teacher_spw_load.get(tid,0)+teacher_tc_spw_load.get(tid,0)}b/t)"
+                f"{tid}({max((v for k, v in teacher_week_load[tid].items() if k > 0), default=0)}b/t)"
                 for tid, _ in candidates[:3]
             )
             extra = f" (và {len(candidates)-3} GV khác)" if len(candidates) > 3 else ""
@@ -290,10 +309,7 @@ def assign_teachers(
 
         res.assignments[(d.subject_code, d.class_id)] = best_tid
         teacher_load[best_tid] = teacher_load.get(best_tid, 0) + d.total_sessions
-        if d.program_level == "trung_cap":
-            teacher_tc_spw_load[best_tid] = teacher_tc_spw_load.get(best_tid, 0) + d.sessions_per_week
-        else:
-            teacher_spw_load[best_tid] = teacher_spw_load.get(best_tid, 0) + d.sessions_per_week
+        _commit_load(best_tid, d)
 
         info = teacher_info.get(best_tid, TeacherInfo(best_tid, best_tid, ""))
         res.log_rows.append({
@@ -316,14 +332,5 @@ def assign_teachers(
                 f"{t}({s})" for s, t, _, _ in scored[1:4]
             ),
         })
-
-    # Cảnh báo cân bằng tải
-    if teacher_load:
-        loads = sorted(teacher_load.items(), key=lambda x: x[1], reverse=True)
-        if loads[0][1] > 3 * avg_load and avg_load > 0:
-            res.warnings.append(
-                f"[assign] Tải mất cân bằng: GV {loads[0][0]} = {loads[0][1]} buổi "
-                f"(avg={avg_load:.0f})"
-            )
 
     return res
