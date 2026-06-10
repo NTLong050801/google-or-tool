@@ -618,11 +618,25 @@ def build_generate_request(
                     class_week_start, week_hi, num_weeks_needed, combined_excluded
                 )
                 if missing_weeks > 0:
-                    warnings.append(
-                        f"[{dept_code}/{program_level}] {class_id} | {subject_name}: "
-                        f"thiếu {missing_weeks} tuần dạy do holiday/excluded đẩy ngoài term "
-                        f"(cần {num_weeks_needed} tuần, term còn {num_weeks_needed - missing_weeks})"
-                    )
+                    # Tự động tăng spw để fit vào số tuần thực còn lại
+                    available_weeks = num_weeks_needed - missing_weeks
+                    if available_weeks > 0:
+                        spw_boosted = min(
+                            math.ceil(total_sessions / available_weeks),
+                            12,  # hard cap: không quá 12 buổi/tuần
+                        )
+                        if spw_boosted > sessions_pw:
+                            sessions_pw = spw_boosted
+                            num_weeks_needed = math.ceil(total_sessions / sessions_pw)
+                            a_week_end, missing_weeks = _compute_week_end_skip_holidays(
+                                class_week_start, week_hi, num_weeks_needed, combined_excluded
+                            )
+                    if missing_weeks > 0:
+                        warnings.append(
+                            f"[{dept_code}/{program_level}] {class_id} | {subject_name}: "
+                            f"thiếu {missing_weeks} tuần dạy do holiday/excluded đẩy ngoài term "
+                            f"(cần {num_weeks_needed} tuần, term còn {num_weeks_needed - missing_weeks})"
+                        )
 
                 class_size = class_sizes.get(class_id)
                 if class_size is None:
