@@ -25,6 +25,7 @@ from .solver import solve_weekly_timetable
 from .timetable_builder import build_generate_request
 from .timetable_export import export_timetable_csv
 from .timetable_export_class import export_timetable_by_class
+from .timetable_export_class_pdt import export_timetable_by_class_pdt
 from .timetable_export_teacher import export_timetable_by_teacher
 from .availability_report import export_availability_report
 from .dept_output import (
@@ -245,6 +246,22 @@ def main() -> None:
             week_dates=br.week_dates,
             holiday_reasons=br.holiday_reasons,
             class_excluded_weeks=br.class_excluded_weeks,
+        )
+        export_timetable_by_class_pdt(
+            dept_sessions,
+            req.assignments,
+            br.assignment_labels,
+            req.classrooms,
+            days=req.or_tools.days,
+            periods_per_day=req.or_tools.periods_per_day,
+            morning_periods=req.or_tools.morning_periods,
+            xlsx_path=dept_out / "timetable_by_class_pdt.xlsx",
+            term_code=args.term,
+            department_code=dept_code,
+            week_dates=br.week_dates,
+            holiday_reasons=br.holiday_reasons,
+            class_excluded_weeks=br.class_excluded_weeks,
+            class_week_starts=br.class_week_starts,
         )
         n_teachers = export_timetable_by_teacher(
             dept_sessions,
