@@ -7,8 +7,8 @@
     "morning_periods": [1, 2, 3, 4, 5],
     "afternoon_periods": [6, 7, 8, 9, 10],
     "default_lessons_cluster": 5,
-    "max_time_seconds": 120,
-    "num_workers": 4
+    "max_time_seconds": 60,
+    "num_workers": 16
   },
 
   "hard_constraints": {
